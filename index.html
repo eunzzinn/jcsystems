@@ -16,7 +16,7 @@
     <nav>
         <div class="nav-pc">
             <h1 class="logo">
-                <img src="your_logo_path.png" alt="(주)제이피시스텍스">
+                <img src="your_logo_path.png" alt="(주)제이씨시스텍스">
             </h1>
             <div class="menu">
                 <a href="company.html">Company</a>
@@ -125,7 +125,7 @@
       <p class="sub-txt">정확성, 복잡성, 효율성을 갖춘<br>(주)제이씨시스템스의 핵심 기술을 지금 만나보세요.</p>
       <div class="product-btn-wrap">
         <button class="product-btn"><img src="img/main/ico-arrow-left.svg" alt="좌"></button>
-        <div class="num"><span class="now-num">1</span> / 6</div>
+        <div class="num"><span class="now-num">1</span> / 06</div>
         <button class="product-btn"><img src="img/main/ico-arrow-right.svg" alt="우"></button>
       </div>
       <div class="product-slider" id="productSlider">
@@ -140,9 +140,9 @@
   </section>
 
   <section class="partner">
-    <div class="-sec-inner">
+    <div class="sec-inner">
       <div class="sub">Partner</div>
-      <h2>(주)제이씨시스템스는 다양한 파트너사와 함께<br>더 나은 미래를 만들어가고 있습니다.</h2>
+      <h2>(주)제이씨시스템스는 <br class="mo">다양한 파트너사와 함께<br>더 나은 미래를 <br class="mo">만들어가고 있습니다.</h2>
       <ul class="partner-wrap">
         <li><img src="img/main/partner1.svg" alt="파트너사"></li>
         <li><img src="img/main/partner2.svg" alt="파트너사"></li>
@@ -151,17 +151,17 @@
         <li><img src="img/main/partner5.svg" alt="파트너사"></li>
         <li><img src="img/main/partner6.svg" alt="파트너사"></li>
       </ul>
-      <div class="partner-marquee">
-        <div class="partner-marquee-text">JC SYSTEMS GLOBAL LEADER JC SYSTEMS GLOBAL LEADER JC SYSTEMS GLOBAL LEADER</div>
-      </div>
+    </div>
+    <div class="partner-marquee">
+      <div class="partner-marquee-text">JC SYSTEMS GLOBAL LEADER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JC SYSTEMS GLOBAL LEADER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JC SYSTEMS GLOBAL LEADER</div>
     </div>
   </section>
 
-  <section class="clients">
+  <section class="client">
     <div class="sec-inner">
       <div class="sub">Client</div>
-      <h2>(주)제이씨시스템스는 여러 클라이언트들과 함께합니다.</h2>
-      <ul class="partner-wrap">
+      <h2>(주)제이씨시스템스는 <br class="mo">여러 클라이언트들과 <br class="mo">함께합니다.</h2>
+      <ul class="client-wrap">
         <li><img src="img/main/client1.svg" alt="클라이언트"></li>
         <li><img src="img/main/client2.svg" alt="클라이언트"></li>
         <li><img src="img/main/client3.svg" alt="클라이언트"></li>
@@ -192,128 +192,20 @@
           <li>(주)제이씨시스템스</li>
           <li class="bar">|</li>
           <li>대표이사: 조종후</li>
-          <li class="bar"></li>
+          <li class="bar">|</li>
           <li>사업자등록번호: 119-86-66085</li>
-          <li>|</li>
+          <li class="bar">|</li>
           <li>서울 금천구 가산디지털1로 233, 405호 (가산동,에이스하이엔드타워9차)</li>
         </ul>
       </div>
       <div class="rights">© 2025 JC Systems Corporation All rights reserved.</div>
+      <div class="scroll-top" onclick="scrollToTop()"></div>
     </div>
-    
-    <div class="scroll-top" onclick="scrollToTop()"></div>
   </footer>
 
 
-  <!-- <script>
-    // GNB 스크롤 동작
-    let lastScrollTop = 0;
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      const st = window.scrollY;
-      if (st === 0) {
-        header.classList.remove('scrolled');
-        header.classList.remove('visible');
-      }
-      // 스크롤을 내릴 경우
-      else if (st > lastScrollTop) {
-        header.classList.add('scrolled');
-        header.classList.remove('visible');
-      }
-    // 스크롤을 올릴 경우
-    else {
-        header.classList.remove('scrolled');
-        header.classList.add('visible');
-    }
-      lastScrollTop = st <= 0 ? 0 : st;
-    });
 
-     const slides = document.querySelectorAll('.main-slide');
-    const prevBtn = document.querySelector('.main-slider .prev');
-    const nextBtn = document.querySelector('.main-slider .next');
-    const pauseBtn = document.querySelector('.pause-resume');
-    const progress = document.querySelector('.progress');
-    let current = 0;
-    let playing = true;
-    let interval;
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-      current = index;
-      progress.style.width = '0%';
-      setTimeout(() => progress.style.width = '100%', 10);
-    }
-
-    function nextSlide() { showSlide((current + 1) % slides.length); }
-    function prevSlide() { showSlide((current - 1 + slides.length) % slides.length); }
-
-    function startAutoSlide() {
-      interval = setInterval(nextSlide, 3000);
-      progress.style.transition = 'width 3s linear';
-      progress.style.width = '100%';
-    }
-
-    function stopAutoSlide() {
-      clearInterval(interval);
-      progress.style.transition = 'none';
-      progress.style.width = '0%';
-    }
-
-    pauseBtn.addEventListener('click', () => {
-      playing = !playing;
-      pauseBtn.textContent = playing ? '⏸' : '▶';
-      playing ? startAutoSlide() : stopAutoSlide();
-    });
-
-    nextBtn.addEventListener('click', () => { nextSlide(); });
-    prevBtn.addEventListener('click', () => { prevSlide(); });
-
-    showSlide(0);
-    startAutoSlide();
-
-    //모바일 GNB-Product 메뉴 애니메이션
-    $('.gnb-header .close-btn').click(function(){
-      $('.nav-mo-container').fadeOut(300);
-    });
-    $('.nav-mo .menu').click(function() {
-        $('.nav-mo-container').fadeIn(300); // 300ms 동안 서서히 나타남
-    });
-
-    $('.has-submenu').click(function(e) {
-        // 기본 링크 동작 방지 (<a> 태그 클릭 시 페이지 이동 방지)
-        e.preventDefault();
-        $(this).find('.submenu').slideToggle(300);
-        $(this).toggleClass('active');
-
-        // 다른 열려있는 서브메뉴 닫기 (선택 사항)
-        // 현재 클릭된 메뉴가 아닌 다른 .has-submenu의 .submenu를 닫고 active 클래스 제거
-        $('.has-submenu').not(this).find('.submenu').slideUp(300);
-        $('.has-submenu').not(this).removeClass('active');
-    });
-
-    $('.submenu a').click(function(e) {
-        // 이벤트 버블링(전파)을 막아 상위 .has-submenu의 click 이벤트가 실행되지 않게 함
-        e.stopPropagation();
-
-        // <a> 태그의 href로 페이지 이동은 기본적으로 허용
-        // e.preventDefault();를 제거하여 정상적인 링크 이동을 보장
-    });
-
-    // 솔루션 슬라이더
-    const productSlider = document.getElementById('productSlider');
-    let productIndex = 0;
-    function nextproductSlide() {
-      productIndex = (productIndex + 1) % 3;
-      productSlider.style.transform = `translateX(-${productIndex * 100}%)`;
-    }
-    setInterval(nextproductSlide, 3000);
-
-    // 탑 버튼
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script> -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
