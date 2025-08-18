@@ -170,6 +170,20 @@ header .gnb-nav .has-submenu .submenu li span {
 header .gnb-nav .has-submenu .submenu.open {
   display: block;
 }
+header .gnb-footer {
+  margin-left: 20px;
+}
+header .gnb-footer a {
+  width: 150px; height: 50px;
+  border-radius: 6px;
+  background: var(--gray-900);
+  color: var(--white-0);
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 50px;
+}
 header.scrolled {
     top: -100px;
 }
