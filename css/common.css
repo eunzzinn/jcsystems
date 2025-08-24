@@ -200,10 +200,28 @@ header.visible .nav-mo a {
   background-size: cover;
 }
 
+/* main */
+main {
+    margin-top: 120px;
+}
+main h2 {
+    padding: 0 20px;
+    font-size: 3.8rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+main .sub {
+    background-size: cover;
+    width: 100%; height: 320px;
+    color: var(--white-0);
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding: 48px 20px 0;
+}
 
 /* section */
 section {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 section .sec-inner {
   padding: 0 20px;
@@ -213,7 +231,14 @@ section h2 {
   font-size: 2.8rem;
   font-weight: 700;
 }
-
+section .sub-txt {
+    font-size: 1.5rem;
+    color: var(--gray-700);
+    margin: 20px 0 60px;
+}
+section.last {
+  margin-bottom: 120px;
+}
 
 
 

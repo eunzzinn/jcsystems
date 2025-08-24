@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC SYSTEMS</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reference.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="nav-pc">
+                <h1 class="logo">
+                    <img src="img/logo.svg" alt="(주)제이씨시스텍스">
+                </h1>
+                <div class="menu">
+                    <a href="company.html">Company</a>
+                    <a href="business.html">Business</a>
+                    <a href="product.html">Product<span class="more"></span></a>
+                    <a href="reference.html">Reference</a>
+                </div>
+                <div class="contact">
+                    <a href="contact.html">문의 신청하기</a>
+                </div>
+            </div>
+            <div class="nav-mo color">
+                <a href="index.html" class="logo"></a>
+                <div class="menu"></div>
+            </div>
+            <div class="nav-mo-container">
+                <div class="nav-mo-inner">
+                    <div class="gnb-header">
+                        <h1 class="logo">
+                            <img src="img/logo.svg" alt="(주)제이씨시스템스">
+                        </h1>
+                        <button class="close-btn" aria-label="메뉴 닫기">
+                            <img src="img/ico-close.svg" alt=" 닫기">
+                        </button>
+                    </div>
+                    <div class="gnb-nav">
+                        <ul class="main-menu">
+                            <li class="menu-item"><a href="company.html">Company</a></li>
+                            <li class="menu-item"><a href="business.html">Business</a></li>
+                            <li class="menu-item has-submenu">
+                                <div class="toggle-menu">
+                                    <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
+                                </div>
+                                <ul class="submenu">
+                                    <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
+                                    <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
+                                    <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
+                                    <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
+                                    <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
+                                    <li><a href="product-rader.html">Rader-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="reference.html">Reference</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb-footer">
+                        <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-inner">
+            <h2>Reference</h2>
+            <div class="sub">
+                <div class="sub-txt">
+                    (주)제이씨시스템스의 글로벌<br>선택을 받은 기술력과 함께하세요!
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="tab">
+        <div class="top-tab">
+            <button class="top-tablinks active" onclick="openTopTab(event, 'Rexnord')">Rexnord</button>
+            <button class="top-tablinks" onclick="openTopTab(event, 'Raeder')">Raeder Vogel</button>
+        </div>
+    </section>
+    <section class="table">
+        <div class="sec-inner">
+            <div class="sec-txt">
+                <h2 class="title">국내외 공급실적</h2>
+            </div>
+            <!-- Rexnord 콘텐츠 -->
+            <div id="Rexnord" class="tabcontent rexnord" style="display:block;">
+                <!-- 하위 탭 -->
+                <div class="sub-tab">
+                    <button class="sub-tablinks active" onclick="openSubTab(event, 'Hyundai', 'Rexnord')">현대 자동차</button>
+                    <button class="sub-tablinks" onclick="openSubTab(event, 'Kia', 'Rexnord')">기아 자동차</button>
+                </div>
+                <!-- 현대 자동차 테이블 -->
+                <div id="Hyundai-Rexnord" class="sub-tabcontent" style="display:block;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>Plant</th>
+                                <th>Application</th>
+                                <th>Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>현대자동차</td>
+                                <td>HMMA</td>
+                                <td>작업자 콘베어</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>현대자동차</td>
+                                <td>HMMA</td>
+                                <td>수밀라인</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>현대자동차</td>
+                                <td>HMMA</td>
+                                <td>최종 검수라인</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>현대자동차</td>
+                                <td>HAOS</td>
+                                <td>타이어라인</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>현대자동차</td>
+                                <td>HMMA</td>
+                                <td>타이어라인</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>현대자동차</td>
+                                <td>HMGMA</td>
+                                <td>작업자 콘베어</td>
+                                <td>Belt 폭: 3,000mm, 라인길이 : 45M, 55M, 36M</td>
+                            </tr>
+                            <tr>
+                                <td>현대자동차</td>
+                                <td>HMGMA</td>
+                                <td>수밀라인</td>
+                                <td>Belt 폭 : 1400mm x 2 lanes, 라인길이 : 88M</td>
+                            </tr>
+                            <tr>
+                                <td>현대자동차</td>
+                                <td>HMGMA</td>
+                                <td>최종 검수라인</td>
+                                <td>Belt 폭 : 1400mm x 2 lanes, 라인길이 : 90M</td>
+                            </tr>
+                            <tr>
+                                <td>현대자동차</td>
+                                <td>울산6공장 GP</td>
+                                <td>수밀라인</td>
+                                <td>Belt 폭 : 3300mm, 라인길이 88M</td>
+                            </tr>
+                            <tr>
+                                <td>현대자동차</td>
+                                <td>울산6공장 GP</td>
+                                <td>최종 검수라인</td>
+                                <td>Belt 폭 : 3300mm, 라인길이 90M</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 기아 자동차 테이블 -->
+                <div id="Kia-Rexnord" class="sub-tabcontent" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>Plant</th>
+                                <th>Application</th>
+                                <th>Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>기아자동차</td>
+                                <td>KaGA</td>
+                                <td>최종 검라인</td>
+                                <td>Belt 폭 : 3000mm, 라인길이 : 80M</td>
+                            </tr>
+                            <tr>
+                                <td>기아자동차</td>
+                                <td>KaGA</td>
+                                <td>타이어라인</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>기아자동차</td>
+                                <td>화성4공장</td>
+                                <td>수밀라인</td>
+                                <td>Belt 폭 : 3000mm, 라인길이 65M</td>
+                            </tr>
+                            <tr>
+                                <td>기아자동차</td>
+                                <td>화성4공장</td>
+                                <td>최종 검수라인</td>
+                                <td>Belt 폭 : 3000mm, 라인길이 65M</td>
+                            </tr>
+                            <tr>
+                                <td>기아자동차</td>
+                                <td>KMM</td>
+                                <td>작업자 콘베어(경사형)</td>
+                                <td>Belt 폭 : 2800mm, 라인길이 69M</td>
+                            </tr>
+                            <tr>
+                                <td>기아자동차</td>
+                                <td>화성 5공장</td>
+                                <td>수입 & 최종검사</td>
+                                <td>Belt 폭 : 3300mm, 라인길이 80M</td>
+                            </tr>
+                            <tr>
+                                <td>기아자동차</td>
+                                <td>광명공장</td>
+                                <td>작업자 콘베어</td>
+                                <td>Belt 폭 : 1200mm x 2 lane, 라인길이 110M</td>
+                            </tr>
+                            <tr>
+                                <td>기아자동차</td>
+                                <td>KMM</td>
+                                <td>작업자 콘베어(경사형)</td>
+                                <td>경사형</td>
+                            </tr>
+                            <tr>
+                                <td>기아자동차</td>
+                                <td>화성 5공장</td>
+                                <td>수밀 & 최종검사</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Raeder Vogel 콘텐츠 -->
+            <div id="Raeder" class="tabcontent raeder" style="display: none;">
+                <div class="sub-tab">
+                    <button class="sub-tablinks active" onclick="openSubTab(event, 'Hyundai', 'Raeder')">현대 자동차</button>
+                    <button class="sub-tablinks" onclick="openSubTab(event, 'Kia', 'Raeder')">기아 자동차</button>
+                </div>
+                <!-- 현대 자동차 -->
+                <div id="Hyundai-Raeder" class="sub-tabcontent" style="display:block;">
+                    <div class="img-content">
+                        <img src="img/reference/hyundai-map-mo.jpg" alt="현대자동차 지도">
+                    </div>
+                    <div class="table-content mo">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>국내</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>남양연구소</p>
+                                        <span>- PDI#2 도장, 의장, PDI#3 의장</span>
+                                        <span>- 의장</span>
+                                        <span>- 1공장 의장</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>아산</p>
+                                        <span>- 2공장 의장</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>울산</p>
+                                        <span>- 3공장 의장 & 도장</span>
+                                        <span>- 4공장 의장</span>
+                                        <span>- 5공장 의장, 차체</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>국외</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>중국</p>
+                                        <span>- BHMC#1 의장</span>
+                                        <span>- BHMC#2 의장 및 도장</span>
+                                        <span>- BHMC#3 의장</span>
+                                        <span>- BHMC#4 의장</span>
+                                        <span>- BHMC#5 의장</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>인도</p>
+                                        <span>- HMI 의장</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>미국</p>
+                                        <span>- HMMA 의장, 차체</span>
+                                        <span>- HMGMA 의장</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>체코</p>
+                                        <span>- HMMC 의장</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>튀르키에</p>
+                                        <span>- HMT 의장</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="Kia-Raeder" class="sub-tabcontent">
+                    <div class="img-content">
+                        <img src="img/reference/kia-map-mo.jpg" alt="기아자동차 지도">
+                    </div>
+                    <div class="table-content mo">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>국내</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>Autoland 화성</p>
+                                        <span>- 2공장 의장</span>
+                                        <span>- 3공장 의장</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Autoland 광명</p>
+                                        <span>- 의장</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Autoland 광주</p>
+                                        <span>- 1공장 차체, 의장</span>
+                                        <span>- 2공장 의장</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>국외</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>조지아</p>
+                                        <span>- 의장, 차체</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>슬로바키아</p>
+                                        <span>- 의장</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>중국</p>
+                                        <span>- DYKMC#1 의장</span>
+                                        <span>- DYKMC#2 의장</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>멕시코</p>
+                                        <span>- 의장</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>의장</p>
+                                        <span>- 의장</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-inner">
+            <div class="logo">(주)제이씨시스템스</div>
+            <div class="footer-agreement">
+                <div><a href="#">사업자정보확인</a></div>
+                <div><a href="#">개인정보처리방침</a></div>
+                <div><a href="#">이메일무단수집거부</a></div>
+                <div><a href="contact.html">문의하기</a></div>
+            </div>
+            <div class="footer-info">
+                <ul>
+                    <li>(주)제이씨시스템스</li>
+                    <li class="bar">|</li>
+                    <li>대표이사: 조종후</li>
+                    <li class="bar">|</li>
+                    <li>사업자등록번호: 119-86-66085</li>
+                    <li class="bar">|</li>
+                    <li>서울 금천구 가산디지털1로 233, 405호 (가산동,에이스하이엔드타워9차)</li>
+                </ul>
+            </div>
+            <div class="rights">© 2025 JC Systems Corporation All rights reserved.</div>
+            <div class="scroll-top" onclick="scrollToTop()"></div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/reference.js"></script>
+</body>
+
+</html>

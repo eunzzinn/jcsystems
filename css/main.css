@@ -1,5 +1,8 @@
 @charset 'UTF-8';
 
+main {
+    margin-top: 0;
+}
 /* main slide */
 .main-inner {
     width: 100%; height: 100vh;
