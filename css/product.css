@@ -91,7 +91,7 @@ main .product-main-img {
   width: 100%;
 }
 
-.info h2 {
+.info h2, .progress h2 {
   margin-bottom: 20px;
 }
 .info .product-wrap {
@@ -99,6 +99,9 @@ main .product-main-img {
   border-radius: 20px;
   padding: 30px 16px 16px;
   margin-bottom: 20px;
+}
+.info .product-wrap.last {
+  margin-bottom: 0;
 }
 .info .product-wrap .product-group {
   font-size: 1.8rem;
@@ -124,8 +127,14 @@ main .product-main-img {
 .info .product-wrap .card {
   width: calc(50% - 5px);
   background: var(--white-0);
-  border: var(--gray-200);
+  border: 1px solid var(--gray-200);
   border-radius: 16px;
+  display: flex;
+}
+.info .product-wrap .card a {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .info .product-wrap .card:hover {
   border: 1px solid var(--darkblue-400-primary);
@@ -134,18 +143,19 @@ main .product-main-img {
 .info .product-wrap .card h3 {
   font-size: 1.4rem;
   font-weight: 500;
-  margin-bottom: 8px;
 }
 .info .product-wrap .card p {
   font-size: 1.2rem;
   color: var(--gray-700);
+  margin-top: 8px;
 }
 .info .product-wrap .card:hover p {
   color: var(--gray-200);
 }
 .info .product-wrap .card .card-txt {
-  padding: 20px 10px 16px;
+  padding: 16px 10px;
   border-radius: 0 0 15px 15px;
+  flex: 1;
 }
 .info .product-wrap .card:hover .card-txt {
   background-color: var(--darkblue-400-primary);
@@ -156,7 +166,7 @@ main .product-main-img {
 }
 .info .product-wrap .card img {
   width: 100%;
-  padding: 12px 12px 20px;
+  padding: 12px;
 }
 
 .reference {
@@ -171,4 +181,171 @@ main .product-main-img {
   line-height: 180%;
   color: var(--gray-700);
   margin-top: 24px;
+}
+
+/* rexnord */
+.info .product-wrap .rexnord-card {
+  width: 100%;
+}
+.info .product-wrap .rexnord-card .card-txt {
+  font-size: 1.3rem;
+  color: var(--gray-700);
+}
+.info .product-wrap .rexnord-card .card-txt ul {
+  position: relative;
+  margin-left: 16px;
+}
+.info .product-wrap .rexnord-card .card-txt li {
+  margin: 4px 0;
+}
+.info .product-wrap .rexnord-card .card-txt li::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 4px; height: 4px;
+  background: var(--darkblue-400-primary);
+  border-radius: 50%;
+  top: 50%; left: -6px;
+  transform: translateY(-50%);
+}
+.info .product-wrap .rexnord-card .card-txt li.strong {
+  font-weight: 600;
+  color: var(--gray-900);
+}
+.rexnord-progress, .product-customer {
+  padding-top: 0;
+}
+.rexnord-progress .progress-tab {
+  margin: 24px 0;
+  overflow-x: scroll;
+}
+.rexnord-progress .progress-tab ul {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+.rexnord-progress .progress-tab ul li {
+  font-size: 1.5rem;
+  display: flex;
+  padding: 0 20px;
+  height: 50px;
+  background: var(--gray-100);
+  border-radius: 50px;
+  color: var(--gray-500);
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.rexnord-progress .progress-tab ul li p {
+  line-height: 50px;
+}
+.rexnord-progress .progress-tab ul li span {
+  background: var(--gray-200);
+  display: inline-block;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 12px;
+  line-height: 24px;
+  position: relative;
+  top: 50%; transform: translateY(-50%);
+}
+.rexnord-progress .progress-tab ul li:hover {
+  color: var(--gray-900);
+  transition: ease-out 0.8s;
+}
+.rexnord-progress .progress-tab ul li.active {
+  background: var(--gray-900);
+  color: var(--gray-100);
+  font-weight: 700;
+}
+.rexnord-progress .progress-tab ul li.active span {
+  background: rgba(255,255,255,.2);
+}
+.rexnord-progress .progress-wrap {
+  background: #F2F4F8;
+  padding: 24px 20px;
+  border-radius: 20px;
+}
+.rexnord-progress .progress-wrap .card-img {
+  display: none;
+}
+.rexnord-progress .progress-wrap .card-img.active {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.rexnord-progress .progress-wrap img {
+  width: 100%;
+}
+.rexnord-info .product-wrap .card:hover .card-txt {
+  background: var(--white-0);
+  color: var(--gray-700);
+}
+.rexnord-info .product-reference
+{
+  width: 100%;
+  overflow-x: scroll;
+}
+.product-customer .product-reference {
+  overflow-x: scroll;
+  border-top: none;
+}
+
+
+/* hanel */
+.hanel-info .product-wrap {
+  background: none;
+  padding: 0;
+}
+.hanel-info .product-wrap .card img {
+  padding: 0;
+  border-radius: 16px 16px 0 0;
+}
+.hanel-info .product-wrap .card-grid {
+  gap: 20px 10px;
+}
+.hanel-info .product-wrap .card {
+  border: 1px solid var(--white-0);
+}
+.hanel-info .product-wrap .card .card-txt {
+  background: var(--gray-100);
+}
+
+/* raedel */
+.raedel-tab {
+  width: 100%;
+  background: var(--gray-100);
+  padding: 8px 20px;
+  overflow-x: scroll;
+}
+.raedel-tab ul {
+  display: flex;
+  gap: 8px;
+}
+.raedel-tab ul li {
+  padding: 0 20px;
+  white-space: nowrap;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.raedel-tab ul li p {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  text-align: center;
+}
+.raedel-tab ul li:hover p {
+  color: var(--gray-900);
+}
+.raedel-tab ul li.active {
+  background: var(--gray-900);
+  border-radius: 8px;
+  box-shadow: 4px 4px 20px rgba(0,0,0,.24);
+}
+.raedel-tab ul li.active p {
+  color: var(--white-0);
 }

@@ -29,4 +29,17 @@ $(document).ready(function() {
         // 모든 네비게이션 아이템에서 active 클래스를 제거
         $(".nav-item").removeClass('active');
     });
+
+    //rexnord 제품 공정 과정
+    $('.rexnord-progress .progress-tab ul li').click(function(){
+        var index = $(this).index();
+
+        // li active 클래스 처리
+        $(".progress-tab li").removeClass("active");
+        $(this).addClass("active");
+
+        // 이미지 active 처리
+        $(".progress-wrap .card-img").removeClass("active");
+        $(".progress-wrap .card-img").eq(index).addClass("active");
+    });
 });

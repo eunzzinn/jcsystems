@@ -66,34 +66,7 @@ main .sub {
   width: 100%;
   overflow-x: scroll;
 }
-.table .sub-tabcontent table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1.3rem;
-  text-align: center;
-  border-top: 2px solid var(--gray-900);
-  border-bottom: 2px solid var(--gray-900);
-  margin-top: 30px;
-  min-width: 600px;
-}
-.table .sub-tabcontent table th, .table .sub-tabcontent table td {
-  padding: 20px;
-  border: 1px solid var(--gray-200);
-  min-width: 112px;
-}
-.table .sub-tabcontent table th {
-  background: var(--gray-100);
-  font-weight: 600;
-}
-.table .sub-tabcontent table th:first-child, .table .sub-tabcontent table td:first-child {
-  border-left: none;
-}
-.table .sub-tabcontent table th:last-child, .table .sub-tabcontent table td:last-child {
-  border-right: none;
-}
-.table .sub-tabcontent table tr td:first-child {
-  background-color: #F2F4F8;
-}
+
 
 /* Raeder Vogel */
 .table .raeder .sub-tabcontent .img-content img {
