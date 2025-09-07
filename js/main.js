@@ -1,142 +1,142 @@
 $(document).ready(function() {
 
 
-// ***** MAIN SLIDER (3장, 진행바 이어서 재생, 좌/우/일시정지) *****
+    // ***** MAIN SLIDER (3장, 진행바 이어서 재생, 좌/우/일시정지) *****
 
-$(function () {
-  const slides = [...document.querySelectorAll(".main-slide")];
-  const prevBtns = document.querySelectorAll(".nav-btn.prev");
-  const nextBtns = document.querySelectorAll(".nav-btn.next");
-  const pauseBtns = document.querySelectorAll(".pause-resume");
+    $(function() {
+        const slides = [...document.querySelectorAll(".main-slide")];
+        const prevBtns = document.querySelectorAll(".nav-btn.prev");
+        const nextBtns = document.querySelectorAll(".nav-btn.next");
+        const pauseBtns = document.querySelectorAll(".pause-resume");
 
-  const DURATION = 5000; // 5s
-  let idx = 0;
-  let timer = null;
-  let isPaused = false;
-  let startTime = 0;
-  let elapsed = 0; // ms (현재 슬라이드에서 경과한 시간)
+        const DURATION = 5000; // 5s
+        let idx = 0;
+        let timer = null;
+        let isPaused = false;
+        let startTime = 0;
+        let elapsed = 0; // ms (현재 슬라이드에서 경과한 시간)
 
-  const barOf = (i) => slides[i].querySelector(".progress");
+        const barOf = (i) => slides[i].querySelector(".progress");
 
-  const updatePauseIcons = () => {
-    pauseBtns.forEach((btn) => {
-      const img = btn.querySelector("img");
-      if (isPaused) {
-        img.src = "img/main/ico-play.svg";
-        img.alt = "재생";
-      } else {
-        img.src = "img/main/ico-pause.svg";
-        img.alt = "일시정지";
-      }
+        const updatePauseIcons = () => {
+            pauseBtns.forEach((btn) => {
+                const img = btn.querySelector("img");
+                if (isPaused) {
+                    img.src = "img/main/ico-play.svg";
+                    img.alt = "재생";
+                } else {
+                    img.src = "img/main/ico-pause.svg";
+                    img.alt = "일시정지";
+                }
+            });
+        };
+
+        const stopTimer = () => {
+            if (timer) {
+                clearTimeout(timer);
+                timer = null;
+            }
+        };
+
+        const go = (to, { keepElapsed = false } = {}) => {
+            // 활성 슬라이드 전환
+            slides.forEach((s, i) => s.classList.toggle("active", i === to));
+            stopTimer();
+            if (!keepElapsed) elapsed = 0;
+
+            // 모든 바 리셋, 활성 슬라이드만 현재 상태로 세팅
+            slides.forEach((s, i) => {
+                const b = s.querySelector(".progress");
+                b.style.transition = "none";
+                b.style.width = i === to ?
+                    (isPaused ? `${(elapsed / DURATION) * 100}%` : "0%") :
+                    "0%";
+            });
+
+            // 재생 중이면 남은 시간만큼 진행바 + 자동 넘김
+            if (!isPaused) {
+                const remaining = Math.max(0, DURATION - elapsed);
+                const b = barOf(to);
+                // 다음 프레임에 transition 적용
+                requestAnimationFrame(() => {
+                    b.style.transition = `width ${remaining}ms linear`;
+                    // 강제 리플로우로 transition 재적용 보장
+                    void b.offsetWidth;
+                    b.style.width = "100%";
+                });
+                startTime = Date.now();
+                timer = setTimeout(() => {
+                    elapsed = 0;
+                    next();
+                }, remaining);
+            }
+
+            idx = to;
+        };
+
+        const next = () => go((idx + 1) % slides.length);
+        const prev = () => go((idx - 1 + slides.length) % slides.length);
+
+        const pause = () => {
+            if (isPaused) return;
+            isPaused = true;
+            elapsed += Date.now() - startTime;
+            const b = barOf(idx);
+            b.style.transition = "none";
+            b.style.width = `${Math.min(100, (elapsed / DURATION) * 100)}%`;
+            stopTimer();
+            updatePauseIcons();
+        };
+
+        const resume = () => {
+            if (!isPaused) return;
+            isPaused = false;
+            const remaining = Math.max(0, DURATION - elapsed);
+            const b = barOf(idx);
+            b.style.transition = `width ${remaining}ms linear`;
+            void b.offsetWidth;
+            b.style.width = "100%";
+            startTime = Date.now();
+            timer = setTimeout(() => {
+                elapsed = 0;
+                next();
+            }, remaining);
+            updatePauseIcons();
+        };
+
+        // 버튼 이벤트
+        nextBtns.forEach((btn) =>
+            btn.addEventListener("click", () => {
+                const wasPaused = isPaused;
+                go((idx + 1) % slides.length);
+                if (wasPaused) updatePauseIcons(); // 일시정지 상태 유지(진행바는 0%에서 멈춘 채)
+            })
+        );
+
+        prevBtns.forEach((btn) =>
+            btn.addEventListener("click", () => {
+                const wasPaused = isPaused;
+                go((idx - 1 + slides.length) % slides.length);
+                if (wasPaused) updatePauseIcons();
+            })
+        );
+
+        pauseBtns.forEach((btn) =>
+            btn.addEventListener("click", () => (isPaused ? resume() : pause()))
+        );
+
+        // 초기화
+        go(0);
+        updatePauseIcons();
     });
-  };
-
-  const stopTimer = () => {
-    if (timer) {
-      clearTimeout(timer);
-      timer = null;
-    }
-  };
-
-  const go = (to, { keepElapsed = false } = {}) => {
-    // 활성 슬라이드 전환
-    slides.forEach((s, i) => s.classList.toggle("active", i === to));
-    stopTimer();
-    if (!keepElapsed) elapsed = 0;
-
-    // 모든 바 리셋, 활성 슬라이드만 현재 상태로 세팅
-    slides.forEach((s, i) => {
-      const b = s.querySelector(".progress");
-      b.style.transition = "none";
-      b.style.width = i === to
-        ? (isPaused ? `${(elapsed / DURATION) * 100}%` : "0%")
-        : "0%";
-    });
-
-    // 재생 중이면 남은 시간만큼 진행바 + 자동 넘김
-    if (!isPaused) {
-      const remaining = Math.max(0, DURATION - elapsed);
-      const b = barOf(to);
-      // 다음 프레임에 transition 적용
-      requestAnimationFrame(() => {
-        b.style.transition = `width ${remaining}ms linear`;
-        // 강제 리플로우로 transition 재적용 보장
-        void b.offsetWidth;
-        b.style.width = "100%";
-      });
-      startTime = Date.now();
-      timer = setTimeout(() => {
-        elapsed = 0;
-        next();
-      }, remaining);
-    }
-
-    idx = to;
-  };
-
-  const next = () => go((idx + 1) % slides.length);
-  const prev = () => go((idx - 1 + slides.length) % slides.length);
-
-  const pause = () => {
-    if (isPaused) return;
-    isPaused = true;
-    elapsed += Date.now() - startTime;
-    const b = barOf(idx);
-    b.style.transition = "none";
-    b.style.width = `${Math.min(100, (elapsed / DURATION) * 100)}%`;
-    stopTimer();
-    updatePauseIcons();
-  };
-
-  const resume = () => {
-    if (!isPaused) return;
-    isPaused = false;
-    const remaining = Math.max(0, DURATION - elapsed);
-    const b = barOf(idx);
-    b.style.transition = `width ${remaining}ms linear`;
-    void b.offsetWidth;
-    b.style.width = "100%";
-    startTime = Date.now();
-    timer = setTimeout(() => {
-      elapsed = 0;
-      next();
-    }, remaining);
-    updatePauseIcons();
-  };
-
-  // 버튼 이벤트
-  nextBtns.forEach((btn) =>
-    btn.addEventListener("click", () => {
-      const wasPaused = isPaused;
-      go((idx + 1) % slides.length);
-      if (wasPaused) updatePauseIcons(); // 일시정지 상태 유지(진행바는 0%에서 멈춘 채)
-    })
-  );
-
-  prevBtns.forEach((btn) =>
-    btn.addEventListener("click", () => {
-      const wasPaused = isPaused;
-      go((idx - 1 + slides.length) % slides.length);
-      if (wasPaused) updatePauseIcons();
-    })
-  );
-
-  pauseBtns.forEach((btn) =>
-    btn.addEventListener("click", () => (isPaused ? resume() : pause()))
-  );
-
-  // 초기화
-  go(0);
-  updatePauseIcons();
-});
 
 
 
 
 
-// ***** PRODUCT SLIDER *****
+    // ***** PRODUCT SLIDER *****
 
-const productSlider = document.getElementById("productSlider");
+    const productSlider = document.getElementById("productSlider");
     if (productSlider) {
         const sliderContainer = productSlider.parentElement;
         const originalSlides = Array.from(productSlider.querySelectorAll(".product-slide"));
@@ -198,7 +198,11 @@ const productSlider = document.getElementById("productSlider");
             } else { // 모바일/태블릿 (1025px 미만) - 기존 로직 유지
                 const slideWidth = document.querySelector('.product-slide').offsetWidth;
                 const offset = -((productIndex - totalOriginal) * (slideWidth + 20));
+                // 자연스러운 애니메이션 추가
+                const transitionStyle = animate ? "transform 0.6s ease-in-out" : "none";
+                productSlider.style.transition = transitionStyle;
                 productSlider.style.transform = `translateX(${offset}px)`;
+
                 allSlides.forEach(s => s.classList.remove("active-product"));
             }
 
@@ -227,6 +231,7 @@ const productSlider = document.getElementById("productSlider");
         }
 
         function nextProductSlide() { moveSlide(1); }
+
         function prevProductSlide() { moveSlide(-1); }
 
         productBtns[0].addEventListener("click", () => {
