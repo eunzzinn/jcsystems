@@ -1,5 +1,7 @@
 @charset 'UTF-8';
 
+/********** MO(390 - 820) **********/
+
 main {
     margin-top: 0;
 }
@@ -31,7 +33,7 @@ main {
     z-index: 1;
 }
 
-.main-slide img {
+.main-slide > img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -39,15 +41,20 @@ main {
     z-index: 0;
 }
 
-.main-text {
+.main-txt {
     color: white;
     font-size: 3.6rem;
     font-weight: 600;
     line-height: 1.2;
     z-index: 2;
-    margin: 0 20px;
 }
-
+.main-txt-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20px;
+    width: 100%;
+}
 .main-subtext {
     color: white;
     font-size: 1.5rem;
@@ -60,13 +67,11 @@ main {
     display: flex;
     align-items: center;
     gap: 16px;
-    position: absolute;
-    bottom: 60px;
-    left: 20px;
-    right: 20px;
-    width: auto;
+    max-width: 400px;
     height: 36px;
     z-index: 10;
+    margin-top: 24px;
+
 }
 .progress-bar {
     flex-grow: 1;
@@ -169,15 +174,20 @@ section.products {
 .products .product-slider {
     display: flex;
     gap: 20px;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
 }
 
 .product-slider .product-slide {
     flex: 0 0 280px;
     width: 280px; height: 280px;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
+    position: relative;
+    z-index: 0;
 }
-
+.product-slider .product-slide.active-product {
+  z-index: 2; /* 커지는 카드가 위로 올라오게 */
+}
 .product-slider .product-slide img {
     width: 100%;
     height: auto;
@@ -200,10 +210,12 @@ section.products {
     gap: 12px;
     max-width: 625px;
     width: 100%;
+    justify-content: center;
 }
 .partner .partner-wrap li {
     flex: 0 0 calc((100% - 24px) / 3);
     width: 100%;
+    max-width: 206px;
 }
 .partner .partner-wrap li img {
     width: 100%;
@@ -216,12 +228,12 @@ section.products {
 }
 .partner-marquee-text {
     display: inline-block;
-    animation: marquee 30s linear infinite;
+    animation: marquee 40s linear infinite;
     padding-left: 100%;
     color: #ddd;
     font-size: 60px;
     font-weight: 800;
-     white-space: pre;
+    white-space: pre;
 }
 @keyframes marquee {
     0% {
@@ -253,9 +265,245 @@ section.products {
 .client .client-wrap li {
     flex: 0 0 calc((100% - 40px) / 3);
     width: 100%;
+    max-width: 200px;
 }
 .client .client-wrap li img {
     width: 100%;
 }
 
 
+
+/********** MO(821 - 1024) **********/
+@media screen and (min-width: 821px) {
+    .main-txt {
+        font-size: 4.6rem;
+        position: relative;
+    }
+    .main-subtext {
+        font-size: 1.6rem;
+    }
+    .main-slide-function {
+        width: 400px;
+    }
+    .main-slide {
+        align-items: unset;
+    }
+    .solution .solution-img {
+        height: 912px;
+    }
+    .product-slider .product-slide {
+        flex: 0 0 340px;
+        width: 340px; height: 340px;
+    }
+    .client .client-wrap {
+        margin: 100px auto 80px;
+        gap: 40px;
+        max-width: none;
+        justify-content: center;
+    }
+
+} /*821*/
+
+/********** MO(1025 - 1440) **********/
+@media screen and (min-width: 1025px) {
+    .main-txt-container {
+        margin: 0 60px;
+    }
+    .main-txt {
+      font-size: 6.4rem;
+      padding-top: 20px;
+    }
+    .main-subtext {
+        font-size: 1.8rem;
+    }
+    .main-slide-function {
+        margin-top: 40px;
+    }
+    section .sub {
+        font-size: 2rem;
+    }
+    section h2 {
+        font-size: 4.2rem;
+    }
+    section .sub-txt {
+        font-size: 2.4rem;
+        margin: 20px 0;
+    }
+    .products .sub, .products h2, .products .sub-txt {
+        margin-left: 60px;
+    }
+    section .sec-txt {
+        text-align: left;
+    }
+    .solution {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 90px;
+    }
+    .solution .sec-inner {
+        padding-right: 0;
+    }
+    .solution .solution-img {
+        height: 600px;
+        max-width: 600px;
+        margin-right: 60px;
+        width: 50%;
+    }
+    .solution .contact-btn {
+        margin: 60px 0 0;
+        font-size: 2rem;
+        text-align: center;
+    }
+    section.products {
+        padding-bottom: 120px;
+    }
+    .products .sec-inner {
+        text-align: left;
+        overflow: hidden;
+        padding: 0;
+    }
+    .products .product-slider-container {
+      width: 72.708vw;
+      min-width: 1396px;
+      /* overflow: hidden; */
+      position: relative;
+      min-height: 620px;
+      margin: -200px auto 0;
+    }
+    .products .product-slider-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -13.646vw;
+        width: 13.646vw;            /* 가려줄 범위 (디자인에 맞게 조정) */
+        height: 100%;
+        background: var(--gray-100);       /* 배경색을 섹션 배경과 동일하게 */
+        z-index: 2;
+    }
+    .products .product-slider {
+        display: flex;
+        gap: 20px;
+        align-items: flex-end;
+        position: absolute;
+        left: 0;
+        transition: transform 0.6s ease-in-out;
+    }
+    .product-slider .product-slide {
+        flex: 0 0 340px;
+        width: 340px;
+        height: auto;
+        transition: width 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    }
+    .product-slider .product-slide.active-product {
+        flex: 0 0 620px;
+        width: 620px;
+        opacity: 1;
+    }
+    .product-slider .product-slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .product-slider .product-label {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-top: 24px;
+        color: var(--gray-900);
+    }
+    .products .product-btn-wrap {
+        justify-content: flex-start;
+        padding-left: 60px; /* 전체 레이아웃에 맞춰 여백 조정 */
+        margin-top: 50px;
+        position: relative;
+        z-index: 99;
+    }
+    .products .num {
+        font-size: 1.5rem;
+    }
+    .products .product-btn {
+        width: 28px; height: 28px;
+    }
+    .partner .partner-wrap li img {
+        max-width: 195px;
+    }
+    .partner .partner-wrap {
+        margin: 100px auto 120px;
+    }
+    .partner-marquee-text {
+        font-size: 14rem;
+    }
+    .client {
+        padding-bottom: 160px;
+    }
+
+}/*1025*/
+
+
+/********** MO(1441 ~) **********/
+@media screen and (min-width: 1441px) {
+    .main-txt {
+        font-size: 4.375vw;
+    }
+    .main-subtext {
+        font-size: 2rem;
+    }
+    .main-txt-container {
+        margin: 0;
+    }
+    .main-slide-function {
+        width: 520px;
+    }
+    section h2 {
+        font-size: 4.8rem;
+    }
+    .solution, .main-txt-container {
+        width: 72.708vw;
+        min-width: 1396px;
+        margin: 0 auto;
+    }
+    .solution .solution-img {
+        width: 100%;
+        max-width: 622px;
+        margin-right: 0;
+    }
+    .solution .contact-btn {
+        width: 240px; height: 62px;
+        line-height: 62px;
+    }
+    .products .sec-inner {
+        width: auto;
+    }
+    .products .sub, .products h2, .products .sub-txt, .products .product-btn-wrap {
+        margin-left: 0;
+        width: 72.708vw;
+        min-width: 1396px;
+        margin: 20px auto;
+    }
+    .solution .sec-inner {
+        min-width: 0;
+    }
+    .products .product-btn-wrap {
+        padding-left: 0;
+        margin-top: 50px;
+    }
+    .partner .partner-wrap {
+        flex-wrap: wrap;
+        width: 72.708vw;
+        min-width: 1396px;
+        max-width: none;
+    }
+    .client .client-wrap {
+        gap: 60px 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+} /*1441*/

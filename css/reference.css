@@ -64,7 +64,6 @@ main .sub {
 
 .table .sub-tabcontent {
   width: 100%;
-  overflow-x: scroll;
 }
 
 
@@ -78,9 +77,11 @@ main .sub {
   min-width: 0;
   text-align: left;
 }
-.table .raeder .sub-tabcontent table th {
+.table .raeder .sub-tabcontent .mo table th {
   background: #F2F4F8;
   padding: 12px 8px;
+  font-size: 1.6rem;
+  border-bottom: none;
 }
 .table .raeder .sub-tabcontent table tr td:first-child {
   padding: 24px 8px;
@@ -97,4 +98,64 @@ main .sub {
 }
 .table .raeder .sub-tabcontent table:last-child {
   border-top: none;
+}
+
+
+/********** MO(821 - 1023) **********/
+@media screen and (min-width: 821px) {
+  .table {
+    margin-bottom: 0;
+  }
+  .table .raeder .sub-tabcontent table:last-child {
+    border-top: 2px solid var(--gray-900);
+  }
+  .table .raeder .sub-tabcontent table th {
+    background: var(--gray-100);
+    border-bottom: 1px solid var(--gray-700);
+  }
+  .table .raeder .sub-tabcontent table {
+    text-align: center;
+  }
+  .table .raeder .sub-tabcontent table tr td:first-child {
+    font-weight: 400;
+  }
+  .table .raeder .sub-tabcontent table td.category {
+    font-weight: 700 !important;
+    background: #F2F4F8 !important;
+  }
+  .table .raeder .sub-tabcontent table td.category-line {
+    border-top: 2px solid var(--gray-900);
+  }
+  .table .raeder .sub-tabcontent table td.gr {
+    background-color: var(--gray-100) !important;
+  }
+} /*821*/
+
+/********** MO(1025 - 1440) **********/
+@media screen and (min-width: 1025px) {
+  .tab button {
+    height: 60px;
+    font-size: 1.8rem;
+  }
+  .table .tabcontent .sub-tab {
+    height: 60px;
+  }
+  .table .tabcontent {
+    margin-top: 30px;
+  }
+  .table .tabcontent .sub-tab button {
+    font-size: 1.8rem;
+  }
+}
+
+/********** MO(1441 ~) **********/
+@media screen and (min-width: 1441px) {
+  .table .tabcontent .sub-tab {
+    height: 80px;
+  }
+  .top-tab {
+    width: 72.708vw;
+    min-width: 1396px;
+    margin: 0 auto;
+  }
 }

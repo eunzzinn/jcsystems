@@ -52,3 +52,90 @@ section .sub-txt {
     font-weight: 500;
     margin-top: 12px;
 }
+
+/********** MO(821 - 1023) **********/
+@media screen and (min-width: 821px) {
+    section {
+        padding: 100px 0 0;
+    }
+    section .sec-img {
+        padding: 0 60px;
+    }
+    .business2 .ico-box {
+        margin: 20px 60px 0;
+        padding: 30px 0;
+    }
+    .business2 .ico-box ul {
+        flex-wrap: nowrap;
+    }
+    .business2 .ico-box li {
+        position: relative;
+    }
+    .business2 .ico-box li::after {
+        content: "";
+        width: 2px; height: 50px;
+        background-color: var(--gray-200);
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .business2 .ico-box li:last-child::after {
+        opacity: 0;
+    }
+    .business2 .ico-box p {
+        font-size: 1.6rem;
+    }
+    .business3 .sec-img .business-img {
+        border: 1px solid var(--gray-200);
+    }
+    section .business-img {
+        height: 480px;
+    }
+
+} /*821*/
+
+/********** MO(1025 - 1440) **********/
+@media screen and (min-width: 1025px) {
+    section {
+        padding: 120px 0 0;
+    }
+    section .business-img {
+        height: 560px;
+    }
+    .business2 .ico-box img {
+        width: 80px;
+    }
+    .business2 .ico-box p {
+        margin-top: 16px;
+    }
+    .business2 .ico-box {
+        padding: 50px 0;
+    }
+} /*1025*/
+
+/********** MO(1441 ~) **********/
+@media screen and (min-width: 1441px) {
+    section .business-img {
+        height: 560px;
+    }
+    section .sec-img {
+        width: 72.708vw;
+        min-width: 1396px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .business2 .ico-box {
+        width: 72.708vw;
+        min-width: 1396px;
+        margin: 40px auto 0;
+    }
+
+
+
+
+
+
+
+}

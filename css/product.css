@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 
 main {
-  background: linear-gradient(-180deg, #0A1E37 0%, #0D4B99 100%);
+  background: linear-gradient(-180deg, #0A1E37 30%, #0D4B99 100%);
   margin-top: 0;
   padding-top: 120px;
 }
@@ -89,6 +89,10 @@ main .product-desc {
 }
 main .product-main-img {
   width: 100%;
+  max-width: 408px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .info h2, .progress h2 {
@@ -117,12 +121,12 @@ main .product-main-img {
 .info .product-wrap .product-description {
   font-size: 1.3rem;
   color: var(--gray-800);
-  margin-bottom: 30px;
 }
 .info .product-wrap .card-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 30px;
 }
 .info .product-wrap .card {
   width: calc(50% - 5px);
@@ -135,6 +139,11 @@ main .product-main-img {
   display: flex;
   flex-direction: column;
   flex: 1;
+}
+.info .product-wrap .card .card-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .info .product-wrap .card:hover {
   border: 1px solid var(--darkblue-400-primary);
@@ -167,6 +176,7 @@ main .product-main-img {
 .info .product-wrap .card img {
   width: 100%;
   padding: 12px;
+  max-width: 600px;
 }
 
 .reference {
@@ -184,21 +194,22 @@ main .product-main-img {
 }
 
 /* rexnord */
-.info .product-wrap .rexnord-card {
+.info .product-wrap .list-card {
   width: 100%;
 }
-.info .product-wrap .rexnord-card .card-txt {
+.info .product-wrap .list-card .card-txt {
   font-size: 1.3rem;
   color: var(--gray-700);
 }
-.info .product-wrap .rexnord-card .card-txt ul {
+.info .product-wrap .list-card .card-txt ul {
   position: relative;
   margin-left: 16px;
 }
-.info .product-wrap .rexnord-card .card-txt li {
+.info .product-wrap .list-card .card-txt li {
   margin: 4px 0;
+  position: relative;
 }
-.info .product-wrap .rexnord-card .card-txt li::before {
+.info .product-wrap .list-card .card-txt li::before {
   content: "";
   position: relative;
   display: inline-block;
@@ -208,7 +219,7 @@ main .product-main-img {
   top: 50%; left: -6px;
   transform: translateY(-50%);
 }
-.info .product-wrap .rexnord-card .card-txt li.strong {
+.info .product-wrap .list-card .card-txt li.strong {
   font-weight: 600;
   color: var(--gray-900);
 }
@@ -242,7 +253,7 @@ main .product-main-img {
 .rexnord-progress .progress-tab ul li span {
   background: var(--gray-200);
   display: inline-block;
-  width: 24px; height: 24px;
+  width: 32px; height: 24px;
   border-radius: 50%;
   text-align: center;
   margin-right: 12px;
@@ -275,21 +286,23 @@ main .product-main-img {
   flex-direction: column;
   gap: 12px;
 }
+.rexnord-progress .progress-wrap .progress-img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 .rexnord-progress .progress-wrap img {
   width: 100%;
+}
+.rexnord-progress .progress-wrap p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
 }
 .rexnord-info .product-wrap .card:hover .card-txt {
   background: var(--white-0);
   color: var(--gray-700);
-}
-.rexnord-info .product-reference
-{
-  width: 100%;
-  overflow-x: scroll;
-}
-.product-customer .product-reference {
-  overflow-x: scroll;
-  border-top: none;
 }
 
 
@@ -311,41 +324,575 @@ main .product-main-img {
 .hanel-info .product-wrap .card .card-txt {
   background: var(--gray-100);
 }
+.hanel-customer .sec-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hanel-customer .reference-view {
+  width: 140px; height: 40px;
+  border: 1px solid var(--gray-300);
+  color: var(--gray-600);
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 40px;
+}
+.hanel-customer .reference-view a {
+  position: relative;
+}
+.hanel-customer .reference-view a::after {
+  content: " ";
+  display: inline-block;
+  width: 18px; height: 18px;
+  background: url('../img/product/ico-arrow-right-gr.svg') no-repeat 50%;
+  background-size: cover;
+  margin-left: 8px;
+  vertical-align: sub;
+}
 
 /* raedel */
+
 .raedel-tab {
-  width: 100%;
-  background: var(--gray-100);
-  padding: 8px 20px;
-  overflow-x: scroll;
+  background: #F2F4F8;
+  height: 60px;
+  border-bottom: 1px solid #EEF0F4;
+  position: relative;
+  z-index: 99;
 }
 .raedel-tab ul {
-  display: flex;
-  gap: 8px;
+  justify-content: center;
+  position: relative;
+  z-index: 9999;
+  gap: 0;
 }
 .raedel-tab ul li {
   padding: 0 20px;
-  white-space: nowrap;
   height: 60px;
-  display: flex;
   align-items: center;
-  cursor: pointer;
 }
 .raedel-tab ul li p {
-  width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--gray-500);
   text-align: center;
 }
 .raedel-tab ul li:hover p {
-  color: var(--gray-900);
+  color: var(--gray-700);
 }
 .raedel-tab ul li.active {
-  background: var(--gray-900);
-  border-radius: 8px;
-  box-shadow: 4px 4px 20px rgba(0,0,0,.24);
+  /* background: var(--gray-900); */
+  /* border-radius: 8px; */
+  color: var(--gray-900);
 }
 .raedel-tab ul li.active p {
-  color: var(--white-0);
+  color: var(--gray-900);
+  font-weight: 700;
+}
+
+.raedel-info {
+  display: none;
+}
+.raedel-info.active {
+  display: block;
+}
+.raedel-info .product-wrap .card-wide {
+  width: 100%;
+}
+.raedel-info .product-wrap .card-wide .card-txt {
+  padding: 20px 16px;
+}
+.raedel-info .product-wrap .card-wide .link {
+  font-size: 1.4rem;
+  color: var(--darkblue-300);
+  font-weight: 500;
+  margin-top: 20px;
+}
+.raedel-info .product-wrap .card-wide .link span {
+  display: inline-block;
+  width: 18px; height: 18px;
+  background: url('../img/product/ico-arrow-right-bl.svg') no-repeat 50%;
+  background-size: cover;
+  vertical-align: top;
+}
+/* raedel - table */
+.raedel-info .tabcontent {
+  padding: 0 20px;
+  margin-top: 60px;
+}
+.raedel-info .tabcontent .sub-tab {
+  height: 50px;
+  line-height: 50px;
+  background: var(--gray-100);
+  display: flex;
+  margin-bottom: 30px;
+}
+.raedel-info .tabcontent .sub-tab button {
+  background-color: var(--gray-100);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 50%;
+  color: var(--gray-600);
+  border-bottom: 1px solid var(--gray-700)
+}
+.raedel-info .tabcontent .sub-tab button.active {
+  background-color: #fff;
+  border-width: 1px 1px 0 1px;
+  border-color: var(--gray-700);
+  border-style: solid;
+  color: var(--gray-900);
+}
+.raedel-info .sub-tabcontent {
+  width: 100%;
+}
+.raedel-info table {
+  min-width: none;
+}
+
+.raedel-info .sub-tabcontent .img-content img {
+  width: 100%;
+  margin: 24px 0;
+}
+.raedel-info .sub-tabcontent table {
+  margin-top: 0;
+  min-width: 0;
+  text-align: left;
+}
+.raedel-info .sub-tabcontent table th {
+  background: #F2F4F8;
+  padding: 12px 8px;
+}
+.raedel-info .sub-tabcontent table tr td:first-child {
+  padding: 24px 8px;
+  background-color: var(--white-0);
+}
+.raedel-info .sub-tabcontent table tr td p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.raedel-info .sub-tabcontent table tr td span {
+  display: block;
+  color: var(--gray-700);
+  margin-top: 4px;
+}
+.raedel-info .sub-tabcontent table:last-child {
+  border-top: none;
+}
+.raedel-info .product-wrap .card-wide:hover {
+  border: 1px solid var(--gray-200);
+  box-shadow: none;
+}
+.raedel-info .product-wrap .card-wide:hover .card-txt {
+  background: inherit;
+}
+.raedel-info .product-wrap .card-wide h3 {
+  color: var(--gray-900);
+}
+.raedel-info .product-wrap .card-wide:hover p, .raedel-info .product-wrap .list-card:hover .card-txt {
+  color: var(--gray-700);
+  background: inherit;
+}
+
+
+
+/********** MO(821 - 1023) **********/
+@media screen and (min-width: 821px) {
+  .main-inner {
+    padding: 0 60px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+  main .nav-bar {
+    width: 372px;
+  }
+  main .product-desc {
+    width: 420px;
+    font-size: 1.4rem;
+  }
+  main .product-txt {
+    margin-bottom: 110px;
+  }
+  main .product-main-img {
+    max-width: 720px;
+  }
+  .info .product-wrap {
+    padding: 50px 34px;
+  }
+  .info .product-wrap .product-group {
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+  }
+  .info .product-wrap .product-group span {
+    font-size: 1.5rem;
+    margin: 0 0 0 8px;
+  }
+  .info .product-wrap .product-description {
+    margin: 12px 0 0;
+    font-size: 1.4rem;
+  }
+  .info .product-wrap .card-grid {
+    gap: 20px;
+  }
+  .info .product-wrap .card {
+    width: calc(33.3% - 14px);
+  }
+  .info .product-wrap .card h3 {
+    font-size: 1.6rem;
+  }
+  .info .product-wrap .card p {
+    font-size: 1.3rem;
+  }
+  .info .product-wrap .card .card-txt {
+    padding: 16px 20px;
+  }
+  .reference .product-reference p {
+    font-size: 1.5rem;
+  }
+
+  /* rexnord */
+  .rexnord-info .product-wrap .card {
+    width: 100%;
+  }
+  .info .product-wrap .card .card-img {
+    flex-wrap: nowrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .info .product-wrap .card .card-img img {
+     width: calc(50% - 28px);
+     padding: 30px 12px 12px;
+  }
+  .info .product-wrap .list-card .card-txt ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .info .product-wrap .list-card .card-txt li {
+    width: 50%  ;
+  }
+    .info .product-wrap .list-card .list-wt li {
+    width: 33.3%;
+  }
+  .info .product-wrap .list-card .card-txt li::before {
+    top: 0;
+  }
+  .info .product-wrap .list-card .card-txt li:nth-child(odd) {
+    padding-right: 30px;
+  }
+  .rexnord-info .product-wrap .card .card-txt {
+    padding: 24px 40px;
+  }
+  .info .product-wrap .card .single img {
+    width: 100%;
+    max-width: 1044px;
+  }
+  .rexnord-progress .progress-tab ul {
+    gap: 20px;
+    background: var(--gray-100);
+    border-radius: 60px;
+  }
+  .rexnord-progress .progress-tab ul li {
+    height: 60px;
+    line-height: 60px;
+    width: calc(25% - 15px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.7rem;
+    padding: 0;
+  }
+  .rexnord-progress .progress-tab ul li span {
+    width: 24px;
+    margin-right: 12px;
+  }
+  .rexnord-progress .progress-tab ul li p {
+    line-height: 60px;
+    width: auto;
+  }
+  .rexnord-progress .progress-wrap {
+    display: flex;
+    gap: 12px;
+  }
+  .rexnord-progress .progress-wrap p {
+    font-size: 2.2rem;
+    margin-top: 16px;
+  }
+  .rexnord-progress .progress-wrap .progress-img {
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+  }
+  .rexnord-progress .progress-wrap img {
+    width: calc(33.3% - 8px);
+  }
+
+  /* hanel */
+  .hanel-info .product-wrap {
+    padding: 0;
+  }
+  .hanel-customer .reference-view {
+    width: 170px; height: 52px;
+    font-size: 1.6rem;
+    line-height: 52px;
+  }
+
+  /* raedel */
+  .raedel-tab ul li p {
+    font-size: 1.5rem;
+  }
+  .raedel-info .product-wrap .product-description {
+    margin-bottom: 0;
+  }
+  .raedel-info .product-wrap .card-wide {
+    width: 100%;
+    margin-top: 24px;
+  }
+  .raedel-info .product-wrap .card-wide h3 {
+    font-size: 2rem;
+  }
+  .raedel-info .product-wrap .card-wide .card-txt {
+    padding: 24px 30px;
+  }
+  .raedel-info .product-wrap .list-card .card-txt ul {
+    margin-top: 24px;
+  }
+  .raedel-info .product-wrap .card-grid {
+  }
+  .raedel-info .product-wrap .card-wide:nth-child(2){
+    margin-top: 0;
+  }
+  .raedel-info .tabcontent {
+    padding: 0 60px;
+  }
+  .raedel-info .sub-tabcontent table:last-child {
+    border-top: 2px solid var(--gray-900);
+  }
+  .raedel-info .sub-tabcontent table th {
+    background: var(--gray-100);
+    border-bottom: 1px solid var(--gray-700);
+  }
+  .raedel-info .sub-tabcontent .pc table th {
+    padding: 20px;
+  }
+  .raedel-info .sub-tabcontent table {
+    text-align: center;
+  }
+  .raedel-info .sub-tabcontent table tr td:first-child {
+    font-weight: 400;
+  }
+  .raedel-info .sub-tabcontent table td.category {
+    font-weight: 700 !important;
+    background: #F2F4F8 !important;
+  }
+  .raedel-info .sub-tabcontent table td.category-line {
+    border-top: 2px solid var(--gray-900);
+  }
+  .raedel-info .sub-tabcontent table td.gr {
+    background-color: var(--gray-100) !important;
+  }
+
+}/*821*/
+
+/********** MO(1025 - 1440) **********/
+@media screen and (min-width: 1025px) {
+  main {
+    padding: 0;
+    display: flex;
+  }
+  main .product-desc {
+    font-size: 1.6rem;
+    max-width: 590px;
+    margin: 60px 0 0;
+    width: 100%;
+  }
+  main h2 {
+    margin-bottom: 12px;
+    font-size: 7rem;
+  }
+  main .product-txt {
+    margin-bottom: 0;
+    padding: 220px 0 160px;
+  }
+  .main-inner {
+    align-items: flex-end;
+    width: 100%;
+  }
+  main .product-main-img {
+    max-width: 648px;
+  }
+  .info .product-wrap .product-group {
+    font-size: 2.8rem;
+  }
+  .info .product-wrap .product-group span {
+    font-size: 1.8rem;
+  }
+  .info .product-wrap .product-description {
+    font-size: 1.5rem;
+  }
+  .info .product-wrap .card-grid {
+    gap: 12px;
+  }
+  .info .product-wrap .card {
+    width: calc(25% - 9px);
+  }
+  .info .product-wrap .card h3 {
+    font-size: 2rem;
+  }
+  .info .product-wrap .card p {
+    font-size: 1.4rem;
+  }
+  .info .product-wrap .card .card-txt {
+    padding: 20px;
+  }
+  .info .product-wrap {
+    padding: 50px 40px;
+  }
+  .reference .product-reference p {
+    font-size: 1.6rem;
+  }
+  .rexnord-info .product-wrap .card {
+    width: 100%;
+  }
+  .rexnord-info .product-wrap .card .card-txt {
+    font-size: 1.5rem;
+  }
+  .rexnord-progress .progress-wrap p {
+    font-size: 2.4rem;
+  }
+  .rexnord-progress .progress-wrap {
+    padding: 24px 40px;
+  }
+  .hanel-info .product-wrap {
+    padding: 10px 0 0;
+  }
+  .hanel-info .product-wrap .card-grid {
+    gap: 40px;
+  }
+  .hanel-info .product-wrap .card {
+    width: calc(33.3% - 27px);
+  }
+  .hanel-info .product-wrap .card .card-txt {
+    padding: 30px;
+  }
+
+  /* raedel-vogel */
+  .raedel-tab {
+    height: 80px;
+  }
+  .raedel-tab ul {
+    gap: 20px;
+  }
+  .raedel-tab ul li p {
+    font-size: 1.6rem;
+  }
+  .raedel-tab ul li {
+    height: 80px;
+    padding: 0 30px;
+  }
+  .raedel-info .product-wrap .card-wide {
+    width: 100%;
+  }
+  .raedel-info .product-wrap .card-wide .link {
+    font-size: 1.6rem;
+  }
+  .product-wrap .list-card .card-txt ul {
+    font-size: 1.5rem;
+  }
+  .raedel-info .tabcontent .sub-tab {
+    height: 60px;
+  }
+  .raedel-info .tabcontent .sub-tab button {
+    font-size: 1.8rem;
+  }
+  .raedel-info .sub-tabcontent table {
+    margin-top: 60px;
+  }
+
+}/*1025*/
+
+
+/********** MO(1441 ~) **********/
+@media screen and (min-width: 1441px) {
+  main {
+    height: 800px;
+  }
+  .main-inner {
+    gap: 80px;
+  }
+  main .product-txt {
+    width: 590px;
+    padding: 0 0 220px;
+  }
+  main .product-main-img {
+    max-width: 720px;
+  }
+  main h2 {
+    font-size: 9rem;
+  }
+  main .product-desc {
+    font-size: 1.8rem;
+  }
+  main .nav-bar .nav-item {
+    font-size: 1.6rem;
+  }
+  .info .product-wrap .card .card-img {
+    gap: 40px;
+  }
+  .info .product-wrap .card .card-img img {
+    width: 460px; height: 320px;
+  }
+  .info .product-wrap .card .single .pc {
+    width: 1044px; height: 546px;
+  }
+  .hanel-info .product-wrap {
+    padding: 0;
+  }
+  .hanel-info .product-wrap .card h3 {
+    font-size: 2.8rem;
+  }
+  .hanel-info .product-wrap .card p {
+    font-size: 1.5rem;
+  }
+  .raedel-tab ul {
+    width: 72.708vw;
+    min-width: 1396px;
+    gap: 20px;
+  }
+  .raedel-tab ul li {
+    width: 216px;
+  }
+  .raedel-tab ul li p {
+    font-size: 1.8rem;
+  }
+  .raedel-info .tabcontent {
+    width: 72.708vw;
+    min-width: 1396px;
+    margin: 180px auto 0;
+    padding: 0;
+  }
+  .info h2, .progress h2 {
+    margin-bottom: 30px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

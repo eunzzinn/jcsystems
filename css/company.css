@@ -122,12 +122,14 @@ main .sub {
     margin: 40px 0 60px;
     font-size: 1.6rem;
     color: var(--gray-800);
-    padding: 0 20px;
 }
 
 .location .info-txt-wrap {
     display: flex;
-    margin-top: 20px;
+    margin-top: 12px;
+}
+.location .info-txt-wrap .bar {
+    color: var(--gray-200);
 }
 
 .location .info-txt {
@@ -147,3 +149,191 @@ main .sub {
 section.last {
     margin-bottom: 0;
 }
+
+
+/********** MO(821 - 1023) **********/
+@media screen and (min-width: 821px) {
+    .info .company-info {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    .info .company-info .info-box {
+        width: 100%;
+    }
+    .info .company-img {
+        height: 400px;
+    }
+    .value {
+        margin-bottom: 140px;
+    }
+    .value .value-wrap {
+        margin: 0 60px;
+        width: calc(100% - 120px);
+        display: flex;
+        gap: 20px;
+    }
+    .value .value-content {
+        width: 100%;
+    }
+    .value .sec-txt {
+        padding: 0 0 150px 60px;
+    }
+    .value .sec-txt .bg-txt {
+        font-size: 12rem;
+        left: auto; right: -208px;
+        top: 24px;
+    }
+    .history .sec-txt, .history .history-wrap {
+        padding: 0 60px;
+    }
+    .history .history-img {
+        margin: 40px 60px 60px;
+        height: 438px;
+        width: calc(100% - 120px);
+    }
+    .location .sec-txt {
+        padding: 0 60px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+    .location .location-info {
+        margin: 0;
+    }
+    .location .location-info > * {
+        margin-top: 12px;
+    }
+    .location iframe {
+        height: 400px;
+    }
+    .location .map-wrap {
+        margin: 0 60px 120px;
+        border: 1px solid var(--gray-400);
+    }
+}/*821*/
+
+/********** MO(1025 - 1440) **********/
+@media screen and (min-width: 1025px) {
+    .info .company-info p {
+        font-size: 2rem;
+        margin-bottom: 16px;
+    }
+    .info .company-info .strong{
+        font-size: 6rem;
+    }
+    .info .company-img {
+        margin: 0 60px;
+        width: calc(100% - 120px);
+        height: 500px;
+    }
+    .value .value-wrap {
+        top: 200px;
+        gap: 32px;
+    }
+    .value .sec-txt .bg-txt {
+        font-size: 14rem;
+        right: -230px; top: 62px;
+    }
+    .value .value-content {
+        padding: 65px 0;
+    }
+    .value .value-content img {
+        width: 110px;
+    }
+    .value .value-content .value-txt {
+        font-size: 3.2rem;
+        margin: 16px 0 12px;
+    }
+    .value .value-content p {
+        font-size: 1.8rem;
+    }
+    .history {
+        padding-top: 280px;
+    }
+    .history .history-img {
+        margin: 0
+    }
+    .history .history-container {
+        display: flex;
+        margin-top: 60px;
+        gap: 120px;
+    }
+    .history .history-wrap {
+        padding: 0 60px 0 0;
+    }
+    .history .history-content .history-year {
+        font-size: 6rem;
+    }
+    .history .history-content .history-txt {
+        font-size: 2rem;
+    }
+    .location .location-info > *, .location .info-txt {
+        font-size: 1.8rem;
+    }
+    .location .location-info {
+        padding-top: 40px;
+    }
+    .location iframe {
+        height: 600px;
+    }
+    .location .map-wrap {
+        margin-bottom: 180px;
+    }
+}/*1025*/
+
+/********** MO(1441 ~) **********/
+@media screen and (min-width: 1441px) {
+    main .sub {
+        padding: 0;
+    }
+    .info .company-img {
+        height: 560px;
+        width: 72.708vw;
+        min-width: 1396px;
+        margin: 0 auto;
+    }
+    .value {
+        padding-top: 140px;
+    }
+    .value .value-content .value-txt {
+        font-size: 4rem;
+    }
+    .value .value-wrap {
+        width: 72.708vw;
+        min-width: 1396px;
+        margin: 0;
+    }
+    .value .sec-txt {
+        padding-left: 0;
+        overflow: visible;
+    }
+    .history .history-img {
+        max-width: 760px;
+    }
+    .history .sec-txt, .history .history-wrap {
+        padding: 0;
+    }
+    .history .history-content .history-year {
+        font-size: 6.8rem;
+    }
+    .location .location-info, .location .location-info > *, .location .info-txt {
+        font-size: 2rem;
+    }
+    .location .sec-txt {
+        padding: 0;
+    }
+    .location .map-wrap {
+        margin: 0 0 180px 0;
+    }
+
+
+
+
+
+
+
+
+}/*1441*/
