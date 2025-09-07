@@ -862,6 +862,7 @@ main .product-main-img {
     width: 72.708vw;
     min-width: 1396px;
     gap: 20px;
+    margin: 0 auto;
   }
   .raedel-tab ul li {
     width: 216px;
