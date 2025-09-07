@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/product.css">
@@ -16,108 +17,165 @@
 <body>
     <header id="header">
         <nav>
-            <div class="nav-pc">
+        <div class="nav nav-pc">
+            <a href="index.html" class="logo"></a>
+            <div class="menu">
+                <a href="company.html">Company</a>
+                <a href="business.html">Business</a>
+                <a href="product-effecto.html" class="product-nav">Product<span class="more"></span></a>
+                <a href="reference.html">Reference</a>
+            </div>
+            <div class="contact">
+                <a href="contact.html">문의 신청하기</a>
+            </div>
+        </div>
+        <div class="nav-pc-product" style="display: none;">
+          <div class="nav-pc-inner">
+            <ul>
+              <li>
+                <a href="product-effecto.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner1.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">툴 체인저</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-winkel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner2.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">산업용 특수 베어링</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-airtac.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner3.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">파워 클램프</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-rexnord.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner4.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">플라스틱 체인</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-hanel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner5.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">수직형 자동창고</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-raedel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner6.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">불코란 휠&롤러</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav nav-mo">
+            <a href="index.html" class="logo"></a>
+            <div class="menu"></div>
+        </div>
+        <div class="nav-mo-container">
+          <div class="nav-mo-inner">
+            <div class="gnb-header">
                 <h1 class="logo">
-                    <img src="img/logo.svg" alt="(주)제이씨시스텍스">
+                    <img src="img/logo.svg" alt="(주)제이씨시스템스">
                 </h1>
-                <div class="menu">
-                    <a href="company.html">Company</a>
-                    <a href="business.html">Business</a>
-                    <a href="product.html">Product<span class="more"></span></a>
-                    <a href="reference.html">Reference</a>
-                </div>
-                <div class="contact">
-                    <a href="contact.html">문의 신청하기</a>
-                </div>
+                <button class="close-btn" aria-label="메뉴 닫기">
+                    <img src="img/ico-close.svg" alt=" 닫기">
+                </button>
             </div>
-            <div class="nav-mo">
-                <a href="index.html" class="logo"></a>
-                <div class="menu"></div>
+            <div class="gnb-nav">
+                <ul class="main-menu">
+                    <li class="menu-item"><a href="company.html">Company</a></li>
+                    <li class="menu-item"><a href="business.html">Business</a></li>
+                    <li class="menu-item has-submenu">
+                      <div class="toggle-menu">
+                        <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
+
+                      </div>
+                      <ul class="submenu">
+                          <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
+                          <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
+                          <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
+                          <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
+                          <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
+                          <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item"><a href="reference.html">Reference</a></li>
+                </ul>
             </div>
-            <div class="nav-mo-container">
-                <div class="nav-mo-inner">
-                    <div class="gnb-header">
-                        <h1 class="logo">
-                            <img src="img/logo.svg" alt="(주)제이씨시스템스">
-                        </h1>
-                        <button class="close-btn" aria-label="메뉴 닫기">
-                            <img src="img/ico-close.svg" alt=" 닫기">
-                        </button>
-                    </div>
-                    <div class="gnb-nav">
-                        <ul class="main-menu">
-                            <li class="menu-item"><a href="company.html">Company</a></li>
-                            <li class="menu-item"><a href="business.html">Business</a></li>
-                            <li class="menu-item has-submenu">
-                                <div class="toggle-menu">
-                                    <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
-                                </div>
-                                <ul class="submenu">
-                                    <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
-                                    <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
-                                    <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
-                                    <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
-                                    <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
-                                    <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item"><a href="reference.html">Reference</a></li>
-                        </ul>
-                    </div>
-                    <div class="gnb-footer">
-                        <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
-                    </div>
-                </div>
+            <div class="gnb-footer">
+                <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
             </div>
-        </nav>
+          </div>
+        </div>
+    </nav>
     </header>
     <main>
         <div class="main-inner">
-            <h2>Rexnord</h2>
-            <div class="nav-bar">
-                <div class="nav-item home">
-                    <a href="index.html">
-                        <img src="img/product/home.svg" alt="메인">
-                    </a>
+            <div class="product-txt">
+                <h2 data-aos="fade-up">Rexnord</h2>
+                <div class="nav-bar" data-aos="fade-up">
+                    <div class="nav-item home">
+                        <a href="index.html">
+                            <img src="img/product/home.svg" alt="메인">
+                        </a>
+                    </div>
+                    <div class="nav-item">Product<span class="arrow"></span>
+                        <ul class="dropdown">
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="business.html">Business</a></li>
+                            <li style="color:var(--darkblue-400-primary)"><a href="product.html">Product</a></li>
+                            <li><a href="reference.html">Reference</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item">Rexnord<span class="arrow"></span>
+                        <ul class="dropdown">
+                            <li><a href="product-effecto.html">Effecto</a></li>
+                            <li><a href="product-winkel.html">Winkel</a></li>
+                            <li><a href="product-airtac.html">AirTAC</a></li>
+                            <li style="color:var(--darkblue-400-primary)"><a href="product-rexnord.html">Rexnord</a></li>
+                            <li><a href="product-hanel.html">Hanel</a></li>
+                            <li><a href="product-raedel.html">Raedel-Vogel</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="nav-item">Product<span class="arrow"></span>
-                    <ul class="dropdown">
-                        <li>Company</li>
-                        <li>Business</li>
-                        <li style="color:var(--darkblue-400-primary)">Product</li>
-                        <li>Reference</li>
-                    </ul>
-                </div>
-                <div class="nav-item">Rexnord<span class="arrow"></span>
-                    <ul class="dropdown">
-                        <li><a href="product-effecto.html">Effecto</a></li>
-                        <li><a href="product-winkel.html">Winkel</a></li>
-                        <li><a href="product-airtac.html">AirTAC</a></li>
-                        <li style="color:var(--darkblue-400-primary)"><a href="product-rexnord.html">Rexnord</a></li>
-                        <li><a href="product-hanel.html">Hanel</a></li>
-                        <li><a href="product-raedel.html">Raedel-Vogel</a></li>
-                    </ul>
-                </div>
+                <p class="product-desc" data-aos="fade-up">
+                    Rexnord는 산업용 베어링, 커플링, 기어 구동 장치, 컨베이어 시스템, 산업용 체인 및 PT 드라이브 부품 등 핵심 전력 전달 솔루션을 제공하는 글로벌 리더로 다양한 산업 영역(자동차, 식음료, 에너지, 광업 등)에 걸친 제품 포트폴리오를 보유하고 있습니다.
+                </p>
             </div>
-            <p class="product-desc">
-                Rexnord는 산업용 베어링, 커플링, 기어 구동 장치, 컨베이어 시스템, 산업용 체인 및 PT 드라이브 부품 등 핵심 전력 전달 솔루션을 제공하는 글로벌 리더로 다양한 산업 영역(자동차, 식음료, 에너지, 광업 등)에 걸친 제품 포트폴리오를 보유하고 있습니다.
-            </p>
-            <img src="img/product/rexnord.png" alt="Airtac" class="product-main-img">
+            <div class="product-img" data-aos="fade-up" data-aos-delay="500">
+                <img src="img/product/rexnord.png" alt="Airtac" class="product-main-img">
+            </div>
         </div>
     </main>
     <section class="info rexnord-info">
         <div class="sec-inner">
-            <div class="sec-txt">
+            <div class="sec-txt" data-aos="fade-up">
                 <h2 class="title">제품 소개</h2>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">Rexnord 하이브리드 체인 6990H4 & 6990H8<span>Rexnord Hybrid Chain 6990H4 & 6990H8</span></div>
                 <div class="product-description">
                     작업자 컨베어, 수밀테스트, 최종검사라인에 최적화된 하이브리드 체인입니다.
                 </div>
                 <div class="card-grid">
-                    <div class="card rexnord-card">
-                        <a href="#">
+                    <div class="card list-card">
+                        <a href="https://www.rexnord.com/contentitems/techlibrary/documents/ft5-019_ltr_productsheet" target="_blank">
                             <div class="card-img">
                                 <img src="img/product/rexnord1-1.png" alt="rexnord">
                                 <img src="img/product/rexnord1-2.png" alt="rexnord">
@@ -138,35 +196,36 @@
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">Rexnord 하이브리드 체인 6990ESD4<span>Rexnord Hybrid Chain 6990ESD4 </span></div>
                 <div class="product-description">
                     전면 플라스틱 구조의 경제적인 옵션으로 짧은 컨베이어 길이나 전통적인 컨베이어 구조에 적합합니다.
                 </div>
                 <div class="card-grid">
-                    <div class="card rexnord-card">
-                        <a href="#">
-                            <div class="card-img">
-                                <img src="img/product/rexnord2-1.png" alt="rexnord">
+                    <div class="card list-card">
+                        <a href="https://www.rexnord.com/contentitems/techlibrary/documents/ft5-019_ltr_productsheet" target="_blank">
+                            <div class="card-img single">
+                                <img src="img/product/rexnord2-1-mo.png" alt="rexnord" class="mo">
+                                <img src="img/product/rexnord2-1-pc.png" alt="rexnord" class="pc">
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="product-wrap last">
-                <div class="product-group"> Rexnord 3120 체인<span>Rexnord 3120 Chain</span></div>
+            <div class="product-wrap last" data-aos="fade-up">
+                <div class="product-group">Rexnord 3120 체인<span>Rexnord 3120 Chain</span></div>
                 <div class="product-description">
                     3120 시리즈 3인치 피치 벨트는 Rexnord의 가장 강력한 플라스틱 모듈러 체인
                 </div>
                 <div class="card-grid">
-                    <div class="card rexnord-card">
-                        <a href="#">
+                    <div class="card list-card">
+                        <a href="https://www.rexnord.com/contentitems/techlibrary/documents/ft5-019_ltr_productsheet" target="_blank">
                             <div class="card-img">
                                 <img src="img/product/rexnord3-1.png" alt="rexnord">
                                 <img src="img/product/rexnord3-2.png" alt="rexnord">
                             </div>
                             <div class="card-txt">
-                                <ul class="list">
+                                <ul class="list list-wt">
                                     <li>오일교환 컨베어</li>
                                     <li>2열 최종 조립라인 컨베어</li>
                                     <li>스키드 및 팔레트 이송 컨베어</li>
@@ -183,10 +242,10 @@
     </section>
     <section class="rexnord-progress">
         <div class="sec-inner">
-            <div class="sec-txt">
+            <div class="sec-txt" data-aos="fade-up">
                 <h2 class="title">제품 공정 과정</h2>
             </div>
-            <div class="progress-tab">
+            <div class="progress-tab horiz-scroll touch-drag" data-aos="fade-up">
                 <ul>
                     <li class="active">
                         <span>1</span>
@@ -206,38 +265,51 @@
                     </li>
                 </ul>
             </div>
-            <div class="progress-wrap">
+            <div class="progress-wrap" data-aos="fade-up">
                 <div class="card-img active">
-                    <img src="img/product/rexnord4-1.png" alt="rexnord">
-                    <img src="img/product/rexnord4-2.png" alt="rexnord">
-                    <img src="img/product/rexnord4-3.png" alt="rexnord">
+                    <p>작업자 컨베이어</p>
+                    <div class="progress-img">
+                        <img src="img/product/rexnord4-1.png" alt="rexnord">
+                        <img src="img/product/rexnord4-2.png" alt="rexnord">
+                        <img src="img/product/rexnord4-3.png" alt="rexnord">
+                    </div>
                 </div>
                 <div class="card-img">
-                    <img src="img/product/rexnord4-4.png" alt="rexnord">
-                    <img src="img/product/rexnord4-5.png" alt="rexnord">
-                    <img src="img/product/rexnord4-6.png" alt="rexnord">
+                    <p>최종 검사 라인</p>
+                    <div class="progress-img">
+                        <img src="img/product/rexnord4-4.png" alt="rexnord">
+                        <img src="img/product/rexnord4-5.png" alt="rexnord">
+                        <img src="img/product/rexnord4-6.png" alt="rexnord">
+                    </div>
                 </div>
                 <div class="card-img">
-                    <img src="img/product/rexnord4-7.png" alt="rexnord">
-                    <img src="img/product/rexnord4-8.png" alt="rexnord">
-                    <img src="img/product/rexnord4-9.png" alt="rexnord">
+                    <p>SKID 이송</p>
+                    <div class="progress-img">
+                        <img src="img/product/rexnord4-7.png" alt="rexnord">
+                        <img src="img/product/rexnord4-8.png" alt="rexnord">
+                        <img src="img/product/rexnord4-9.png" alt="rexnord">
+                    </div>
+
                 </div>
                 <div class="card-img">
-                    <img src="img/product/rexnord4-10.png" alt="rexnord">
-                    <img src="img/product/rexnord4-11.png" alt="rexnord">
-                    <img src="img/product/rexnord4-12.png" alt="rexnord">
+                    <p>수밀라인</p>
+                    <div class="progress-img">
+                        <img src="img/product/rexnord4-10.png" alt="rexnord">
+                        <img src="img/product/rexnord4-11.png" alt="rexnord">
+                        <img src="img/product/rexnord4-12.png" alt="rexnord">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="product-customer last">
         <div class="sec-inner">
-            <div class="sec-txt">
+            <div class="sec-txt" data-aos="fade-up">
                 <h2 class="title">제품 레퍼런스</h2>
             </div>
             <div class="product-reference">
                 <!-- 현대 자동차 테이블 -->
-                <div id="Hyundai-Rexnord" class="sub-tabcontent" style="display:block;">
+                <div id="Hyundai-Rexnord" class="sub-tabcontent scroll-custom touch-drag" style="display:block;" data-aos="fade-up">
                     <table>
                         <thead>
                             <tr>
@@ -372,9 +444,8 @@
         <div class="footer-inner">
             <div class="logo">(주)제이씨시스템스</div>
             <div class="footer-agreement">
-                <div><a href="#">사업자정보확인</a></div>
-                <div><a href="#">개인정보처리방침</a></div>
-                <div><a href="#">이메일무단수집거부</a></div>
+                <div><a href="privacy.html" target="_blank">개인정보처리방침</a></div>
+                <div><a href="email.html" target="_blank">이메일무단수집거부</a></div>
                 <div><a href="contact.html">문의하기</a></div>
             </div>
             <div class="footer-info">
@@ -393,6 +464,8 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/common.js"></script>
     <script src="js/product.js"></script>
 </body>

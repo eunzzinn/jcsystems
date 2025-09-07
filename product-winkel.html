@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/product.css">
@@ -16,108 +17,165 @@
 <body>
     <header id="header">
         <nav>
-            <div class="nav-pc">
+        <div class="nav nav-pc">
+            <a href="index.html" class="logo"></a>
+            <div class="menu">
+                <a href="company.html">Company</a>
+                <a href="business.html">Business</a>
+                <a href="product-effecto.html" class="product-nav">Product<span class="more"></span></a>
+                <a href="reference.html">Reference</a>
+            </div>
+            <div class="contact">
+                <a href="contact.html">문의 신청하기</a>
+            </div>
+        </div>
+        <div class="nav-pc-product" style="display: none;">
+          <div class="nav-pc-inner">
+            <ul>
+              <li>
+                <a href="product-effecto.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner1.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">툴 체인저</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-winkel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner2.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">산업용 특수 베어링</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-airtac.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner3.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">파워 클램프</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-rexnord.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner4.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">플라스틱 체인</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-hanel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner5.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">수직형 자동창고</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-raedel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner6.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">불코란 휠&롤러</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav nav-mo">
+            <a href="index.html" class="logo"></a>
+            <div class="menu"></div>
+        </div>
+        <div class="nav-mo-container">
+          <div class="nav-mo-inner">
+            <div class="gnb-header">
                 <h1 class="logo">
-                    <img src="img/logo.svg" alt="(주)제이씨시스텍스">
+                    <img src="img/logo.svg" alt="(주)제이씨시스템스">
                 </h1>
-                <div class="menu">
-                    <a href="company.html">Company</a>
-                    <a href="business.html">Business</a>
-                    <a href="product.html">Product<span class="more"></span></a>
-                    <a href="reference.html">Reference</a>
-                </div>
-                <div class="contact">
-                    <a href="contact.html">문의 신청하기</a>
-                </div>
+                <button class="close-btn" aria-label="메뉴 닫기">
+                    <img src="img/ico-close.svg" alt=" 닫기">
+                </button>
             </div>
-            <div class="nav-mo">
-                <a href="index.html" class="logo"></a>
-                <div class="menu"></div>
+            <div class="gnb-nav">
+                <ul class="main-menu">
+                    <li class="menu-item"><a href="company.html">Company</a></li>
+                    <li class="menu-item"><a href="business.html">Business</a></li>
+                    <li class="menu-item has-submenu">
+                      <div class="toggle-menu">
+                        <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
+
+                      </div>
+                      <ul class="submenu">
+                          <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
+                          <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
+                          <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
+                          <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
+                          <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
+                          <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item"><a href="reference.html">Reference</a></li>
+                </ul>
             </div>
-            <div class="nav-mo-container">
-                <div class="nav-mo-inner">
-                    <div class="gnb-header">
-                        <h1 class="logo">
-                            <img src="img/logo.svg" alt="(주)제이씨시스템스">
-                        </h1>
-                        <button class="close-btn" aria-label="메뉴 닫기">
-                            <img src="img/ico-close.svg" alt=" 닫기">
-                        </button>
-                    </div>
-                    <div class="gnb-nav">
-                        <ul class="main-menu">
-                            <li class="menu-item"><a href="company.html">Company</a></li>
-                            <li class="menu-item"><a href="business.html">Business</a></li>
-                            <li class="menu-item has-submenu">
-                                <div class="toggle-menu">
-                                    <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
-                                </div>
-                                <ul class="submenu">
-                                    <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
-                                    <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
-                                    <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
-                                    <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
-                                    <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
-                                    <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item"><a href="reference.html">Reference</a></li>
-                        </ul>
-                    </div>
-                    <div class="gnb-footer">
-                        <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
-                    </div>
-                </div>
+            <div class="gnb-footer">
+                <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
             </div>
-        </nav>
+          </div>
+        </div>
+    </nav>
     </header>
     <main>
         <div class="main-inner">
-            <h2>Winkel</h2>
-            <div class="nav-bar">
-                <div class="nav-item home">
-                    <a href="index.html">
-                        <img src="img/product/home.svg" alt="메인">
-                    </a>
+            <div class="product-txt">
+                <h2 data-aos="fade-up">Winkel</h2>
+                <div class="nav-bar" data-aos="fade-up">
+                    <div class="nav-item home">
+                        <a href="index.html">
+                            <img src="img/product/home.svg" alt="메인">
+                        </a>
+                    </div>
+                    <div class="nav-item">Product<span class="arrow"></span>
+                        <ul class="dropdown">
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="business.html">Business</a></li>
+                            <li style="color:var(--darkblue-400-primary)"><a href="product.html">Product</a></li>
+                            <li><a href="reference.html">Reference</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item">Winkel<span class="arrow"></span>
+                        <ul class="dropdown">
+                            <li><a href="product-effecto.html">Effecto</a></li>
+                            <li style="color:var(--darkblue-400-primary)"><a href="product-winkel.html">Winkel</a></li>
+                            <li><a href="product-airtac.html">AirTAC</a></li>
+                            <li><a href="product-rexnord.html">Rexnord</a></li>
+                            <li><a href="product-hanel.html">Hanel</a></li>
+                            <li><a href="product-raedel.html">Raedel-Vogel</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="nav-item">Product<span class="arrow"></span>
-                    <ul class="dropdown">
-                        <li>Company</li>
-                        <li>Business</li>
-                        <li style="color:var(--darkblue-400-primary)">Product</li>
-                        <li>Reference</li>
-                    </ul>
-                </div>
-                <div class="nav-item">Winkel<span class="arrow"></span>
-                    <ul class="dropdown">
-                        <li><a href="product-effecto.html">Effecto</a></li>
-                        <li style="color:var(--darkblue-400-primary)"><a href="product-winkel.html">Winkel</a></li>
-                        <li><a href="product-airtac.html">AirTAC</a></li>
-                        <li><a href="product-rexnord.html">Rexnord</a></li>
-                        <li><a href="product-hanel.html">Hanel</a></li>
-                        <li><a href="product-raedel.html">Raedel-Vogel</a></li>
-                    </ul>
-                </div>
+                <p class="product-desc" data-aos="fade-up">
+                    WINKEL은 43년간 선형 시스템 및 자재 취급 분야에서 시장을 선도하며 수천 개의 핸들링 시스템을 공급해왔습니다. 지게차 부품에서 시작해 다양한 산업에 적용 가능한 맞춤형 솔루션으로 발전해왔으며, 풍부한 경험과 최신 설계 기술을 바탕으로 고객의 경쟁력 향상에 기여하고 있습니다.
+                </p>
             </div>
-            <p class="product-desc">
-                WINKEL은 43년간 선형 시스템 및 자재 취급 분야에서 시장을 선도하며 수천 개의 핸들링 시스템을 공급해왔습니다. 지게차 부품에서 시작해 다양한 산업에 적용 가능한 맞춤형 솔루션으로 발전해왔으며, 풍부한 경험과 최신 설계 기술을 바탕으로 고객의 경쟁력 향상에 기여하고 있습니다.
-            </p>
-            <img src="img/product/winkel.png" alt="Winkel" class="product-main-img">
+            <div class="product-img" data-aos="fade-up" data-aos-delay="500">
+                <img src="img/product/winkel.png" alt="Winkel" class="product-main-img">
+            </div>
         </div>
     </main>
     <section class="info">
         <div class="sec-inner">
-            <div class="sec-txt">
+            <div class="sec-txt" data-aos="fade-up">
                 <h2 class="title">제품 소개</h2>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">선형 가이드<span>Linear Guides</span></div>
                 <div class="product-description">
                     WINKEL Linear Guide는 고하중과 고정밀을 지원하는 모듈형 시스템으로, 표준화된 부품과 구성 툴을 통해 다양한 산업 환경에 맞춘 효율적이고 경제적인 설계를 가능하게 합니다.
                 </div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/winkel-bearings/combined-bearing" target="_blank">
                             <img src="img/product/winkel1-1.png" alt="Winkel Bearings">
                             <div class="card-txt">
                                 <h3>Winkel Bearings</h3>
@@ -125,7 +183,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/profiles/standard-u-profiles-nbv" target="_blank">
                             <img src="img/product/winkel1-2.png" alt="Winkel Guide Profile">
                             <div class="card-txt">
                                 <h3>Winkel Guide Profile</h3>
@@ -133,7 +191,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/flange-plates/ap-flange-plates-rectangular" target="_blank">
                             <img src="img/product/winkel1-3.png" alt="Flange Plate">
                             <div class="card-txt">
                                 <h3>Flange Plate</h3>
@@ -141,7 +199,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/components/wheel-blocs/type/wheel-bloc/RN-10-100" target="_blank">
                             <img src="img/product/winkel1-4.png" alt="Monorail / Wheel blocks">
                             <div class="card-txt">
                                 <h3>Monorail / Wheel blocks</h3>
@@ -150,14 +208,14 @@
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">선형 축과 시스템<span>Linear Axis / Systems</span></div>
                 <div class="product-description">
                     Winkel 리니어 시스템을 사용하면 80kg에서 최대 10,000kg의 중하중 및 고하중을 손쉽게 처리할 수 있으며, Winkel 리니어 액슬은 최대 5m/s의 빠른 속도 와 최대 ±0.1mm의 정밀도를 자랑합니다.
                 </div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/linear-axis/dle-linear-axis-units-high-dynamic" target="_blank">
                             <img src="img/product/winkel2-1.png" alt="DLE High Dynamic">
                             <div class="card-txt">
                                 <h3>DLE High Dynamic</h3>
@@ -165,7 +223,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/linear-axis/sle-linear-axis-heavy-duty" target="_blank">
                             <img src="img/product/winkel2-2.png" alt="SLE Heavy Duty">
                             <div class="card-txt">
                                 <h3>SLE Heavy Duty</h3>
@@ -173,7 +231,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/multi-axis-units/ple-linear-axis-high-dynamic" target="_blank">
                             <img src="img/product/winkel2-3.png" alt="PLE High Dynamic">
                             <div class="card-txt">
                                 <h3>PLE High Dynamic</h3>
@@ -181,7 +239,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/multi-axis-units/rle-robot-tracks" target="_blank">
                             <img src="img/product/winkel2-4.png" alt="RLE Robot tracks">
                             <div class="card-txt">
                                 <h3>RLE Robot tracks</h3>
@@ -189,7 +247,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/multi-axis-units/rts-rtp-readytrack" target="_blank">
                             <img src="img/product/winkel2-5.png" alt="Ready Tracks Ground Axis">
                             <div class="card-txt">
                                 <h3>Ready Tracks Ground Axis</h3>
@@ -197,7 +255,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/linear-axis/cobot-track" target="_blank">
                             <img src="img/product/winkel2-6.png" alt="COBOT Tracks">
                             <div class="card-txt">
                                 <h3>COBOT Tracks</h3>
@@ -206,14 +264,14 @@
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">자재 취급<span>Material Handling</span></div>
                 <div class="product-description">
                     팔레트 리프터, 특수 리프터, 로지스틱 유닛 등 모듈형 구성 요소를 기반으로, 0.5톤에서 100톤까지 다양한 중·대형 하중을 고속·고정밀로 처리할 수 있는 경제적이고 신뢰성 높은 시스템입니다.
                 </div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/pallet-lifter" target="_blank">
                             <img src="img/product/winkel3-1.png" alt="Pallet Lifter">
                             <div class="card-txt">
                                 <h3>Pallet Lifter</h3>
@@ -221,7 +279,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/logistics-systems/fast-pick-station" target="_blank">
                             <img src="img/product/winkel3-2.png" alt="Pallet-Handling">
                             <div class="card-txt">
                                 <h3>Pallet-Handling</h3>
@@ -229,7 +287,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/lifting-systems/automotive-lifter" target="_blank">
                             <img src="img/product/winkel3-3.png" alt="Lift Systems">
                             <div class="card-txt">
                                 <h3>Lift Systems</h3>
@@ -237,7 +295,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/logistics-systems/puma-pallet-sr-storage-and-retrieval-machines" target="_blank">
                             <img src="img/product/winkel3-4.png" alt="Storage / Retrieval Machines">
                             <div class="card-txt">
                                 <h3>Storage / Retrieval Machines</h3>
@@ -245,24 +303,23 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://www.winkel.de/en/special-applications/tool-changing-systems" target="_blank">
                             <img src="img/product/winkel3-5.png" alt="Tool Changing Systems">
                             <div class="card-txt">
                                 <h3>Tool Changing Systems</h3>
                             </div>
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
     <section class="reference last">
         <div class="sec-inner">
-            <div class="sec-txt">
+            <div class="sec-txt" data-aos="fade-up">
                 <h2 class="title">제품 레퍼런스</h2>
             </div>
-            <div class="product-reference">
+            <div class="product-reference" data-aos="fade-up">
                 <p>특수건설 / 제이디_POSCO 인도네시아 / 태양백단_풍산금속 / (주)종로_현대제철 / 제이디 / 원일상공 / 모듈글로벌 / 성진CBK / 대우베어링 / (주)마산 / 삼우에코_FIVES / 우성오토콘 / (주)종로_현대제철 / 김포비앤에스_LG 화학 / 대성베아링상사 / 대우베어링 / 삼아알미늄 / 대성후드텍_동원시스템즈 / 롤링코리아 / 대성후드텍_상가리아 이가공장 / 김포비앤에스_LG화학 대산공장 / 원상사_현대제철 / 타임시스템_HMMA / 엠앤디 / 원일상공 / 엠앤디 / 스틸맥스_현대중공업 / 국제플랜트_세아특수강 / (주)종로_POSCO / 연광엔지니어링_ACHENBACH / 삼부기업 / 대성베아링상사 / 우성오토콘_Kruger USA / 대성베아링상사 / 대성후드텍 / 로지스솔루션(주)_자전거 주차장 / 대성베아링상사 / 동화엘에스씨_대한제강 / 한일베아링 / 디에스콘_POSCO / 비알샤프트 / 에스에프에이서비스_V6250 / 웬투스_HMC#3 도장_4차 / 삼아알미늄 / 원일상공 / 예준테크_HMC소재공장 / 대성후드텍 / 에스에프에이서비스_V5250 & V6250 / 디씨엠베어링 / 태광공업사 / 무한상사 / 에스에프에이서비스_V6250 / 디에스콘 / (주)한성중공업 / 유닉테크노스_INXA / 에스에프에이서비스_V5250&6250 / 대성후드텍 / 연광엔지니어링_삼아알미늄 / 원일상공 / 에스에프에이서비스_V5250 / 원일상공 / (주)종로_POSCO / 원일상공_세아제강 / 연광엔지니어링 / 삼부기업 / 웬투스_HMC#3도장 PBS 추가건 / 대성후드텍_원팩 / 원일상공 / 동신산업_5250&6250 / 동신산업_삼성전자 클린룸 / 웬투스_HMC#3도장 PBS 추가건 / 에스에프에이서비스_V5250&6250 / 우성오토콘_CE PACK / 대성베아링상사 / 한중알앤비 / 원일상공 / 서원물산_현대제철 / 이레테크놀로지 / 성호개발_인천공항 / (주)디에스콘 / 다호테크 / 대성베아링상사 / 세원에스디에스 / 우성오토콘_Romcarton / 두리엠텍&우리이엔티_POSCO / 대성베아링상사 / 다이후코리아_HMC울산#5 BC / 대성베아링상사 / AFT KOREA_KMMG / 대성베아링상사 / (주)종로_한보철강 / (주)종로_POSCO 광양 / 김포비앤에스_카길애그리퓨리나평택공장 / BM KOREA_무림피앤피 / (주)종로_현대2냉연 / (주)종로_현대특수강 / 중문_나라케이아이씨 / 대성베아링상사 / TSCO_기아광주#2 / 제이에스이노텍_세아특수강 / 유니텍시스템_현대제철 / 서신상사 / 동영플럭_현대제철 / 제이에스이노텍_현대제철 / 제이에스이노텍_DHI_로템 특수강 / (주)영원인써씨 / 제이에스이노텍_DHI_로템 특수강 / (주)와이제이통상_로템 특수강 설비 / 아피발코리아 / 에이에프티코리아_울산#52 / 우성오토콘_GP SAN LEANDRO / 우성오토콘_자체제작기계 Spare / BM KOREA_무림피앤피(울산) / (주)김포비앤에스_카길애그리퓨리나 / 옥성정밀_삼아알미늄 / (주)종로_POSCO 포항 / 세원산업 / 연광엔지니어링 / SE.타타대우상용차 / 한종특수베어링 / 김포비앤에스_LG 화학 / 대표엔터프라이즈 / 삼진FA / 아피발코리아 / 유일산업기계_BMW / (유)현대테크_POSCO 광양 / YJ상사 / 네오인터네셔널 / 일진상사 / 김포비앤에스(주)_현대EP 울산공장 / 조양정밀기계 / 삼진FA / EASTARNFP(KIC)_현대제철 / Rotem_BHMC#2</p>
             </div>
         </div>
@@ -271,9 +328,8 @@
         <div class="footer-inner">
             <div class="logo">(주)제이씨시스템스</div>
             <div class="footer-agreement">
-                <div><a href="#">사업자정보확인</a></div>
-                <div><a href="#">개인정보처리방침</a></div>
-                <div><a href="#">이메일무단수집거부</a></div>
+                <div><a href="privacy.html" target="_blank">개인정보처리방침</a></div>
+                <div><a href="email.html" target="_blank">이메일무단수집거부</a></div>
                 <div><a href="contact.html">문의하기</a></div>
             </div>
             <div class="footer-info">
@@ -292,6 +348,8 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/common.js"></script>
     <script src="js/product.js"></script>
 </body>

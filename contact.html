@@ -8,29 +8,82 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
-    <header id="header">
+    <header id="header" class="visible">
         <nav>
-            <div class="nav-pc">
-                <h1 class="logo">
-                    <img src="img/logo.svg" alt="(주)제이씨시스텍스">
-                </h1>
+            <div class="nav nav-pc color">
+                <a href="index.html" class="logo"></a>
                 <div class="menu">
                     <a href="company.html">Company</a>
                     <a href="business.html">Business</a>
-                    <a href="product.html">Product<span class="more"></span></a>
+                    <a href="product-effecto.html" class="product-nav">Product<span class="more"></span></a>
                     <a href="reference.html">Reference</a>
                 </div>
                 <div class="contact">
                     <a href="contact.html">문의 신청하기</a>
                 </div>
             </div>
-            <div class="nav-mo color">
+            <div class="nav-pc-product" style="display: none;">
+                <div class="nav-pc-inner">
+                    <ul>
+                        <li>
+                            <a href="product-effecto.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner1.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">툴 체인저</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-winkel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner2.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">산업용 특수 베어링</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-airtac.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner3.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">파워 클램프</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-rexnord.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner4.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">플라스틱 체인</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-hanel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner5.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">수직형 자동창고</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-raedel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner6.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">불코란 휠&롤러</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav nav-mo color">
                 <a href="index.html" class="logo"></a>
                 <div class="menu"></div>
             </div>
@@ -73,40 +126,39 @@
     </header>
     <main>
         <div class="main-inner">
-            <h2>Contact Us</h2>
+            <h2 data-aos="fade-up">Contact Us</h2>
             <div class="sub">
-                <div class="sub-txt">
+                <div class="sub-txt" data-aos="fade-up" data-aos-delay="500">
                     (주)제이씨시스템스는 <br>언제나 신뢰를 바탕으로 한 <br>빠른 대응을 약속드립니다.
                 </div>
             </div>
         </div>
     </main>
     <section class="form last">
-        <div class="sec-inner">
+        <div class="sec-inner" data-aos="fade-up">
             <h2 class="title">문의하기</h2>
             <form class="card" action="#" method="post" novalidate>
-                <!-- Name -->
-                <div class="field">
-                    <label for="name" class="label">Name(이름)<span class="required">*</span></label>
-                    <input id="name" name="name" type="text" placeholder="이름을 입력해주세요." required>
+                <div class="input-container">
+                    <div class="field">
+                        <label for="name" class="label">Name(이름)<span class="required">*</span></label>
+                        <input id="name" name="name" type="text" placeholder="이름을 입력해주세요." required>
+                    </div>
+                    <div class="field">
+                        <label for="company" class="label">Company(회사명)<span class="required">*</span></label>
+                        <input id="company" name="company" type="text" placeholder="회사명을 입력해주세요." required>
+                    </div>
                 </div>
-                <!-- Company -->
-                <div class="field">
-                    <label for="company" class="label">Company(회사명)<span class="required">*</span></label>
-                    <input id="company" name="company" type="text" placeholder="회사명을 입력해주세요." required>
+                <div class="input-container">
+                    <div class="field">
+                        <label for="tel" class="label">Tel/CP(전화번호)<span class="required">*</span></label>
+                        <input id="tel" name="tel" type="text" inputmode="numeric" pattern="[0-9]{7,15}" placeholder="연락 받으실 전화번호를 입력해주세요.(-제외)" required>
+                    </div>
+                    <div class="field">
+                        <label for="email" class="label">E-mail(이메일 주소)<span class="required">*</span></label>
+                        <input id="email" name="email" type="email" placeholder="연락 받으실 이메일 주소를 입력해주세요." required>
+                    </div>
                 </div>
-                <!-- Tel/CP -->
-                <div class="field">
-                    <label for="tel" class="label">Tel/CP(전화번호)<span class="required">*</span></label>
-                    <input id="tel" name="tel" type="text" inputmode="numeric" pattern="[0-9]{7,15}" placeholder="연락 받으실 전화번호를 입력해주세요.(-제외)" required>
-                </div>
-                <!-- Email -->
-                <div class="field">
-                    <label for="email" class="label">E-mail(이메일 주소)<span class="required">*</span></label>
-                    <input id="email" name="email" type="email" placeholder="연락 받으실 이메일 주소를 입력해주세요." required>
-                </div>
-                <!-- Questionnaire -->
-                <div class="field">
+                <div class="field text-area">
                     <label for="msg" class="label">Questionnaire(문의 내용)</label>
                     <textarea id="msg" name="message" maxlength="500" placeholder="궁금하신 점을 입력해 주세요. (500자 이내)"></textarea>
                 </div>
@@ -120,7 +172,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="actions">
+                <div class="form-btn">
                     <button type="submit">문의하기</button>
                 </div>
             </form>
@@ -130,9 +182,8 @@
         <div class="footer-inner">
             <div class="logo">(주)제이씨시스템스</div>
             <div class="footer-agreement">
-                <div><a href="#">사업자정보확인</a></div>
-                <div><a href="#">개인정보처리방침</a></div>
-                <div><a href="#">이메일무단수집거부</a></div>
+                <div><a href="privacy.html" target="_blank">개인정보처리방침</a></div>
+                <div><a href="email.html" target="_blank">이메일무단수집거부</a></div>
                 <div><a href="contact.html">문의하기</a></div>
             </div>
             <div class="footer-info">
@@ -151,6 +202,8 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="js/common.js"></script>
 </body>
 

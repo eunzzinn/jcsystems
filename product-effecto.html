@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/product.css">
@@ -16,108 +17,165 @@
 <body>
     <header id="header">
         <nav>
-            <div class="nav-pc">
+        <div class="nav nav-pc">
+            <a href="index.html" class="logo"></a>
+            <div class="menu">
+                <a href="company.html">Company</a>
+                <a href="business.html">Business</a>
+                <a href="product-effecto.html" class="product-nav">Product<span class="more"></span></a>
+                <a href="reference.html">Reference</a>
+            </div>
+            <div class="contact">
+                <a href="contact.html">문의 신청하기</a>
+            </div>
+        </div>
+        <div class="nav-pc-product" style="display: none;">
+          <div class="nav-pc-inner">
+            <ul>
+              <li>
+                <a href="product-effecto.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner1.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">툴 체인저</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-winkel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner2.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">산업용 특수 베어링</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-airtac.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner3.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">파워 클램프</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-rexnord.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner4.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">플라스틱 체인</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-hanel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner5.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">수직형 자동창고</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-raedel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner6.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">불코란 휠&롤러</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav nav-mo">
+            <a href="index.html" class="logo"></a>
+            <div class="menu"></div>
+        </div>
+        <div class="nav-mo-container">
+          <div class="nav-mo-inner">
+            <div class="gnb-header">
                 <h1 class="logo">
-                    <img src="img/logo.svg" alt="(주)제이씨시스텍스">
+                    <img src="img/logo.svg" alt="(주)제이씨시스템스">
                 </h1>
-                <div class="menu">
-                    <a href="company.html">Company</a>
-                    <a href="business.html">Business</a>
-                    <a href="product.html">Product<span class="more"></span></a>
-                    <a href="reference.html">Reference</a>
-                </div>
-                <div class="contact">
-                    <a href="contact.html">문의 신청하기</a>
-                </div>
+                <button class="close-btn" aria-label="메뉴 닫기">
+                    <img src="img/ico-close.svg" alt=" 닫기">
+                </button>
             </div>
-            <div class="nav-mo">
-                <a href="index.html" class="logo"></a>
-                <div class="menu"></div>
+            <div class="gnb-nav">
+                <ul class="main-menu">
+                    <li class="menu-item"><a href="company.html">Company</a></li>
+                    <li class="menu-item"><a href="business.html">Business</a></li>
+                    <li class="menu-item has-submenu">
+                      <div class="toggle-menu">
+                        <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
+
+                      </div>
+                      <ul class="submenu">
+                          <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
+                          <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
+                          <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
+                          <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
+                          <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
+                          <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item"><a href="reference.html">Reference</a></li>
+                </ul>
             </div>
-            <div class="nav-mo-container">
-                <div class="nav-mo-inner">
-                    <div class="gnb-header">
-                        <h1 class="logo">
-                            <img src="img/logo.svg" alt="(주)제이씨시스템스">
-                        </h1>
-                        <button class="close-btn" aria-label="메뉴 닫기">
-                            <img src="img/ico-close.svg" alt=" 닫기">
-                        </button>
-                    </div>
-                    <div class="gnb-nav">
-                        <ul class="main-menu">
-                            <li class="menu-item"><a href="company.html">Company</a></li>
-                            <li class="menu-item"><a href="business.html">Business</a></li>
-                            <li class="menu-item has-submenu">
-                                <div class="toggle-menu">
-                                    <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
-                                </div>
-                                <ul class="submenu">
-                                    <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
-                                    <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
-                                    <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
-                                    <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
-                                    <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
-                                    <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item"><a href="reference.html">Reference</a></li>
-                        </ul>
-                    </div>
-                    <div class="gnb-footer">
-                        <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
-                    </div>
-                </div>
+            <div class="gnb-footer">
+                <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
             </div>
-        </nav>
+          </div>
+        </div>
+    </nav>
     </header>
     <main>
         <div class="main-inner">
-            <h2>Effecto</h2>
-            <div class="nav-bar">
-                <div class="nav-item home">
-                    <a href="index.html">
-                        <img src="img/product/home.svg" alt="메인">
-                    </a>
+            <div class="product-txt">
+                <h2 data-aos="fade-up">Effecto</h2>
+                <div class="nav-bar" data-aos="fade-up">
+                    <div class="nav-item home">
+                        <a href="index.html">
+                            <img src="img/product/home.svg" alt="메인">
+                        </a>
+                    </div>
+                    <div class="nav-item">Product<span class="arrow"></span>
+                        <ul class="dropdown">
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="business.html">Business</a></li>
+                            <li style="color:var(--darkblue-400-primary)"><a href="product.html">Product</a></li>
+                            <li><a href="reference.html">Reference</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item">Effecto<span class="arrow"></span>
+                        <ul class="dropdown">
+                            <li style="color:var(--darkblue-400-primary)"><a href="product-effecto.html">Effecto</a></li>
+                            <li><a href="product-winkel.html">Winkel</a></li>
+                            <li><a href="product-airtac.html">AirTAC</a></li>
+                            <li><a href="product-rexnord.html">Rexnord</a></li>
+                            <li><a href="product-hanel.html">Hanel</a></li>
+                            <li><a href="product-raedel.html">Raedel-Vogel</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="nav-item">Product<span class="arrow"></span>
-                    <ul class="dropdown">
-                        <li>Company</li>
-                        <li>Business</li>
-                        <li style="color:var(--darkblue-400-primary)">Product</li>
-                        <li>Reference</li>
-                    </ul>
-                </div>
-                <div class="nav-item">Effecto<span class="arrow"></span>
-                    <ul class="dropdown">
-                        <li style="color:var(--darkblue-400-primary)"><a href="product-effecto.html">Effecto</a></li>
-                        <li><a href="product-winkel.html">Winkel</a></li>
-                        <li><a href="product-airtac.html">AirTAC</a></li>
-                        <li><a href="product-rexnord.html">Rexnord</a></li>
-                        <li><a href="product-hanel.html">Hanel</a></li>
-                        <li><a href="product-raedel.html">Raedel-Vogel</a></li>
-                    </ul>
-                </div>
+                <p class="product-desc" data-aos="fade-up">
+                    Effector Group은 자동화 산업의 변화에 대응하는 혁신 솔루션에 집중하는 글로벌 팀입니다. 로봇 툴 체인저를 최초로 설계·출시한 기업으로, 단순한 제조사를 넘어선 전문성을 갖추고 있으며, 항공우주, 자동차, 의료 등 다양한 산업에서 고객의 신뢰를 얻어 전 세계에 뛰어난 자동화 기술을 제공하고 있습니다.
+                </p>
             </div>
-            <p class="product-desc">
-                Effector Group은 자동화 산업의 변화에 대응하는 혁신 솔루션에 집중하는 글로벌 팀입니다. 로봇 툴 체인저를 최초로 설계·출시한 기업으로, 단순한 제조사를 넘어선 전문성을 갖추고 있으며, 항공우주, 자동차, 의료 등 다양한 산업에서 고객의 신뢰를 얻어 전 세계에 뛰어난 자동화 기술을 제공하고 있습니다.
-            </p>
-            <img src="img/product/effecto.png" alt="Effecto" class="product-main-img">
+            <div class="product-img" data-aos="fade-up" data-aos-delay="500">
+                <img src="img/product/effecto.png" alt="Effecto" class="product-main-img">
+            </div>
         </div>
     </main>
     <section class="info">
         <div class="sec-inner">
-            <div class="sec-txt">
+            <div class="sec-txt" data-aos="fade-up">
                 <h2 class="title">제품 소개</h2>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">툴 체인저<span>Tool Changer</span></div>
                 <div class="product-description">
                     매니퓰레이터(즉, 로봇)가 다양한 툴 또는 그리퍼(end-effector) 간에 신속하게 전환할 수 있도록 강력하고 신뢰할 수 있는 방법을 제공합니다. 모듈화 설계를 통해 Epsilon은 모든 응용 분야에 대해 최대의 유연성을 제공합니다.
                 </div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/prodotti/epsilon-automatic-tool-changers-epsilon/?lang=en" target="_blank">
                             <img src="img/product/effecto1-1.png" alt="Automatic Tool Changer">
                             <div class="card-txt">
                                 <h3>Automatic</h3>
@@ -126,7 +184,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/prodotti/em-manual-tool-changer/?lang=en" target="_blank">
                             <img src="img/product/effecto1-2.png" alt="Manual Tool Changer">
                             <div class="card-txt">
                                 <h3>Manual</h3>
@@ -135,7 +193,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/prodotti/auto-coupler-xchange-tool-changer/?lang=en" target="_blank">
                             <img src="img/product/effecto1-3.png" alt="Auto Coupler">
                             <div class="card-txt">
                                 <h3>Auto Coupler</h3>
@@ -145,14 +203,14 @@
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">충돌 감지 센서<span>Collision Sensor</span></div>
                 <div class="product-description">
                     장비를 충돌로부터 보호하고, 각도·회전력·압축력 감지가 가능하며, 트립 포인트를 동적으로 조정할 수 있고, 영구적인 반복 정밀도를 제공합니다.
                 </div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/prodotti/qs-aw/?lang=en" target="_blank">
                             <img src="img/product/effecto2-1.png" alt="For arc welding">
                             <div class="card-txt">
                                 <h3>For arc welding</h3>
@@ -160,7 +218,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/prodotti/qs/?lang=en" target="_blank">
                             <img src="img/product/effecto2-2.png" alt="Standard">
                             <div class="card-txt">
                                 <h3>Standard</h3>
@@ -169,14 +227,14 @@
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">그리퍼<span>Grippers</span></div>
                 <div class="product-description">
                     모든 용도에 적합한 다양한 그리퍼 라인업 – 강력한 파지력, 정밀성, 신뢰성을 제공합니다. 병렬형, 앵귤러형, 토글형 그리퍼부터 2지 또는 3지 타입, 니들형, 클린룸용, 고무 및 가스켓용, 서보 방식, 백용, 식품용, 실링 처리된 타입, 롱 스트로크 타입까지 다양한 제품을 제공하며, 37종의 표준 버전, 250가지 이상의 사이즈로 구성되어 있습니다.
                 </div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-1.png" alt="2-finger parallel">
                             <div class="card-txt">
                                 <h3>2-finger parallel</h3>
@@ -184,7 +242,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-2.png" alt="3-finger parallel">
                             <div class="card-txt">
                                 <h3>3-finger parallel</h3>
@@ -192,7 +250,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-3.png" alt="Angular">
                             <div class="card-txt">
                                 <h3>Angular</h3>
@@ -200,7 +258,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-4.png" alt="Collaborative">
                             <div class="card-txt">
                                 <h3>Collaborative</h3>
@@ -208,7 +266,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-5.png" alt="Electric">
                             <div class="card-txt">
                                 <h3>Electric</h3>
@@ -216,7 +274,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-6.png" alt="For Gaskets">
                             <div class="card-txt">
                                 <h3>For Gaskets</h3>
@@ -224,7 +282,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-7.png" alt="Long Stroke">
                             <div class="card-txt">
                                 <h3>Long Stroke</h3>
@@ -232,7 +290,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-8.png" alt="Needle">
                             <div class="card-txt">
                                 <h3>Needle</h3>
@@ -240,7 +298,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-9.png" alt="Palletizing">
                             <div class="card-txt">
                                 <h3>Palletizing</h3>
@@ -248,7 +306,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-10.png" alt="Rubber">
                             <div class="card-txt">
                                 <h3>Rubber</h3>
@@ -256,7 +314,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-11.png" alt="Sealed">
                             <div class="card-txt">
                                 <h3>Sealed</h3>
@@ -264,7 +322,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/grippers/?lang=en" target="_blank">
                             <img src="img/product/effecto3-12.png" alt="Toggle">
                             <div class="card-txt">
                                 <h3>Toggle</h3>
@@ -273,14 +331,14 @@
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">버 제거 및 사상 공구<span>Deburring & Finishing Tools</span></div>
                 <div class="product-description">
                     버 제거, 나사 가공, 줄질, 밀링, 브러싱 등 다양한 공정 요구를 충족하는 폭넓은 제품군으로, 보정 스핀들은 일정하고 고속의 전진 속도를 구현할 수 있도록 설계되어 있습니다.
                 </div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/deburring-tools/?lang=en" target="_blank">
                             <img src="img/product/effecto4-1.png" alt="Belt Grinding">
                             <div class="card-txt">
                                 <h3>Belt Grinding</h3>
@@ -288,7 +346,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/deburring-tools/?lang=en" target="_blank">
                             <img src="img/product/effecto4-2.png" alt="Brushing/Grinding">
                             <div class="card-txt">
                                 <h3>Brushing/Grinding</h3>
@@ -296,7 +354,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/deburring-tools/?lang=en" target="_blank">
                             <img src="img/product/effecto4-3.png" alt="Chipping Hammers">
                             <div class="card-txt">
                                 <h3>Chipping Hammers</h3>
@@ -304,7 +362,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/deburring-tools/?lang=en" target="_blank">
                             <img src="img/product/effecto4-4.png" alt="Circular Saws">
                             <div class="card-txt">
                                 <h3>Circular Saws</h3>
@@ -312,49 +370,49 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/deburring-tools/?lang=en" target="_blank">
                             <div class="card-txt only-txt">
                                 <h3>Countersinks</h3>
                             </div>
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/deburring-tools/?lang=en" target="_blank">
                             <div class="card-txt only-txt">
                                 <h3>Deburring for Bore</h3>
                             </div>
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/deburring-tools/?lang=en" target="_blank">
                             <div class="card-txt only-txt">
                                 <h3>Filing</h3>
                             </div>
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/deburring-tools/?lang=en" target="_blank">
                             <div class="card-txt only-txt">
                                 <h3>Grinding/Milling</h3>
                             </div>
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/deburring-tools/?lang=en" target="_blank">
                             <div class="card-txt only-txt">
                                 <h3>Milling/Sawing</h3>
                             </div>
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/deburring-tools/?lang=en" target="_blank">
                             <div class="card-txt only-txt">
                                 <h3>Scraping</h3>
                             </div>
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://effecto.com/automation/deburring-tools/?lang=en" target="_blank">
                             <div class="card-txt only-txt">
                                 <h3>Tool Support</h3>
                             </div>
@@ -367,9 +425,9 @@
     <section class="reference last">
         <div class="sec-inner">
             <div class="sec-txt">
-                <h2 class="title">제품 레퍼런스</h2>
+                <h2 class="title" data-aos="fade-up">제품 레퍼런스</h2>
             </div>
-            <div class="product-reference">
+            <div class="product-reference" data-aos="fade-up">
                 <p>오토봇 / 네모 엔지니어링 / 아비코빈젤 / 우신시스템_Ford FTM P703 / 엔케이에스 / 한화기계 / 알엠시스_TATA Ace Edge / 우신시스템_Ford B515 / 한화Solar / 부영정공 / 레이저라인코리아 / 우신시스템_Ford B562 India / (주)GSENG_한화테크엠 / 우신시스템_Ford U375 Thailand / 우신_Daimler / 우신_Renault Russia</p>
             </div>
         </div>
@@ -378,9 +436,8 @@
         <div class="footer-inner">
             <div class="logo">(주)제이씨시스템스</div>
             <div class="footer-agreement">
-                <div><a href="#">사업자정보확인</a></div>
-                <div><a href="#">개인정보처리방침</a></div>
-                <div><a href="#">이메일무단수집거부</a></div>
+                <div><a href="privacy.html" target="_blank">개인정보처리방침</a></div>
+                <div><a href="email.html" target="_blank">이메일무단수집거부</a></div>
                 <div><a href="contact.html">문의하기</a></div>
             </div>
             <div class="footer-info">
@@ -399,6 +456,8 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/common.js"></script>
     <script src="js/product.js"></script>
 </body>

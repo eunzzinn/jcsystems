@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/product.css">
@@ -16,96 +17,153 @@
 <body>
     <header id="header">
         <nav>
-            <div class="nav-pc">
+        <div class="nav nav-pc">
+            <a href="index.html" class="logo"></a>
+            <div class="menu">
+                <a href="company.html">Company</a>
+                <a href="business.html">Business</a>
+                <a href="product-effecto.html" class="product-nav">Product<span class="more"></span></a>
+                <a href="reference.html">Reference</a>
+            </div>
+            <div class="contact">
+                <a href="contact.html">문의 신청하기</a>
+            </div>
+        </div>
+        <div class="nav-pc-product" style="display: none;">
+          <div class="nav-pc-inner">
+            <ul>
+              <li>
+                <a href="product-effecto.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner1.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">툴 체인저</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-winkel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner2.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">산업용 특수 베어링</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-airtac.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner3.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">파워 클램프</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-rexnord.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner4.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">플라스틱 체인</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-hanel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner5.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">수직형 자동창고</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-raedel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner6.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">불코란 휠&롤러</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav nav-mo">
+            <a href="index.html" class="logo"></a>
+            <div class="menu"></div>
+        </div>
+        <div class="nav-mo-container">
+          <div class="nav-mo-inner">
+            <div class="gnb-header">
                 <h1 class="logo">
-                    <img src="img/logo.svg" alt="(주)제이씨시스텍스">
+                    <img src="img/logo.svg" alt="(주)제이씨시스템스">
                 </h1>
-                <div class="menu">
-                    <a href="company.html">Company</a>
-                    <a href="business.html">Business</a>
-                    <a href="product.html">Product<span class="more"></span></a>
-                    <a href="reference.html">Reference</a>
-                </div>
-                <div class="contact">
-                    <a href="contact.html">문의 신청하기</a>
-                </div>
+                <button class="close-btn" aria-label="메뉴 닫기">
+                    <img src="img/ico-close.svg" alt=" 닫기">
+                </button>
             </div>
-            <div class="nav-mo">
-                <a href="index.html" class="logo"></a>
-                <div class="menu"></div>
+            <div class="gnb-nav">
+                <ul class="main-menu">
+                    <li class="menu-item"><a href="company.html">Company</a></li>
+                    <li class="menu-item"><a href="business.html">Business</a></li>
+                    <li class="menu-item has-submenu">
+                      <div class="toggle-menu">
+                        <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
+
+                      </div>
+                      <ul class="submenu">
+                          <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
+                          <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
+                          <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
+                          <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
+                          <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
+                          <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item"><a href="reference.html">Reference</a></li>
+                </ul>
             </div>
-            <div class="nav-mo-container">
-                <div class="nav-mo-inner">
-                    <div class="gnb-header">
-                        <h1 class="logo">
-                            <img src="img/logo.svg" alt="(주)제이씨시스템스">
-                        </h1>
-                        <button class="close-btn" aria-label="메뉴 닫기">
-                            <img src="img/ico-close.svg" alt=" 닫기">
-                        </button>
-                    </div>
-                    <div class="gnb-nav">
-                        <ul class="main-menu">
-                            <li class="menu-item"><a href="company.html">Company</a></li>
-                            <li class="menu-item"><a href="business.html">Business</a></li>
-                            <li class="menu-item has-submenu">
-                                <div class="toggle-menu">
-                                    <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
-                                </div>
-                                <ul class="submenu">
-                                    <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
-                                    <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
-                                    <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
-                                    <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
-                                    <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
-                                    <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item"><a href="reference.html">Reference</a></li>
-                        </ul>
-                    </div>
-                    <div class="gnb-footer">
-                        <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
-                    </div>
-                </div>
+            <div class="gnb-footer">
+                <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
             </div>
-        </nav>
+          </div>
+        </div>
+    </nav>
     </header>
     <main>
         <div class="main-inner">
-            <h2>Raedel-Vogel</h2>
-            <div class="nav-bar">
-                <div class="nav-item home">
-                    <a href="index.html">
-                        <img src="img/product/home.svg" alt="메인">
-                    </a>
+            <div class="product-txt">
+                <h2 data-aos="fade-up">Raedel-Vogel</h2>
+                <div class="nav-bar" data-aos="fade-up">
+                    <div class="nav-item home">
+                        <a href="index.html">
+                            <img src="img/product/home.svg" alt="메인">
+                        </a>
+                    </div>
+                    <div class="nav-item">Product<span class="arrow"></span>
+                        <ul class="dropdown">
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="business.html">Business</a></li>
+                            <li style="color:var(--darkblue-400-primary)"><a href="product.html">Product</a></li>
+                            <li><a href="reference.html">Reference</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item">Raedel-Vogel<span class="arrow"></span>
+                        <ul class="dropdown">
+                            <li><a href="product-effecto.html">Effecto</a></li>
+                            <li><a href="product-winkel.html">Winkel</a></li>
+                            <li><a href="product-airtac.html">AirTAC</a></li>
+                            <li><a href="product-rexnord.html">Rexnord</a></li>
+                            <li><a href="product-hanel.html">Hanel</a></li>
+                            <li style="color:var(--darkblue-400-primary)"><a href="product-raedel.html">Raedel-Vogel</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="nav-item">Product<span class="arrow"></span>
-                    <ul class="dropdown">
-                        <li>Company</li>
-                        <li>Business</li>
-                        <li style="color:var(--darkblue-400-primary)">Product</li>
-                        <li>Reference</li>
-                    </ul>
-                </div>
-                <div class="nav-item">Raedel-Vogel<span class="arrow"></span>
-                    <ul class="dropdown">
-                        <li><a href="product-effecto.html">Effecto</a></li>
-                        <li><a href="product-winkel.html">Winkel</a></li>
-                        <li><a href="product-airtac.html">AirTAC</a></li>
-                        <li><a href="product-rexnord.html">Rexnord</a></li>
-                        <li><a href="product-hanel.html">Hanel</a></li>
-                        <li style="color:var(--darkblue-400-primary)"><a href="product-raedel.html">Raedel-Vogel</a></li>
-                    </ul>
-                </div>
+                <p class="product-desc" data-aos="fade-up">
+                    RÄDER-VOGEL은 1946년 독일 함부르크에서 설립된 가족 경영 기업으로, 산업용 휠 및 캐스터의 선도적인 글로벌 제조업체입니다. VULKOLLAN® 및 PEVOLON®과 같은 특수 폴리우레탄 재질을 활용하여 30,000개 이상의 제품을 생산하며, 10,000개 이상의 고객에게 서비스를 제공합니다.
+                </p>
             </div>
-            <p class="product-desc">
-                RÄDER-VOGEL은 1946년 독일 함부르크에서 설립된 가족 경영 기업으로, 산업용 휠 및 캐스터의 선도적인 글로벌 제조업체입니다. VULKOLLAN® 및 PEVOLON®과 같은 특수 폴리우레탄 재질을 활용하여 30,000개 이상의 제품을 생산하며, 10,000개 이상의 고객에게 서비스를 제공합니다.
-            </p>
-            <img src="img/product/raedel.png" alt="Raedel-Vogel" class="product-main-img">
+            <div class="product-img" data-aos="fade-up" data-aos-delay="500">
+                <img src="img/product/raedel.png" alt="Raedel-Vogel" class="product-main-img">
+            </div>
         </div>
     </main>
-    <div class="raedel-tab">
+    <div class="raedel-tab horiz-scroll touch-drag" data-aos="fade-up">
         <ul>
             <li class="active">
                 <p>다양한 용도에 최적화된<br>고품질 휠 소재</p>
@@ -130,14 +188,14 @@
     <section class="info raedel-info raedel-tab1 active">
         <div class="sec-inner">
             <div class="sec-txt">
-                <h2 class="title">제품 소개</h2>
+                <h2 class="title" data-aos="fade-up">제품 소개</h2>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">표준 휠 재질<span>Standard wheel materials</span></div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-1-1.png" alt="Automatic Tool Changer">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-standard-range-wheel-materials" target="_blank">
+                            <img src="img/product/raedel1-1-1.png" alt="VULKOLLAN® (93 Shore A)/hydrolyse stabilisiert">
                             <div class="card-txt">
                                 <h3>VULKOLLAN® (93 Shore A)/hydrolyse stabilisiert</h3>
                                 <p>VULKOLLAN®*은 Desmodur® 15*을 기반으로 한 고탄성의 가교 폴리우레탄 엘라스토머로, 우수한 기계적 특성을 지니고 있습니다.</p>
@@ -145,8 +203,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-1-2.png" alt="Manual Tool Changer">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-standard-range-wheel-materials" target="_blank">
+                            <img src="img/product/raedel1-1-2.png" alt="PEVODYN®">
                             <div class="card-txt">
                                 <h3>PEVODYN®</h3>
                                 <p>PEVODYN®은 자사가 개발한 고품질 폴리우레탄 엘라스토머로, 시동 저항 및 구름 저항이 현저히 낮고 동적 하중 용량이 뛰어납니다.</p>
@@ -154,22 +212,22 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-1-3.png" alt="Auto Coupler">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-standard-range-wheel-materials" target="_blank">
+                            <img src="img/product/raedel1-1-3.png" alt="PEVOPUR®">
                             <div class="card-txt">
                                 <h3>PEVOPUR®</h3>
-                                <p>PEVOPUR®는 우수한 동적 하중 용량, 높은 탄성, 뛰어난 기계적 내마모성  특성을 지닌 고품질 폴리우레탄 엘라스토머입니다.</p>
+                                <p>PEVOPUR®는 우수한 동적 하중 용량, 높은 탄성, 뛰어난 기계적 내마모성 특성을 지닌 고품질 폴리우레탄 엘라스토머입니다.</p>
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">특수 휠 재질<span>Wheel materials for special requirements</span></div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-2-1.png" alt="For arc welding">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-special-range-of-wheel-materials" target="_blank">
+                            <img src="img/product/raedel1-2-1.png" alt="VULKOLLAN® 95 Shore A">
                             <div class="card-txt">
                                 <h3>VULKOLLAN® 95 Shore A</h3>
                                 <p>VULKOLLAN® 95 Shore A는 Desmodur® 15*을 기반으로 한 고탄성 폴리우레탄 엘라스토머로, 고부하 및 고속 주행이 요구되는 역동적인 작업 환경에 적합한 소재입니다.</p>
@@ -177,8 +235,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-2-2.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-special-range-of-wheel-materials" target="_blank">
+                            <img src="img/product/raedel1-2-2.png" alt="VULKOSOFT®">
                             <div class="card-txt">
                                 <h3>VULKOSOFT®</h3>
                                 <p>VULKOSOFT®는 Desmodur® 15 기반의 고탄성 폴리우레탄 엘라스토머 VULKOLLAN® 계열로, 85 Shore A의 낮은 경도를 통해 특화된 성능을 제공합니다.</p>
@@ -186,8 +244,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-2-3.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-special-range-of-wheel-materials" target="_blank">
+                            <img src="img/product/raedel1-2-3.png" alt="VULKOLLAN® -ELF">
                             <div class="card-txt">
                                 <h3>VULKOLLAN® -ELF</h3>
                                 <p>VULKOLLAN®-ELF는 Desmodur® 15를 기반으로 자사가 개발하고 특허를 획득한 정전기 방전용 특수 소재로 전도성 성분이 첨가되었습니다.</p>
@@ -195,8 +253,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-2-4.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-special-range-of-wheel-materials" target="_blank">
+                            <img src="img/product/raedel1-2-4.png" alt="TRACTOTHAN®">
                             <div class="card-txt">
                                 <h3>TRACTOTHAN®</h3>
                                 <p>TRACTOTHAN®은 기본적인 VULKOLLAN®의 특성을 그대로 유지하면서도 특수 TPU(열가소성 폴리우레탄) 과립을 트레드에 첨가하여 휠의 접지력을 향상시킨 제품입니다.</p>
@@ -205,16 +263,16 @@
                     </div>
                     <div class="card">
                         <a href="#">
-                            <img src="img/product/raedel1-2-5.png" alt="Standard">
+                            <img src="img/product/raedel1-2-5.png" alt="PEVOSOFT®">
                             <div class="card-txt">
                                 <h3>PEVOSOFT®</h3>
-                                <p>TRACTOSOFT®는  기본적인 TRACTOTHAN®의 특성을 유지하면서도 쇼어 경도 85 Shore A의 낮은 경도를 갖추고 있습니다.</p>
+                                <p>TRACTOSOFT®는 기본적인 TRACTOTHAN®의 특성을 유지하면서도 쇼어 경도 85 Shore A의 낮은 경도를 갖추고 있습니다.</p>
                             </div>
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-2-6.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-special-range-of-wheel-materials" target="_blank">
+                            <img src="img/product/raedel1-2-6.png" alt="VULKOLLAN®-Quarz">
                             <div class="card-txt">
                                 <h3>VULKOLLAN®-Quarz</h3>
                                 <p>VULKOLLAN®-Quartz는 극도로 젖고 미끄럽거나 기름진 표면에서의 사용에 적합하며 쿼츠(석영) 샌드가 첨가되어 접지력이 크게 향상되었습니다.</p>
@@ -222,8 +280,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-2-7.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-special-range-of-wheel-materials" target="_blank">
+                            <img src="img/product/raedel1-2-7.png" alt="VULKODYN®">
                             <div class="card-txt">
                                 <h3>VULKODYN®</h3>
                                 <p>VULKODYN®은 당사가 개발한 고탄성 폴리우레탄 엘라스토머로, 극도로 역동적인 작업 환경에 적합한 소재이며, 고속 주행 작업에 특히 적합합니다.</p>
@@ -231,8 +289,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-2-8.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-special-range-of-wheel-materials" target="_blank">
+                            <img src="img/product/raedel1-2-8.png" alt="PEVODYN®-Soft">
                             <div class="card-txt">
                                 <h3>PEVODYN®-Soft</h3>
                                 <p>PEVODYN®-Soft는 당사가 개발한 신형 고품질 폴리우레탄 엘라스토머로, 높은 동적 하중 용량과 크게 줄어든 시동 및 구름 저항을 특징으로 합니다.</p>
@@ -240,8 +298,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-2-9.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-special-range-of-wheel-materials" target="_blank">
+                            <img src="img/product/raedel1-2-9.png" alt="PEVOSOFT®">
                             <div class="card-txt">
                                 <h3>PEVOSOFT®</h3>
                                 <p>VPEVOSOFT®는 고품질 폴리우레탄 엘라스토머로, 우수한 동적 하중 용량, 높은 탄성, 뛰어난 내마모성 및 압축 복원력을 갖춘 소재입니다.</p>
@@ -250,12 +308,12 @@
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">산업용 및 중장비 캐스터용 휠 재질<span>Our Wheel Materials for industrial and heavy duty castors</span></div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-3-1.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-standard-range-of-swivel-castor-brackets" target="_blank">
+                            <img src="img/product/raedel1-3-1.png" alt="PEVOLON®">
                             <div class="card-txt">
                                 <h3>PEVOLON®</h3>
                                 <p>PEVOLON®은 폴리아미드(나일론)를 기반으로 한 열가소성 소재로, 비자국성, 우수한 내화학성, 높은 마모 저항성, 낮은 구름 저항을 갖춘 산업용 바퀴 재질입니다.</p>
@@ -263,8 +321,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-3-2.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-standard-range-of-swivel-castor-brackets" target="_blank">
+                            <img src="img/product/raedel1-3-2.png" alt="PAG">
                             <div class="card-txt">
                                 <h3>PAG</h3>
                                 <p>Cast polyamide (PAG)는 PEVOLON®과 유사한 우수한 물리적 특성을 가지면서도, 최대 50톤에 달하는 매우 높은 하중 용량을 자랑하는 고성능 열가소성 재질입니다.</p>
@@ -272,8 +330,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-3-3.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-standard-range-of-swivel-castor-brackets" target="_blank">
+                            <img src="img/product/raedel1-3-3.png" alt="PEVOLON®-ELF">
                             <div class="card-txt">
                                 <h3>PEVOLON®-ELF</h3>
                                 <p>PEVOLON®-ELF는 정전기 방전을 위한 특수 가공 열가소성 소재로, PEVOLON®과 동일한 우수한 물리적 특성을 유지하면서도 정전기 방전 기능이 추가된 제품입니다.</p>
@@ -281,8 +339,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-3-4.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-standard-range-of-swivel-castor-brackets" target="_blank">
+                            <img src="img/product/raedel1-3-4.png" alt="PEVOLASTIC®">
                             <div class="card-txt">
                                 <h3>PEVOLASTIC®</h3>
                                 <p>PEVOLASTIC® 바퀴는 PEVOLON® 림과 기계적으로 고정된 열가소성 폴리우레탄 트레드(face)로 구성된 복합 구조입니다.</p>
@@ -290,8 +348,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-3-5.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-standard-range-of-swivel-castor-brackets" target="_blank">
+                            <img src="img/product/raedel1-3-5.png" alt="PEVOTHAN®">
                             <div class="card-txt">
                                 <h3>PEVOTHAN®</h3>
                                 <p>PEVOTHAN®은 고품질 열가소성 폴리우레탄 엘라스토머로, 일반 고무 바퀴보다 우수한 특성을 지닌 비마킹(non-marking) 바퀴 소재입니다.</p>
@@ -299,8 +357,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-3-6.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-standard-range-of-swivel-castor-brackets" target="_blank">
+                            <img src="img/product/raedel1-3-6.png" alt="PEVOTHAN®-ELF">
                             <div class="card-txt">
                                 <h3>PEVOTHAN®-ELF</h3>
                                 <p>PEVOTHAN®-ELF는 정전기 방전을 위한 특수 가공 열가소성 소재로, 트레드 전체를 통해 전기 방전이 이루어지며, DIN EN 12527 ff 표준의 전기 체적 저항 요건을 안정적으로 초과합니다.</p>
@@ -308,8 +366,8 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
-                            <img src="img/product/raedel1-3-7.png" alt="Standard">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/quality-wheel-materials-for-your-applications/our-standard-range-of-swivel-castor-brackets" target="_blank">
+                            <img src="img/product/raedel1-3-7.png" alt="Rubber">
                             <div class="card-txt">
                                 <h3>Rubber</h3>
                                 <p>폴리아미드 및 폴리우레탄과 비교했을 때, 고무 바퀴는 구름 저항이 더 높지만 바닥 보호에 매우 뛰어나며, 공장 내 운송 분야에서 광범위하게 활용될 수 있습니다.</p>
@@ -320,13 +378,802 @@
             </div>
         </div>
     </section>
+    <section class="info raedel-info raedel-tab2">
+        <div class="sec-inner">
+            <div class="sec-txt" data-aos="fade-up">
+                <h2 class="title">제품 소개</h2>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">프레스온 타이어<span>Press-on-tyres</span></div>
+                <div class="card-grid">
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/press-on-tyres" target="_blank">
+                            <img src="img/product/raedel2-1-1.png" alt="VULKOLLAN® press-on tyres">
+                            <div class="card-txt">
+                                <h3>VULKOLLAN® press-on tyres</h3>
+                                <p>기계 가공된 강철 밴드가 결합된 원통형 VULKOLLAN® 프레스온 타이어(경도 93 Shore A) – h11 공차의 림(fit h11)에 적합합니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/press-on-tyres" target="_blank">
+                            <img src="img/product/raedel2-1-2.png" alt="VULKOLLAN® press-on tyres">
+                            <div class="card-txt">
+                                <h3>VULKOLLAN® press-on tyres</h3>
+                                <p>원뿔형 베이스와 주조 강철 밴드가 내장된 VULKOLLAN® 프레스온 타이어(경도 93 Shore A)로, 중앙 분할형(km 타입) 또는 측면 분할형(ks 타입)으로 제작됩니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/press-on-tyres" target="_blank">
+                            <img src="img/product/raedel2-1-3.png" alt="PEVOPUR® press-on tyres">
+                            <div class="card-txt">
+                                <h3>PEVOPUR® press-on tyres</h3>
+                                <p>h11 맞춤 림용 가공 강철 밴드가 부착된 원통형 PEVOPUR® 프레스온 타이어 (경도 93 Shore A)입니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/press-on-tyres" target="_blank">
+                            <img src="img/product/raedel2-1-4.png" alt="Solid rubber press-on tyres">
+                            <div class="card-txt">
+                                <h3>Solid rubber press-on tyres</h3>
+                                <p>강철 와이어 코어와 평평한 프로파일을 가진 원통형 타이어로 횡단(크로스컨트리) 프로파일 또는 비마킹(자국 없음) 솔리드 고무 프레스온 타이어는 요청 시 제공 가능합니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/press-on-tyres" target="_blank">
+                            <img src="img/product/raedel2-1-5.png" alt="Solid rubber press-on tyres">
+                            <div class="card-txt">
+                                <h3>Solid rubber press-on tyres</h3>
+                                <p>구동 휠 품질의 강철 링이 내장된 원통형 타이어로, 평평한 프로파일을 갖추고 있으며, 크로스컨트리 프로파일 또는 비마킹 솔리드 고무 프레스온 타이어는 요청 시 제공 가능합니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">특수 바퀴 재질<span>Special rollers, ball units</span></div>
+                <div class="card-grid">
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/special-rollers-ball-units" target="_blank">
+                            <img src="img/product/raedel2-2-1.png" alt="PEVOLON® conveyor roller">
+                            <div class="card-txt">
+                                <h3>PEVOLON® conveyor roller</h3>
+                                <p>볼 베어링이 장착된 PEVOLON® 컨베이어 롤러로 고품질 열가소성 폴리아미드로 제작된 롤러 본체가 볼 베어링 주변에 성형되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/special-rollers-ball-units" target="_blank">
+                            <img src="img/product/raedel2-2-2.png" alt="PEVOLON® single flanged rollers">
+                            <div class="card-txt">
+                                <h3>PEVOLON® single flanged rollers</h3>
+                                <p>볼 베어링이 장착된 PEVOLON® 단측 플랜지 롤러로 고품질 열가소성 폴리아미드로 제작된 롤러 본체가 볼 베어링 주변에 성형되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/special-rollers-ball-units" target="_blank">
+                            <img src="img/product/raedel2-2-3.png" alt="PEVOLON® grooved wheels">
+                            <div class="card-txt">
+                                <h3>PEVOLON® grooved wheels</h3>
+                                <p>볼 베어링이 장착된 PEVOLON® 홈형 바퀴로 고품질 열가소성 폴리아미드로 제작된 바퀴 본체가 볼 베어링 주변에 성형되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/special-rollers-ball-units" target="_blank">
+                            <img src="img/product/raedel2-2-4.png" alt="PEVOTHAN® conveyor rollers">
+                            <div class="card-txt">
+                                <h3>PEVOTHAN® conveyor rollers</h3>
+                                <p>볼 베어링이 장착된 PEVOTHAN® 컨베이어 롤러로 경도 96 Shore A의 고품질 열가소성 폴리우레탄으로 제작된 롤러 본체가 볼 베어링 주변에 성형되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/special-rollers-ball-units" target="_blank">
+                            <img src="img/product/raedel2-2-5.png" alt="PEVOTHAN® Heavy-duty conveyor rollers">
+                            <div class="card-txt">
+                                <h3>PEVOTHAN® Heavy-duty conveyor rollers</h3>
+                                <p>볼 베어링이 장착된 PEVOTHAN® 중부하용 컨베이어 롤러로 경도 98 Shore A / 78 Shore D의 고품질 열가소성 폴리우레탄으로 제작된 롤러 로 본체가 볼 베어링 주변에 성형되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/special-rollers-ball-units" target="_blank">
+                            <img src="img/product/raedel2-2-6.png" alt="VULKOLLAN® guiding rollers">
+                            <div class="card-txt">
+                                <h3>VULKOLLAN® guiding rollers</h3>
+                                <p>강철 본체에 강제 장착된 롤러 베어링과 경도 93 Shore A의 VULKOLLAN® 트레드가 직접 접착된 구조입니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">팔레트 롤러<span>Pallet rollers</span></div>
+                <div class="card-grid">
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/pallet-rollers" target="_blank">
+                            <img src="img/product/raedel2-3-1.png" alt="PEVOLON® pallet rollers">
+                            <div class="card-txt">
+                                <h3>PEVOLON® pallet rollers</h3>
+                                <p>볼 베어링 장착형 PEVOLON® 팔레트 롤러로 고품질 열가소성 폴리아미드로 제작된 롤러 본체에 볼 베어링이 장착되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/pallet-rollers" target="_blank">
+                            <img src="img/product/raedel2-3-2.png" alt="PEVOLON® pallet rollers">
+                            <div class="card-txt">
+                                <h3>PEVOLON® pallet rollers</h3>
+                                <p>씰 처리된 볼 베어링 장착형 PEVOLON® 팔레트 롤러로 고품질 열가소성 폴리아미드 본체에 볼 베어링을 장착되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/pallet-rollers" target="_blank">
+                            <img src="img/product/raedel2-3-3.png" alt="VULKOLLAN® pallet rollers">
+                            <div class="card-txt">
+                                <h3>VULKOLLAN® pallet rollers</h3>
+                                <p>볼 베어링 장착형 VULKOLLAN® 팔레트 롤러로 강철 튜브 본체에 볼 베어링을 장착하며 경도 93 Shore A의 VULKOLLAN® 트레드가 직접 접착되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/pallet-rollers" target="_blank">
+                            <img src="img/product/raedel2-3-4.png" alt="VULKOLLAN® pallet rollers">
+                            <div class="card-txt">
+                                <h3>VULKOLLAN® pallet rollers</h3>
+                                <p>씰 처리된 볼 베어링 장착형 VULKOLLAN® 팔레트 롤러로 강철 튜브 본체에 볼 베어링을 장착하며 경도 93 Shore A의 VULKOLLAN® 트레드가 직접 접착되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/wheels-by-raeder-vogel/pallet-rollers" target="_blank">
+                            <img src="img/product/raedel2-3-5.png" alt="PEVOPUR® pallet rollers">
+                            <div class="card-txt">
+                                <h3>PEVOPUR® pallet rollers</h3>
+                                <p>볼 베어링 장착형 PEVOPUR® 팔레트 롤러로 강철 튜브 본체에 볼 베어링을 장착되어 있으며 경도 93 Shore A의 PEVOPUR® 트레드가 직접 접착되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">고속용 중하중 휠<span>HSHL</span></div>
+                <div class="product-description">
+                    HSHL은휠 중심부의 혁신적인 형상 설계를 통해 중심부와 코팅층 사이의 접착면 가장자리에서 발생하는 응력을 효과적으로 줄였으며, 고속 주행 시 발생하는 내부 발열도 최소화하였습니다. 또한, 구조 변경을 통해 생산에 필요한 재료가 줄어들어 단가 절감 효과도 있습니다.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info raedel-info raedel-tab3">
+        <div class="sec-inner">
+            <div class="sec-txt" data-aos="fade-up">
+                <h2 class="title">제품 소개</h2>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">경량 상업용 휠 & 캐스터<span>Institutional wheels & castors</span></div>
+                <div class="card-grid">
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/institutional-castors" target="_blank">
+                            <img src="img/product/raedel3-1-1.png" alt="플라스틱 림이 적용된 열가소성 고무 휠">
+                            <div class="card-txt">
+                                <h3>플라스틱 림이 적용된 열가소성 고무 휠</h3>
+                                <p>비흔적 열가소성 고무 타이어와 플레인 베어링(/1), 볼 베어링(/5), 또는 스테인리스 볼 베어링(/5R) 중 선택 가능한 플라스틱 림 휠입니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/institutional-castors" target="_blank">
+                            <img src="img/product/raedel3-1-2.png" alt="PEVOTHAN® 휠">
+                            <div class="card-txt">
+                                <h3>PEVOTHAN® 휠</h3>
+                                <p>PEVOLON® 림에 고품질 열가소성 폴리우레탄 트레드가 적용된 제품으로, 평축 베어링(/1), 볼 베어링(/5), 스테인리스 볼 베어링(/5R) 옵션이 제공됩니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/institutional-castors" target="_blank">
+                            <img src="img/product/raedel3-1-3.png" alt="열가소성 고무 휠을 적용한 회전형 캐스터">
+                            <div class="card-txt">
+                                <h3>열가소성 고무 휠을 적용한 회전형 캐스터</h3>
+                                <p>시리즈 85 휠을 적용하며,슬라이드 베어링(/1)과 실 먼지 방지 커버가 장착된 볼 베어링(/5/P FAD) 타입이 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/institutional-castors" target="_blank">
+                            <img src="img/product/raedel3-1-4.png" alt="PEVOTHAN® 휠을 적용한 회전형 캐스터">
+                            <div class="card-txt">
+                                <h3>PEVOTHAN® 휠을 적용한 회전형 캐스터</h3>
+                                <p>시리즈 85 PU 휠을 적용하며, 슬라이드 베어링(/1), 볼 베어링(/5) 선택이 가능합니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/institutional-castors" target="_blank">
+                            <img src="img/product/raedel3-1-5.png" alt="열가소성 고무 휠이 장착된 가구용 이중 휠 회전형 캐스터">
+                            <div class="card-txt">
+                                <h3>열가소성 고무 휠이 장착된 가구용 이중 휠 회전형 캐스터</h3>
+                                <p>베어링 종류에 따른 85 시리즈 바퀴인 평면 베어링(/1) 또는 스레드 가드가 있는 볼 베어링(/5/..FAD)이 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/institutional-castors" target="_blank">
+                            <img src="img/product/raedel3-1-6.png" alt="PEVOTHAN® 휠이 장착된 가구용 이중 휠 회전형 캐스터">
+                            <div class="card-txt">
+                                <h3>PEVOTHAN® 휠이 장착된 가구용 이중 휠 회전형 캐스터</h3>
+                                <p>평면 베어링(/1) 또는 볼 베어링(/5)이 장착된 85 시리즈 PU 휠입니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">산업용 캐스터<span>Industrial castors</span></div>
+                <div class="card-grid">
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/industrial-castors" target="_blank">
+                            <img src="img/product/raedel3-2-1.png" alt="PEVOLON® wheels">
+                            <div class="card-txt">
+                                <h3>PEVOLON® wheels</h3>
+                                <p>고품질 열가소성 폴리아미드 재질로 제작된 중하중용 바퀴이며, 볼 베어링(/5)이 장착되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/industrial-castors" target="_blank">
+                            <img src="img/product/raedel3-2-2.png" alt="PEVOTHAN® wheels">
+                            <div class="card-txt">
+                                <h3>PEVOTHAN® wheels</h3>
+                                <p>PEVOLON® 림에 고품질 열가소성 폴리우레탄(경도 96 Shore A) 트레드가 적용된 제품으로, 평축 베어링(/1), 볼 베어링(/5), 또는 스테인리스 볼 베어링(/5R) 중 선택 가능합니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/industrial-castors" target="_blank">
+                            <img src="img/product/raedel3-2-3.png" alt="PEVOLON® ELASTIC solid rubber wheels">
+                            <div class="card-txt">
+                                <h3>ELASTIC solid rubber wheels</h3>
+                                <p>알루미늄 림에 볼 베어링(/5)이 장착된, 견고하게 가황된 ELASTIC 솔리드 고무 타이어가 적용된 바퀴입니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/industrial-castors" target="_blank">
+                            <img src="img/product/raedel3-2-4.png" alt="PEVODYN®-Soft wheels">
+                            <div class="card-txt">
+                                <h3>PEVODYN®-Soft wheels</h3>
+                                <p>볼 베어링이 장착된 PEVOTHAN® 컨베이어 롤러로 경도 96 Shore A의 고품질 열가소성 폴리우레탄으로 제작된 롤러 본체가 볼 베어링 주변에 성형되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/industrial-castors" target="_blank">
+                            <img src="img/product/raedel3-2-5.png" alt="PEVOLON® 휠이 장착된 중하중 산업용 회전 캐스터">
+                            <div class="card-txt">
+                                <h3>PEVOLON® 휠이 장착된 중하중 산업용 회전 캐스터</h3>
+                                <p>볼 베어링(/5)이 장착된 시리즈 A 휠로, 강력한 프레스드 스틸 하우징에 아연 도금 및 크롬 처리되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/industrial-castors" target="_blank">
+                            <img src="img/product/raedel3-2-6.png" alt="PEVOTHAN® 휠이 장착된 중하중 산업용 회전 캐스터">
+                            <div class="card-txt">
+                                <h3>PEVOTHAN® 휠이 장착된 중하중 산업용 회전 캐스터</h3>
+                                <p>볼 베어링(/5)이 장착된 시리즈 87 PU 휠로, 강력한 프레스드 스틸 하우징에 아연 도금 및 크롬 처리되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/industrial-castors" target="_blank">
+                            <img src="img/product/raedel3-2-7.png" alt="엘라스틱 솔리드 고무 휠이 장착된 산업용 회전 캐스터">
+                            <div class="card-txt">
+                                <h3>엘라스틱 솔리드 고무 휠이 장착된 산업용 회전 캐스터</h3>
+                                <p>롤러 베어링(/3)이 장착된 시리즈 80 HE 휠로, 프레스드 스틸 하우징에 아연 도금 및 크롬 처리가 되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/industrial-castors" target="_blank">
+                            <img src="img/product/raedel3-2-8.png" alt="PEVODYN®-Soft 휠이 장착된 산업용 회전 캐스터">
+                            <div class="card-txt">
+                                <h3>PEVODYN®-Soft 휠이 장착된 산업용 회전 캐스터</h3>
+                                <p>볼 베어링(/5)이 장착된 시리즈 183 ALU PD-S 휠로, 프레스드 스틸 하우징에 아연 도금 및 크롬 처리가 되어 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/industrial-castors" target="_blank">
+                            <img src="img/product/raedel3-2-9.png" alt="PEVOPUR® 휠이 장착된 중하중 회전 캐스터">
+                            <div class="card-txt">
+                                <h3>PEVOPUR® 휠이 장착된 중하중 회전 캐스터</h3>
+                                <p>볼 베어링(/5)이 장착된 시리즈 178 PUR 휠로, 정밀하고 고강도 용접 강철 구조의 하우징으로 제작되었습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">스테인리스 강 캐스터<span>Stainless steel castors</span></div>
+                <div class="card-grid">
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/stainless-steel-castors" target="_blank">
+                            <img src="img/product/raedel3-3-1.png" alt="스테인리스 스틸 인스티튜셔널 캐스터">
+                            <div class="card-txt">
+                                <h3>스테인리스 스틸 인스티튜셔널 캐스터</h3>
+                                <p>폴리싱 처리된 스테인리스 스틸 하우징에 열가소성 고무 또는 PEVOTHAN® 바퀴가 장착되어 있으며, 평축 베어링, 심홈 볼 베어링 또는 방청 심홈 볼 베어링으로 구성됩니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/stainless-steel-castors" target="_blank">
+                            <img src="img/product/raedel3-3-2.png" alt="PEVOLON® pallet rollers">
+                            <div class="card-txt">
+                                <h3>스테인리스 스틸 산업용 캐스터</h3>
+                                <p>스테인리스 스틸 하우징에 PEVOLON®, PEVOTHAN® 또는 열가소성 고무 바퀴가 장착되어 있으며, 평축 베어링 또는 방청 롤러 베어링으로 구성됩니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.raedervogel.de/en/wheels-castors/castors/stainless-steel-castors" target="_blank">
+                            <img src="img/product/raedel3-3-3.png" alt="스테인리스 스틸 인스티튜셔널 캐스터">
+                            <div class="card-txt">
+                                <h3>스테인리스 스틸 인스티튜셔널 캐스터</h3>
+                                <p>용접된 스테인리스 스틸 하우징에 PEVOLON® 바퀴가 장착되어 있으며, 평축 베어링을 사용합니다. 상부 플레이트가 부착되어 있고, 선택적으로 ALLSTOP 잠금 장치를 포함할 수 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info raedel-info raedel-tab4">
+        <div class="sec-inner">
+            <div class="sec-txt" data-aos="fade-up">
+                <h2 class="title">제품 소개</h2>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">산업용 트럭용 휠<span>Wheels for industrial trucks</span></div>
+                <div class="product-description">
+                    저희는 전 세계 주요 산업용 트럭 제조사들의 OEM 개발 파트너로 20년 이상 함께해 왔습니다. 고객에게는 애프터서비스 관리와 모든 인트라로지스틱스 과제 해결을 위한 폭넓은 제품 포트폴리오를 제공합니다. 저희 제품은 설계비용 최적화(design-to-cost) 원칙에 따라 개발되며, 각 단계마다 지속적인 개선 과정을 거칩니다. 또한 고객의 요구에 따라 사전 조립된 부품과 구성품을 제공하며, 필요 시 ‘적시 공급(Just In Time)’이나 고객의 칸반(Kanban) 시스템에 통합하여 납품합니다.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info raedel-info raedel-tab5">
+        <div class="sec-inner">
+            <div class="sec-txt" data-aos="fade-up">
+                <h2 class="title">제품 소개</h2>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">맞춤 제작 휠<span>Custom-made products</span></div>
+                <div class="product-description">
+                    저희는 고객님의 특별한 휠과 캐스터 요구에 능동적으로 대응하는 것을 사명으로 생각합니다. 개별적인 필요가 최우선이기에 모든 도전을 환영하며, 고객님과 협력하여 복잡한 문제에 대한 맞춤 솔루션을 개발합니다. 다년간의 경험과 폭넓은 전문지식을 바탕으로 최고 품질의 휠과 캐스터를 제작하며, 3D CAD 시스템, FEM 해석 및 시뮬레이션 등 최신 도구를 개발 과정에 표준으로 활용합니다. 전문 컨설턴트가 프로젝트 초기부터 성공적인 완수까지 전 과정을 책임감 있게 안내해 드립니다. 고객 만족이 저희의 최우선 목표이며, 이를 통해 오랜 기간 소중한 파트너십을 구축하고자 합니다.
+                </div>
+                <div class="card-grid">
+                    <div class="card card-wide">
+                        <a href="https://www.raedervogel.de/en/service/video-pevotecr-specialists-in-custom-made-products" target="_blank">
+                            <div class="card-txt">
+                                <h3>PEVOTEC®</h3>
+                                <p>EVOTEC®는 극한 작업 환경에서 사용되는 다양한 특수 폴리우레탄 엘라스토머 제품군을 의미합니다. 작업 조건에 따라 화학적·물리적 특성을 맞춤 조정하여 고객님께 최적의 휠 재료를 개발해 드립니다.</p>
+                                <div class="link">
+                                    영상 보러가기<span></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info raedel-info raedel-tab6">
+        <div class="sec-inner">
+            <div class="sec-txt" data-aos="fade-up">
+                <h2 class="title">제품 소개</h2>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">인트라로지스틱스<span>Intralogistics</span></div>
+                <div class="card-grid">
+                    <div class="card card-wide list-card">
+                        <a href="https://www.raedervogel.de/en/applications/intralogistics/industrial-trucks" target="_blank">
+                            <div class="card-txt">
+                                <h3>Industrial Trucks</h3>
+                                <ul class="list">
+                                    <li>Electric pallet truck</li>
+                                    <li>Electric pallet stacker</li>
+                                    <li>Electric vertical order picker</li>
+                                    <li>Electric reach mast truck</li>
+                                    <li>Narrow aisle forklift truck</li>
+                                    <li>4-way sideloader</li>
+                                    <li>Automatic guided vehicle system (AGV)</li>
+                                    <li>Hand pallet truck</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card card-wide list-card">
+                        <a href="https://www.raedervogel.de/en/applications/intralogistics/materials-handling" target="_blank">
+                            <div class="card-txt">
+                                <h3>Materials Handling</h3>
+                                <ul class="list">
+                                    <li>Wheels for electric monorail systems</li>
+                                    <li>Wheels for lifting equipments</li>
+                                    <li>Wheels for turntables</li>
+                                    <li>Wheels and castors for automatic guides vehicles</li>
+                                    <li>Wheels for shuttle systems</li>
+                                    <li>Wheels for stacker cranes and retrieval units and automated small-parts warehouses</li>
+                                    <li>Castors for transport carts</li>
+                                    <li>Wheels for rail conveyor systems</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">원자재 추출<span>Raw material extraction</span></div>
+                <div class="card-grid">
+                    <div class="card card-wide">
+                        <a href="https://www.raedervogel.de/en/applications/raw-material-extraction/drive-wheels-for-rail-bound-transport-systems-in-mining-technology" target="_blank">
+                            <div class="card-txt">
+                                <h3>Mining technology</h3>
+                                <p>PEVOTEC®는 극한 작업 환경에서 사용되는 다양한 특수 폴리우레탄 엘라스토머 제품군을 의미합니다. 작업 조건에 따라 화학적·물리적 특성을 맞춤 조정하여 고객님께 최적의 휠 재료를 개발해 드립니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card card-wide">
+                        <a href="https://www.raedervogel.de/en/applications/raw-material-extraction/laying-of-pipelines" target="_blank">
+                            <div class="card-txt">
+                                <h3>Laying of pipelines</h3>
+                                <p>저희는 천연가스 파이프라인(직경 500mm, 바퀴 폭 300mm)용 강관 설치 작업에 VULKOLLAN® 로드 휠과 가이드 휠을 공급했습니다. 이 바퀴들은 수직 하중 12톤, 수평 하중 9톤이라는 매우 높은 극한 하중에 노출되었으며, 파이프 표면이 마모 방지 코팅 처리되어 있어 우수한 마모 저항성 또한 필수 조건이었습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">원자재 가공<span>Raw material processing</span></div>
+                <div class="card-grid">
+                    <div class="card card-wide list-card">
+                        <a href="https://www.raedervogel.de/en/applications/raw-material-processing/metal-production" target="_blank">
+                            <div class="card-txt">
+                                <h3>Metal production</h3>
+                                <ul class="list">
+                                    <li>Wheel diameter 280 mm</li>
+                                    <li>Wheel width 193 mm</li>
+                                    <li>Welded steel wheel centres</li>
+                                    <li>Angular contact ball bearing</li>
+                                    <li>VULKOLLAN® 93 Shore A tread.</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card card-wide">
+                        <a href="https://www.raedervogel.de/en/applications/raw-material-processing/metal-processing" target="_blank">
+                            <div class="card-txt">
+                                <h3>Metal processing</h3>
+                                <p>저희 PEVOTEC® 바퀴는 가열로와 단조 설비 사이에서 워크피스를 이송하는 매니퓰레이터에 사용됩니다. 이 바퀴에 사용된 소재는 중하중 환경에서의 특수 요구사항을 충족하도록 설계되어 있으며, 극한의 하중과 온도 조건도 견딜 수 있습니다. 또한, 협소한 공간에서도 높은 기동성과 자유로운 움직임을 제공하여 장비의 유연한 작동을 지원합니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">드럼 구동 장치<span>Drum drives</span></div>
+            </div>
+            <div class="product-wrap" data-aos="fade-up">
+                <div class="product-group">다른 활용 분야<span>Further applications</span></div>
+            </div>
+        </div>
+        <div id="Raeder" class="tabcontent raeder">
+            <div class="sec-txt" data-aos="fade-up">
+                <h2 class="title">제품 레퍼런스</h2>
+            </div>
+            <div class="sub-tab" data-aos="fade-up">
+                <button class="sub-tablinks active" onclick="openSubTab(event, 'Hyundai', 'Raeder')">현대 자동차</button>
+                <button class="sub-tablinks" onclick="openSubTab(event, 'Kia', 'Raeder')">기아 자동차</button>
+            </div>
+            <!-- 현대 자동차 -->
+            <div id="Hyundai-Raeder" class="sub-tabcontent" style="display:block;" data-aos="fade-up">
+                <div class="table-content mo">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>국내</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>남양연구소</p>
+                                    <span>- PDI#2 도장, 의장, PDI#3 의장</span>
+                                    <span>- 의장</span>
+                                    <span>- 1공장 의장</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>아산</p>
+                                    <span>- 2공장 의장</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>울산</p>
+                                    <span>- 3공장 의장 & 도장</span>
+                                    <span>- 4공장 의장</span>
+                                    <span>- 5공장 의장, 차체</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>국외</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>중국</p>
+                                    <span>- BHMC#1 의장</span>
+                                    <span>- BHMC#2 의장 및 도장</span>
+                                    <span>- BHMC#3 의장</span>
+                                    <span>- BHMC#4 의장</span>
+                                    <span>- BHMC#5 의장</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>인도</p>
+                                    <span>- HMI 의장</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>미국</p>
+                                    <span>- HMMA 의장, 차체</span>
+                                    <span>- HMGMA 의장</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>체코</p>
+                                    <span>- HMMC 의장</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>튀르키에</p>
+                                    <span>- HMT 의장</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-content pc">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>지역</th>
+                                    <th>적용 공장</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="category" rowspan="7">국내</td>
+                                    <td rowspan="3">남양연구소</td>
+                                    <td>PDI#2 도장, 의장, PDI#3 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>의장</td>
+                                </tr>
+                                <tr>
+                                    <td>1공장 의장</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">아산</td>
+                                    <td class="gr">2공장 의장</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">울산</td>
+                                    <td>3공장 의장 & 도장</td>
+                                </tr>
+                                <tr>
+                                    <td>4공장 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>5공장 의장, 차체</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="category category-line" rowspan="11">국외</td>
+                                    <td class="category-line" rowspan="5">중국</td>
+                                    <td class="category-line">BHMC#1 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>BHMC#2 의장 및 도장</td>
+                                </tr>
+                                <tr>
+                                    <td>BHMC#3 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>BHMC#4 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>BHMC#5 의장</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">인도</td>
+                                    <td class="gr">HMI 의장</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">미국</td>
+                                    <td>HMMA 의장, 차체</td>
+                                </tr>
+                                <tr>
+                                    <td>HMGMA 의장</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">체코</td>
+                                    <td class="gr">HMMC 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>튀르키예</td>
+                                    <td>HMT 의장</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+            <!-- 기아자동차 -->
+            <div id="Kia-Raeder" class="sub-tabcontent" style="display: none;" data-aos="fade-up">
+                <div class="table-content mo">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>국내</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>Autoland 화성</p>
+                                    <span>- 2공장 의장</span>
+                                    <span>- 3공장 의장</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Autoland 광명</p>
+                                    <span>- 의장</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Autoland 광주</p>
+                                    <span>- 1공장 차체, 의장</span>
+                                    <span>- 2공장 의장</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>국외</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>조지아</p>
+                                    <span>- 의장, 차체</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>슬로바키아</p>
+                                    <span>- 의장</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>중국</p>
+                                    <span>- DYKMC#1 의장</span>
+                                    <span>- DYKMC#2 의장</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>멕시코</p>
+                                    <span>- 의장</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>의장</p>
+                                    <span>- 의장</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-content pc">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>지역</th>
+                                    <th>적용 공장</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="category" rowspan="5">국내</td>
+                                    <td rowspan="2">Autoland 화성</td>
+                                    <td>2공장 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>3공장 의장</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">Autoland 광명</td>
+                                    <td class="gr">의장</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Autoland 광주</td>
+                                    <td>1공장 차체, 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>2공장 의장</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="category category-line" rowspan="6">국외</td>
+                                    <td class="category-line">조지아</td>
+                                    <td class="category-line">의장, 차체</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">슬로바키아</td>
+                                    <td class="gr">의장</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">중국</td>
+                                    <td>DYKMC#1 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>DYKMC#2 의장</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">멕시코</td>
+                                    <td class="gr">의장</td>
+                                </tr>
+                                <tr>
+                                    <td>인도</td>
+                                    <td>의장</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="footer-inner">
             <div class="logo">(주)제이씨시스템스</div>
             <div class="footer-agreement">
-                <div><a href="#">사업자정보확인</a></div>
-                <div><a href="#">개인정보처리방침</a></div>
-                <div><a href="#">이메일무단수집거부</a></div>
+                <div><a href="privacy.html" target="_blank">개인정보처리방침</a></div>
+                <div><a href="email.html" target="_blank">이메일무단수집거부</a></div>
                 <div><a href="contact.html">문의하기</a></div>
             </div>
             <div class="footer-info">
@@ -345,6 +1192,8 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/common.js"></script>
     <script src="js/product.js"></script>
 </body>

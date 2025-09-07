@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/product.css">
@@ -16,105 +17,162 @@
 <body>
     <header id="header">
         <nav>
-            <div class="nav-pc">
+        <div class="nav nav-pc">
+            <a href="index.html" class="logo"></a>
+            <div class="menu">
+                <a href="company.html">Company</a>
+                <a href="business.html">Business</a>
+                <a href="product-effecto.html" class="product-nav">Product<span class="more"></span></a>
+                <a href="reference.html">Reference</a>
+            </div>
+            <div class="contact">
+                <a href="contact.html">문의 신청하기</a>
+            </div>
+        </div>
+        <div class="nav-pc-product" style="display: none;">
+          <div class="nav-pc-inner">
+            <ul>
+              <li>
+                <a href="product-effecto.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner1.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">툴 체인저</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-winkel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner2.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">산업용 특수 베어링</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-airtac.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner3.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">파워 클램프</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-rexnord.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner4.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">플라스틱 체인</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-hanel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner5.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">수직형 자동창고</div>
+                </a>
+              </li>
+              <li>
+                <a href="product-raedel.html">
+                  <div class="product-logo">
+                    <img src="img/main/gnb-partner6.png" alt="effecto">
+                  </div>
+                  <div class="product-txt">불코란 휠&롤러</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav nav-mo">
+            <a href="index.html" class="logo"></a>
+            <div class="menu"></div>
+        </div>
+        <div class="nav-mo-container">
+          <div class="nav-mo-inner">
+            <div class="gnb-header">
                 <h1 class="logo">
-                    <img src="img/logo.svg" alt="(주)제이씨시스텍스">
+                    <img src="img/logo.svg" alt="(주)제이씨시스템스">
                 </h1>
-                <div class="menu">
-                    <a href="company.html">Company</a>
-                    <a href="business.html">Business</a>
-                    <a href="product.html">Product<span class="more"></span></a>
-                    <a href="reference.html">Reference</a>
-                </div>
-                <div class="contact">
-                    <a href="contact.html">문의 신청하기</a>
-                </div>
+                <button class="close-btn" aria-label="메뉴 닫기">
+                    <img src="img/ico-close.svg" alt=" 닫기">
+                </button>
             </div>
-            <div class="nav-mo">
-                <a href="index.html" class="logo"></a>
-                <div class="menu"></div>
+            <div class="gnb-nav">
+                <ul class="main-menu">
+                    <li class="menu-item"><a href="company.html">Company</a></li>
+                    <li class="menu-item"><a href="business.html">Business</a></li>
+                    <li class="menu-item has-submenu">
+                      <div class="toggle-menu">
+                        <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
+
+                      </div>
+                      <ul class="submenu">
+                          <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
+                          <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
+                          <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
+                          <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
+                          <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
+                          <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item"><a href="reference.html">Reference</a></li>
+                </ul>
             </div>
-            <div class="nav-mo-container">
-                <div class="nav-mo-inner">
-                    <div class="gnb-header">
-                        <h1 class="logo">
-                            <img src="img/logo.svg" alt="(주)제이씨시스템스">
-                        </h1>
-                        <button class="close-btn" aria-label="메뉴 닫기">
-                            <img src="img/ico-close.svg" alt=" 닫기">
-                        </button>
-                    </div>
-                    <div class="gnb-nav">
-                        <ul class="main-menu">
-                            <li class="menu-item"><a href="company.html">Company</a></li>
-                            <li class="menu-item"><a href="business.html">Business</a></li>
-                            <li class="menu-item has-submenu">
-                                <div class="toggle-menu">
-                                    <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
-                                </div>
-                                <ul class="submenu">
-                                    <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
-                                    <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
-                                    <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
-                                    <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
-                                    <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
-                                    <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item"><a href="reference.html">Reference</a></li>
-                        </ul>
-                    </div>
-                    <div class="gnb-footer">
-                        <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
-                    </div>
-                </div>
+            <div class="gnb-footer">
+                <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
             </div>
-        </nav>
+          </div>
+        </div>
+    </nav>
     </header>
     <main>
         <div class="main-inner">
-            <h2>AirTAC</h2>
-            <div class="nav-bar">
-                <div class="nav-item home">
-                    <a href="index.html">
-                        <img src="img/product/home.svg" alt="메인">
-                    </a>
+            <div class="product-txt">
+                <h2 data-aos="fade-up">AirTAC</h2>
+                <div class="nav-bar" data-aos="fade-up">
+                    <div class="nav-item home">
+                        <a href="index.html">
+                            <img src="img/product/home.svg" alt="메인">
+                        </a>
+                    </div>
+                    <div class="nav-item">Product<span class="arrow"></span>
+                        <ul class="dropdown">
+                            <li><a href="company.html">Company</a></li>
+                            <li><a href="business.html">Business</a></li>
+                            <li style="color:var(--darkblue-400-primary)"><a href="product.html">Product</a></li>
+                            <li><a href="reference.html">Reference</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item">AirTAC<span class="arrow"></span>
+                        <ul class="dropdown">
+                            <li><a href="product-effecto.html">Effecto</a></li>
+                            <li><a href="product-winkel.html">Winkel</a></li>
+                            <li style="color:var(--darkblue-400-primary)"><a href="product-airtac.html">AirTAC</a></li>
+                            <li><a href="product-rexnord.html">Rexnord</a></li>
+                            <li><a href="product-hanel.html">Hanel</a></li>
+                            <li><a href="product-raedel.html">Raedel-Vogel</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="nav-item">Product<span class="arrow"></span>
-                    <ul class="dropdown">
-                        <li>Company</li>
-                        <li>Business</li>
-                        <li style="color:var(--darkblue-400-primary)">Product</li>
-                        <li>Reference</li>
-                    </ul>
-                </div>
-                <div class="nav-item">AirTAC<span class="arrow"></span>
-                    <ul class="dropdown">
-                        <li><a href="product-effecto.html">Effecto</a></li>
-                        <li><a href="product-winkel.html">Winkel</a></li>
-                        <li style="color:var(--darkblue-400-primary)"><a href="product-airtac.html">AirTAC</a></li>
-                        <li><a href="product-rexnord.html">Rexnord</a></li>
-                        <li><a href="product-hanel.html">Hanel</a></li>
-                        <li><a href="product-raedel.html">Raedel-Vogel</a></li>
-                    </ul>
-                </div>
+                <p class="product-desc" data-aos="fade-up">
+                    AirTAC International Group는 1988년에 대만에서 설립되어 본사를 두고 있으며, 세계 시장에서 잘 알려진 동력 전달 장비의 공급업체 및 제조업체입니다. AirTAC은 준비 유닛, 제어 구성품, 액추에이터 등을 전문적으로 생산하며 이 제품들은 자동차, 기계 제조, 금속 공학 등 여러 분야에서 널리 사용되고 있습니다.
+                </p>
             </div>
-            <p class="product-desc">
-                AirTAC International Group는 1988년에 대만에서 설립되어 본사를 두고 있으며, 세계 시장에서 잘 알려진 동력 전달 장비의 공급업체 및 제조업체입니다. AirTAC은 준비 유닛, 제어 구성품, 액추에이터 등을 전문적으로 생산하며 이 제품들은 자동차, 기계 제조, 금속 공학 등 여러 분야에서 널리 사용되고 있습니다.
-            </p>
-            <img src="img/product/airtac.png" alt="Airtac" class="product-main-img">
+            <div class="product-img" data-aos="fade-up" data-aos-delay="500">
+                <img src="img/product/airtac.png" alt="Airtac" class="product-main-img">
+            </div>
         </div>
     </main>
     <section class="info">
         <div class="sec-inner">
             <div class="sec-txt">
-                <h2 class="title">제품 소개</h2>
+                <h2 class="title" data-aos="fade-up">제품 소개</h2>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">필터, 레귤레이터, 급유<span>Preparation Unit</span></div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=39&c_kind4=455&GA-Series" target="_blank">
                             <img src="img/product/airtac1-1.png" alt="GA Series">
                             <div class="card-txt">
                                 <h3>GA Series</h3>
@@ -122,7 +180,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=39&c_kind4=482&GP-Series" target="_blank">
                             <img src="img/product/airtac1-2.png" alt="GP Series">
                             <div class="card-txt">
                                 <h3>GP Series</h3>
@@ -130,7 +188,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=39&c_kind4=44&A-B-Series" target="_blank">
                             <img src="img/product/airtac1-3.png" alt="A,B Series">
                             <div class="card-txt">
                                 <h3>A,B Series</h3>
@@ -138,7 +196,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=39&c_kind4=545&Pressure-Switch" target="blank">
                             <img src="img/product/airtac1-4.png" alt="Pressure Switch">
                             <div class="card-txt">
                                 <h3>Pressure Switch</h3>
@@ -146,7 +204,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=39&c_kind4=45&Other-Series" target="_blank">
                             <img src="img/product/airtac1-5.png" alt="Other Series">
                             <div class="card-txt">
                                 <h3>Other Series</h3>
@@ -154,7 +212,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=39&c_kind4=546&Vacuum-Components" target="_blank">
                             <img src="img/product/airtac1-6.png" alt="Vacuum Components">
                             <div class="card-txt">
                                 <h3>Vacuum Components</h3>
@@ -163,11 +221,11 @@
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">솔레노이드 밸브<span>Control Components</span></div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=40&c_kind4=46&Solenoid-Valve" target="_blank">
                             <img src="img/product/airtac2-1.png" alt="Solenoid Valve">
                             <div class="card-txt">
                                 <h3>Solenoid Valve</h3>
@@ -175,7 +233,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=40&c_kind4=47&Flow-Control-Valve" target="_blank">
                             <img src="img/product/airtac2-2.png" alt="Flow Control Valve">
                             <div class="card-txt">
                                 <h3>Flow Control Valve</h3>
@@ -183,7 +241,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=40&c_kind4=48&Pneumatic-Control-Valve" target="_blank">
                             <img src="img/product/airtac2-3.png" alt="Pneumatic Control Valve">
                             <div class="card-txt">
                                 <h3>Pneumatic Control Valve</h3>
@@ -191,7 +249,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=40&c_kind4=49&Other-Valves" target="_blank">
                             <img src="img/product/airtac2-4.png" alt="Other Valves">
                             <div class="card-txt">
                                 <h3>Other Valves</h3>
@@ -199,7 +257,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=40&c_kind4=306&Ordinary-Coils" target="_blank">
                             <img src="img/product/airtac2-5.png" alt="Ordinary Coils">
                             <div class="card-txt">
                                 <h3>Ordinary Coils</h3>
@@ -208,11 +266,11 @@
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">각종 실린더<span>Actuators</span></div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=51&Standard-Cylinders" target="_blank">
                             <img src="img/product/airtac3-1.png" alt="Standard Cylinders">
                             <div class="card-txt">
                                 <h3>Standard Cylinders</h3>
@@ -220,7 +278,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=52&Mini-Cylinders" target="_blank">
                             <img src="img/product/airtac3-2.png" alt="Mini Cylinders">
                             <div class="card-txt">
                                 <h3>Mini Cylinders</h3>
@@ -228,7 +286,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=53&Compact-Cylinders" target="_blank">
                             <img src="img/product/airtac3-3.png" alt="Compact Cylinders">
                             <div class="card-txt">
                                 <h3>Compact Cylinders</h3>
@@ -236,7 +294,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=507&Slide-Table-Cylinders" target="_blank">
                             <img src="img/product/airtac3-4.png" alt="Slide Table Cylinders">
                             <div class="card-txt">
                                 <h3>Slide Table Cylinders</h3>
@@ -244,7 +302,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=508&Guided-Cylinders" target="_blank">
                             <img src="img/product/airtac3-5.png" alt="Guided Cylinders">
                             <div class="card-txt">
                                 <h3>Guided Cylinders</h3>
@@ -252,7 +310,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=509&Rodless-Magnetic-Cylinders" target="_blank">
                             <img src="img/product/airtac3-6.png" alt="Rodless Magnetic Cylinders">
                             <div class="card-txt">
                                 <h3>Rodless Magnetic Cylinders</h3>
@@ -260,7 +318,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=510&Air-Grippers" target="_blank">
                             <img src="img/product/airtac3-7.png" alt="Air Grippers">
                             <div class="card-txt">
                                 <h3>Air Grippers</h3>
@@ -268,7 +326,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=511&Rotary-Table-Cylinders" target="_blank">
                             <img src="img/product/airtac3-8.png" alt="Rotary Table Cylinders">
                             <div class="card-txt">
                                 <h3>Rotary Table Cylinders</h3>
@@ -276,7 +334,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=513&Clamp-Cylinders" target="_blank">
                             <img src="img/product/airtac3-9.png" alt="Clamp Cylinders">
                             <div class="card-txt">
                                 <h3>Clamp Cylinders</h3>
@@ -284,7 +342,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=514&Rotary-Clamp-Cylinders" target="_blank">
                             <img src="img/product/airtac3-10.png" alt="Rotary Clamp Cylinders">
                             <div class="card-txt">
                                 <h3>Rotary Clamp Cylinders</h3>
@@ -292,7 +350,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=515&Pin-Clamp-Cylinders" target="_blank">
                             <img src="img/product/airtac3-11.png" alt="Pin Clamp Cylinders">
                             <div class="card-txt">
                                 <h3>Pin Clamp Cylinders</h3>
@@ -300,7 +358,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=41&c_kind4=55&Cylinder-Accessories" target="_blank">
                             <img src="img/product/airtac3-12.png" alt="Cylinder Accessories">
                             <div class="card-txt">
                                 <h3>Cylinder Accessories</h3>
@@ -309,11 +367,11 @@
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">피팅, 튜브 및 악세서리<span>Fittings & Tubing & Accessories</span></div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=42&c_kind4=56&Shock-Absorber" target="_blank">
                             <img src="img/product/airtac4-1.png" alt="Shock Absorber">
                             <div class="card-txt">
                                 <h3>Shock Absorber</h3>
@@ -321,7 +379,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=42&c_kind4=57&One-Touch-Fittings" target="_blank">
                             <img src="img/product/airtac4-2.png" alt="One-Touch Fittings">
                             <div class="card-txt">
                                 <h3>One-Touch Fittings</h3>
@@ -329,7 +387,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=42&c_kind4=532&Stainless-SteelOne-touch-Fittings" target="_blank">
                             <img src="img/product/airtac4-3.png" alt="Stainless SteelOne-touch">
                             <div class="card-txt">
                                 <h3>Stainless SteelOne-touch</h3>
@@ -337,7 +395,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=42&c_kind4=257&PU-Tube" target="_blank">
                             <img src="img/product/airtac4-4.png" alt="PU Tube">
                             <div class="card-txt">
                                 <h3>PU Tube</h3>
@@ -345,7 +403,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=42&c_kind4=258&PA-Tube-Flame-resistant-tube" target="_blank">
                             <img src="img/product/airtac4-5.png" alt="PA Tube">
                             <div class="card-txt">
                                 <h3>PA Tube</h3>
@@ -353,7 +411,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=42&c_kind4=612&Pneumatic-Indicator" target="_blank">
                             <img src="img/product/airtac4-6.png" alt="Pneumatic Indicator">
                             <div class="card-txt">
                                 <h3>Pneumatic Indicator</h3>
@@ -362,11 +420,11 @@
                     </div>
                 </div>
             </div>
-            <div class="product-wrap">
+            <div class="product-wrap" data-aos="fade-up">
                 <div class="product-group">LM 가이드<span>LM Guide</span></div>
                 <div class="card-grid">
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/pro.aspx?c_kind=4&c_kind2=19&c_kind3=446&c_kind4=502&Guide" target="_blank">
                             <img src="img/product/airtac5-1.png" alt="Guide">
                             <div class="card-txt">
                                 <h3>Guide</h3>
@@ -374,7 +432,7 @@
                         </a>
                     </div>
                     <div class="card">
-                        <a href="#">
+                        <a href="https://global.airtac.com/guide" target="_blank">
                             <img src="img/product/airtac5-2.png" alt="Linear guide theoretical lifespan calculation program">
                             <div class="card-txt">
                                 <h3>Linear guide theoretical lifespan calculation program</h3>
@@ -387,10 +445,10 @@
     </section>
     <section class="reference last">
         <div class="sec-inner">
-            <div class="sec-txt">
+            <div class="sec-txt" data-aos="fade-up">
                 <h2 class="title">제품 레퍼런스</h2>
             </div>
-            <div class="product-reference">
+            <div class="product-reference" data-aos="fade-up">
                 <p>㈜에스이씨 / (주)에이티엠이엔지 / 대우로보트 / 한국티앤엠㈜ / (주)오토텍 / 삼미기계 / 대린테크㈜ / 명신산업㈜</p>
             </div>
         </div>
@@ -399,9 +457,8 @@
         <div class="footer-inner">
             <div class="logo">(주)제이씨시스템스</div>
             <div class="footer-agreement">
-                <div><a href="#">사업자정보확인</a></div>
-                <div><a href="#">개인정보처리방침</a></div>
-                <div><a href="#">이메일무단수집거부</a></div>
+                <div><a href="privacy.html" target="_blank">개인정보처리방침</a></div>
+                <div><a href="email.html" target="_blank">이메일무단수집거부</a></div>
                 <div><a href="contact.html">문의하기</a></div>
             </div>
             <div class="footer-info">
@@ -420,6 +477,8 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/common.js"></script>
     <script src="js/product.js"></script>
 </body>

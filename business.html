@@ -8,29 +8,82 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/business.css">
 </head>
 
 <body>
-    <header id="header">
+    <header id="header" class="visible">
         <nav>
-            <div class="nav-pc">
-                <h1 class="logo">
-                    <img src="img/logo.svg" alt="(주)제이씨시스텍스">
-                </h1>
+            <div class="nav nav-pc color">
+                <a href="index.html" class="logo"></a>
                 <div class="menu">
                     <a href="company.html">Company</a>
                     <a href="business.html">Business</a>
-                    <a href="product.html">Product<span class="more"></span></a>
+                    <a href="product-effecto.html" class="product-nav">Product<span class="more"></span></a>
                     <a href="reference.html">Reference</a>
                 </div>
                 <div class="contact">
                     <a href="contact.html">문의 신청하기</a>
                 </div>
             </div>
-            <div class="nav-mo color">
+            <div class="nav-pc-product" style="display: none;">
+                <div class="nav-pc-inner">
+                    <ul>
+                        <li>
+                            <a href="product-effecto.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner1.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">툴 체인저</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-winkel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner2.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">산업용 특수 베어링</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-airtac.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner3.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">파워 클램프</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-rexnord.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner4.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">플라스틱 체인</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-hanel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner5.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">수직형 자동창고</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-raedel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner6.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">불코란 휠&롤러</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav nav-mo color">
                 <a href="index.html" class="logo"></a>
                 <div class="menu"></div>
             </div>
@@ -73,9 +126,9 @@
     </header>
     <main>
         <div class="main-inner">
-            <h2>Business</h2>
+            <h2 data-aos="fade-up">Business</h2>
             <div class="sub">
-                <div class="sub-txt">
+                <div class="sub-txt" data-aos="fade-up" data-aos-delay="500">
                     스마트 산업의 흐름, <br>(주)제이씨시스템스가 만듭니다.
                 </div>
             </div>
@@ -84,21 +137,25 @@
     <section class="business1">
         <div class="sec-inner">
             <div class="sec-txt">
-                <h2 class="title">물류 자동화</h2>
-                <p class="sub-txt">물류시스템 자동화에 필요한 컴포넌트(접촉식&비접촉식 전원 공급 장치, 공압 부품, 타이밍 벨트 등)의 공급을 통해 물류공정의 효율성 향상 및 고객 신뢰도에 기여해 왔습니다.</p>
+                <h2 class="title" data-aos="fade-up">물류 자동화</h2>
+                <p class="sub-txt" data-aos="fade-up">물류시스템 자동화에 필요한 컴포넌트(접촉식&비접촉식 전원 공급 장치, 공압 부품, 타이밍 벨트 등)의 공급을 통해 물류공정의 효율성 향상 및 고객 신뢰도에 기여해 왔습니다.</p>
             </div>
         </div>
-        <div class="business-img"></div>
+        <div class="sec-img" data-aos="fade-up">
+            <div class="business-img"></div>
+        </div>
     </section>
     <section class="business2">
         <div class="sec-inner">
             <div class="sec-txt">
-                <h2 class="title">자동 창고</h2>
-                <p class="sub-txt">독일 Haenel사의 혁신적인 제품군과 당사의 전문적인 솔루션 제안을 결합하여, 생산 및 물류 환경의 전반적인 효율성과 안정성을 극대화하는 솔루션을 제공합니다. 최신 자동화 기술과 데이터 기반 관리 시스템을 도입해 고객사의 비즈니스 경쟁력을 한층 강화시키고 있습니다.</p>
+                <h2 class="title" data-aos="fade-up">자동 창고</h2>
+                <p class="sub-txt" data-aos="fade-up">독일 Haenel사의 혁신적인 제품군과 당사의 전문적인 솔루션 제안을 결합하여, 생산 및 물류 환경의 전반적인 효율성과 안정성을 극대화하는 솔루션을 제공합니다. 최신 자동화 기술과 데이터 기반 관리 시스템을 도입해 고객사의 비즈니스 경쟁력을 한층 강화시키고 있습니다.</p>
             </div>
         </div>
-        <div class="business-img"></div>
-        <div class="ico-box">
+        <div class="sec-img" data-aos="fade-up">
+            <div class="business-img"></div>
+        </div>
+        <div class="ico-box" data-aos="fade-up">
             <ul>
                 <li>
                     <img src="img/business/ico-business1.svg" alt="자동화 창고 및 물류 시스템">
@@ -122,29 +179,31 @@
     <section class="business3">
         <div class="sec-inner">
             <div class="sec-txt">
-                <h2 class="title">자동차 생산공정</h2>
-                <p class="sub-txt">전 세계 최고 수준의 기술력을 보유한 독일 파트너사와의 협업을 통해, 자동차 생산 공정에 필요한 설비와 부품을 성공적으로 공급하였습니다. 또한, 공정 최적화와 고품질 부품 제공을 통해 생산성 향상과 설비 보전 효율 개선에 기여하고 있습니다.</p>
+                <h2 class="title" data-aos="fade-up">자동차 생산공정</h2>
+                <p class="sub-txt" data-aos="fade-up">전 세계 최고 수준의 기술력을 보유한 독일 파트너사와의 협업을 통해, 자동차 생산 공정에 필요한 설비와 부품을 성공적으로 공급하였습니다. 또한, 공정 최적화와 고품질 부품 제공을 통해 생산성 향상과 설비 보전 효율 개선에 기여하고 있습니다.</p>
             </div>
         </div>
-        <div class="business-img"></div>
+        <div class="sec-img" data-aos="fade-up">
+            <div class="business-img"></div>
+        </div>
     </section>
     <section class="business4 last">
         <div class="sec-inner">
             <div class="sec-txt">
-                <h2 class="title">고객 맞춤형 컨설팅 및 지원</h2>
-                <p class="sub-txt">자동차 생산공정과 물류 전반에 최적화된 솔루션을 포함한 관련 부품을 독일 등 선진국으로부터 공급합니다.</p>
+                <h2 class="title" data-aos="fade-up">고객 맞춤형 컨설팅 및 지원</h2>
+                <p class="sub-txt" data-aos="fade-up">자동차 생산공정과 물류 전반에 최적화된 솔루션을 포함한 관련 부품을 독일 등 선진국으로부터 공급합니다.</p>
             </div>
         </div>
-        <div class="business-img"></div>
+        <div class="sec-img" data-aos="fade-up">
+            <div class="business-img"></div>
+        </div>
     </section>
-
     <footer>
         <div class="footer-inner">
             <div class="logo">(주)제이씨시스템스</div>
             <div class="footer-agreement">
-                <div><a href="#">사업자정보확인</a></div>
-                <div><a href="#">개인정보처리방침</a></div>
-                <div><a href="#">이메일무단수집거부</a></div>
+                <div><a href="privacy.html" target="_blank">개인정보처리방침</a></div>
+                <div><a href="email.html" target="_blank">이메일무단수집거부</a></div>
                 <div><a href="contact.html">문의하기</a></div>
             </div>
             <div class="footer-info">
@@ -163,6 +222,8 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="js/common.js"></script>
 </body>
 

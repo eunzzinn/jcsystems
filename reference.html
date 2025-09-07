@@ -8,29 +8,82 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/reference.css">
 </head>
 
 <body>
-    <header id="header">
+    <header id="header" class="visible">
         <nav>
-            <div class="nav-pc">
-                <h1 class="logo">
-                    <img src="img/logo.svg" alt="(주)제이씨시스텍스">
-                </h1>
+            <div class="nav nav-pc color">
+                <a href="index.html" class="logo"></a>
                 <div class="menu">
                     <a href="company.html">Company</a>
                     <a href="business.html">Business</a>
-                    <a href="product.html">Product<span class="more"></span></a>
+                    <a href="product-effecto.html" class="product-nav">Product<span class="more"></span></a>
                     <a href="reference.html">Reference</a>
                 </div>
                 <div class="contact">
                     <a href="contact.html">문의 신청하기</a>
                 </div>
             </div>
-            <div class="nav-mo color">
+            <div class="nav-pc-product" style="display: none;">
+                <div class="nav-pc-inner">
+                    <ul>
+                        <li>
+                            <a href="product-effecto.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner1.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">툴 체인저</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-winkel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner2.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">산업용 특수 베어링</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-airtac.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner3.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">파워 클램프</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-rexnord.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner4.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">플라스틱 체인</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-hanel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner5.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">수직형 자동창고</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-raedel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner6.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">불코란 휠&롤러</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav nav-mo color">
                 <a href="index.html" class="logo"></a>
                 <div class="menu"></div>
             </div>
@@ -73,15 +126,15 @@
     </header>
     <main>
         <div class="main-inner">
-            <h2>Reference</h2>
+            <h2 data-aos="fade-up">Reference</h2>
             <div class="sub">
-                <div class="sub-txt">
+                <div class="sub-txt" data-aos="fade-up" data-aos-delay="500">
                     (주)제이씨시스템스의 글로벌<br>선택을 받은 기술력과 함께하세요!
                 </div>
             </div>
         </div>
     </main>
-    <section class="tab">
+    <section class="tab" data-aos="fade-up" data-aos-delay="700">
         <div class="top-tab">
             <button class="top-tablinks active" onclick="openTopTab(event, 'Rexnord')">Rexnord</button>
             <button class="top-tablinks" onclick="openTopTab(event, 'Raeder')">Raeder Vogel</button>
@@ -89,18 +142,18 @@
     </section>
     <section class="table">
         <div class="sec-inner">
-            <div class="sec-txt">
+            <div class="sec-txt" data-aos="fade-up">
                 <h2 class="title">국내외 공급실적</h2>
             </div>
             <!-- Rexnord 콘텐츠 -->
             <div id="Rexnord" class="tabcontent rexnord" style="display:block;">
                 <!-- 하위 탭 -->
-                <div class="sub-tab">
+                <div class="sub-tab" data-aos="fade-up">
                     <button class="sub-tablinks active" onclick="openSubTab(event, 'Hyundai', 'Rexnord')">현대 자동차</button>
                     <button class="sub-tablinks" onclick="openSubTab(event, 'Kia', 'Rexnord')">기아 자동차</button>
                 </div>
                 <!-- 현대 자동차 테이블 -->
-                <div id="Hyundai-Rexnord" class="sub-tabcontent" style="display:block;">
+                <div id="Hyundai-Rexnord" class="sub-tabcontent scroll-custom touch-drag" style="display:block;" data-aos="fade-up">
                     <table>
                         <thead>
                             <tr>
@@ -175,7 +228,7 @@
                     </table>
                 </div>
                 <!-- 기아 자동차 테이블 -->
-                <div id="Kia-Rexnord" class="sub-tabcontent" style="display: none;">
+                <div id="Kia-Rexnord" class="sub-tabcontent scroll-custom touch-drag" style="display: none;">
                     <table>
                         <thead>
                             <tr>
@@ -252,10 +305,11 @@
                 </div>
                 <!-- 현대 자동차 -->
                 <div id="Hyundai-Raeder" class="sub-tabcontent" style="display:block;">
-                    <div class="img-content">
-                        <img src="img/reference/hyundai-map-mo.jpg" alt="현대자동차 지도">
+                    <div class="img-content" data-aos="fade-up">
+                        <img src="img/reference/hyundai-map-mo.jpg" alt="현대자동차 지도" class="mo">
+                        <img src="img/reference/hyundai-map-pc.jpg" alt="현대자동차 지도" class="pc">
                     </div>
-                    <div class="table-content mo">
+                    <div class="table-content mo" data-aos="fade-up">
                         <table>
                             <thead>
                                 <tr>
@@ -332,10 +386,86 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="table-content pc">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>지역</th>
+                                    <th>적용 공장</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="category" rowspan="7">국내</td>
+                                    <td rowspan="3">남양연구소</td>
+                                    <td>PDI#2 도장, 의장, PDI#3 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>의장</td>
+                                </tr>
+                                <tr>
+                                    <td>1공장 의장</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">아산</td>
+                                    <td class="gr">2공장 의장</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">울산</td>
+                                    <td>3공장 의장 & 도장</td>
+                                </tr>
+                                <tr>
+                                    <td>4공장 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>5공장 의장, 차체</td>
+                                </tr>
+                                <tr>
+                                    <td class="category category-line" rowspan="11">국외</td>
+                                    <td class="category-line" rowspan="5">중국</td>
+                                    <td class="category-line">BHMC#1 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>BHMC#2 의장 및 도장</td>
+                                </tr>
+                                <tr>
+                                    <td>BHMC#3 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>BHMC#4 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>BHMC#5 의장</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">인도</td>
+                                    <td class="gr">HMI 의장</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">미국</td>
+                                    <td>HMMA 의장, 차체</td>
+                                </tr>
+                                <tr>
+                                    <td>HMGMA 의장</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">체코</td>
+                                    <td class="gr">HMMC 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>튀르키예</td>
+                                    <td>HMT 의장</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div id="Kia-Raeder" class="sub-tabcontent">
+                <!-- 기아 자동차 -->
+                <div id="Kia-Raeder" class="sub-tabcontent" data-aos="fade-up">
                     <div class="img-content">
-                        <img src="img/reference/kia-map-mo.jpg" alt="기아자동차 지도">
+                        <img src="img/reference/kia-map-mo.jpg" alt="기아자동차 지도" class="mo">
+                        <img src="img/reference/kia-map-pc.jpg" alt="기아자동차 지도" class="pc">
                     </div>
                     <div class="table-content mo">
                         <table>
@@ -408,6 +538,62 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="table-content pc">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>지역</th>
+                                    <th>적용 공장</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="category" rowspan="5">국내</td>
+                                    <td rowspan="2">Autoland 화성</td>
+                                    <td>2공장 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>3공장 의장</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">Autoland 광명</td>
+                                    <td class="gr">의장</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Autoland 광주</td>
+                                    <td>1공장 차체, 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>2공장 의장</td>
+                                </tr>
+                                <tr>
+                                    <td class="category category-line" rowspan="6">국외</td>
+                                    <td class="category-line">조지아</td>
+                                    <td class="category-line">의장, 차체</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">슬로바키아</td>
+                                    <td class="gr">의장</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">중국</td>
+                                    <td>DYKMC#1 의장</td>
+                                </tr>
+                                <tr>
+                                    <td>DYKMC#2 의장</td>
+                                </tr>
+                                <tr>
+                                    <td class="gr">멕시코</td>
+                                    <td class="gr">의장</td>
+                                </tr>
+                                <tr>
+                                    <td>인도</td>
+                                    <td>의장</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -416,9 +602,8 @@
         <div class="footer-inner">
             <div class="logo">(주)제이씨시스템스</div>
             <div class="footer-agreement">
-                <div><a href="#">사업자정보확인</a></div>
-                <div><a href="#">개인정보처리방침</a></div>
-                <div><a href="#">이메일무단수집거부</a></div>
+                <div><a href="privacy.html" target="_blank">개인정보처리방침</a></div>
+                <div><a href="email.html" target="_blank">이메일무단수집거부</a></div>
                 <div><a href="contact.html">문의하기</a></div>
             </div>
             <div class="footer-info">
@@ -437,6 +622,8 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/reference.js"></script>
 </body>

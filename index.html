@@ -1,212 +1,298 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JC SYSTEMS</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/PretendardVariable.woff2">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  <header id="header">
-    <nav>
-        <div class="nav-pc">
-            <h1 class="logo">
-                <img src="img/logo.svg" alt="(주)제이씨시스텍스">
-            </h1>
-            <div class="menu">
-                <a href="company.html">Company</a>
-                <a href="business.html">Business</a>
-                <a href="product.html">Product<span class="more"></span></a>
-                <a href="reference.html">Reference</a>
-            </div>
-            <div class="contact">
-                <a href="contact.html">문의 신청하기</a>
-            </div>
-        </div>
-        <div class="nav-mo">
-            <a href="index.html" class="logo"></a>
-            <div class="menu"></div>
-        </div>
-        <div class="nav-mo-container">
-          <div class="nav-mo-inner">
-            <div class="gnb-header">
-                <h1 class="logo">
-                    <img src="img/logo.svg" alt="(주)제이씨시스템스">
-                </h1>
-                <button class="close-btn" aria-label="메뉴 닫기">
-                    <img src="img/ico-close.svg" alt=" 닫기">
-                </button>
-            </div>
-            <div class="gnb-nav">
-                <ul class="main-menu">
-                    <li class="menu-item"><a href="company.html">Company</a></li>
-                    <li class="menu-item"><a href="business.html">Business</a></li>
-                    <li class="menu-item has-submenu">
-                      <div class="toggle-menu">
-                        <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
 
-                      </div>
-                      <ul class="submenu">
-                          <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
-                          <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
-                          <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
-                          <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
-                          <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
-                          <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item"><a href="reference.html">Reference</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC SYSTEMS</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/PretendardVariable.woff2">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="nav nav-pc">
+                <a href="index.html" class="logo"></a>
+                <div class="menu">
+                    <a href="company.html">Company</a>
+                    <a href="business.html">Business</a>
+                    <a href="product-effecto.html" class="product-nav">Product<span class="more"></span></a>
+                    <a href="reference.html">Reference</a>
+                </div>
+                <div class="contact">
+                    <a href="contact.html">문의 신청하기</a>
+                </div>
+            </div>
+            <div class="nav-pc-product" style="display: none;">
+                <div class="nav-pc-inner">
+                    <ul>
+                        <li>
+                            <a href="product-effecto.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner1.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">툴 체인저</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-winkel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner2.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">산업용 특수 베어링</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-airtac.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner3.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">파워 클램프</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-rexnord.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner4.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">플라스틱 체인</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-hanel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner5.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">수직형 자동창고</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-raedel.html">
+                                <div class="product-logo">
+                                    <img src="img/main/gnb-partner6.png" alt="effecto">
+                                </div>
+                                <div class="product-txt">불코란 휠&롤러</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav nav-mo">
+                <a href="index.html" class="logo"></a>
+                <div class="menu"></div>
+            </div>
+            <div class="nav-mo-container">
+                <div class="nav-mo-inner">
+                    <div class="gnb-header">
+                        <h1 class="logo">
+                            <img src="img/logo.svg" alt="(주)제이씨시스템스">
+                        </h1>
+                        <button class="close-btn" aria-label="메뉴 닫기">
+                            <img src="img/ico-close.svg" alt=" 닫기">
+                        </button>
+                    </div>
+                    <div class="gnb-nav">
+                        <ul class="main-menu">
+                            <li class="menu-item"><a href="company.html">Company</a></li>
+                            <li class="menu-item"><a href="business.html">Business</a></li>
+                            <li class="menu-item has-submenu">
+                                <div class="toggle-menu">
+                                    <a href="product.html" class="submenu-toggle">Product<span class="toggle-open"></span></a>
+                                </div>
+                                <ul class="submenu">
+                                    <li><a href="product-effecto.html">Effecto<span>툴 체인저</span></a></li>
+                                    <li><a href="product-winkel.html">Winkel<span>산업용 특수 베어링</span></a></li>
+                                    <li><a href="product-airtac.html">AirTAC<span>파워 클램프</span></a></li>
+                                    <li><a href="product-rexnord.html">Rexnord<span>플라스틱 체인</span></a></li>
+                                    <li><a href="product-hanel.html">Hanel<span>수직형 자동창고</span></a></li>
+                                    <li><a href="product-raedel.html">Raedel-vogel<span>볼 코팅 휠&amp;롤러</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="reference.html">Reference</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb-footer">
+                        <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-slider" id="mainSlider">
+        <div class="main-inner">
+            <div class="main-slide active">
+                <img src="img/main/main1.jpg" alt="슬라이드1">
+                <div class="main-txt-container" data-aos="fade-up">
+                    <div class="main-txt">
+                        Precise,<br class="mo">Flexible<br>Transport
+                        <div class="main-subtext">(주)제이씨시스템스는 자동차 생산라인 <br class="mo">및 일반 물류센터에 <br class="pc">최적화되고 <br class="mo">완벽한 솔루션을 제공합니다.</div>
+                    </div>
+                    <div class="main-slide-function mo">
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="page-view">
+                            <button class="nav-btn prev"><img src="img/main/ico-prev.svg" alt="이전"></button>
+                            <button class="pause-resume"><img src="img/main/ico-pause.svg" alt="일시정지"></button>
+                            <button class="nav-btn next"><img src="img/main/ico-next.svg" alt="다음"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-slide">
+                <img src="img/main/main2.jpg" alt="슬라이드2">
+                <div class="main-txt-container" data-aos="fade-up">
+                    <div class="main-txt">Trusted by<br>Industry <br class="mo">Partners
+                        <div class="main-subtext">국내외 다양한 기업과 함께한 <br class="mo">경험을 통해 쌓아온 신뢰와 노하우로,<br>고객의 비즈니스 성장을 함께합니다.</div>
+                    </div>
+                    <div class="main-slide-function mo">
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="page-view">
+                            <button class="nav-btn prev"><img src="img/main/ico-prev.svg" alt="이전"></button>
+                            <button class="pause-resume"><img src="img/main/ico-pause.svg" alt="일시정지"></button>
+                            <button class="nav-btn next"><img src="img/main/ico-next.svg" alt="다음"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-slide">
+                <img src="img/main/main3.jpg" alt="슬라이드3">
+                <div class="main-txt-container" data-aos="fade-up">
+                    <div class="main-txt">Flexible Solutions <br class="mo">for <br>Manufacturing <br>& Material Handling
+                        <div class="main-subtext">제조 현장에서 요구되는 정확도, 내구성, 확장성을 <br>갖춘 시스템으로 스마트 팩토리 환경에 최적화된 <br class="mo">솔루션을 제공합니다.</div>
+                    </div>
+                    <div class="main-slide-function mo">
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="page-view">
+                            <button class="nav-btn prev"><img src="img/main/ico-prev.svg" alt="이전"></button>
+                            <button class="pause-resume"><img src="img/main/ico-pause.svg" alt="일시정지"></button>
+                            <button class="nav-btn next"><img src="img/main/ico-next.svg" alt="다음"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="solution">
+        <div class="sec-inner">
+            <div class="sec-txt" data-aos="fade-up">
+                <div class="sub">Solution</div>
+                <h2>고객 맞춤 솔루션과 <br class="mo">기술 제안,<br>(주)제이씨시스템스에서 <br class="pc-1441">시작하세요.</h2>
+                <p class="sub-txt">축적된 경험과 전문성으로 고객님의 비즈니스에<br>최적화된 솔루션을 제공합니다.</p>
+                <div class="contact-btn"><a href="contact.html">상담 신청하기</a></div>
+            </div>
+        </div>
+        <div class="solution-img" data-aos="fade-up"></div>
+    </section>
+    <section class="products">
+        <div class="sec-inner" data-aos="fade-up">
+            <div class="sub">Product</div>
+            <h2>(주)제이씨시스템스의 기술로<br>증명하는 대표 솔루션</h2>
+            <p class="sub-txt">정확성, 복잡성, 효율성을 갖춘 <br>(주)제이씨시스템스의 핵심 기술을 지금 만나보세요.</p>
+            <div class="product-btn-wrap">
+                <button class="product-btn"><img src="img/main/ico-arrow-left.svg" alt="좌"></button>
+                <div class="num"><span class="now-num">1</span> / 06</div>
+                <button class="product-btn"><img src="img/main/ico-arrow-right.svg" alt="우"></button>
+            </div>
+            <div class="product-slider-container">
+                <div class="product-slider" id="productSlider">
+                    <div class="product-slide"><img src="img/main/product1.jpg" alt="제품1">
+                        <div class="product-label">Effecto</div>
+                    </div>
+                    <div class="product-slide"><img src="img/main/product2.jpg" alt="제품2">
+                        <div class="product-label">Winkel</div>
+                    </div>
+                    <div class="product-slide"><img src="img/main/product3.jpg" alt="제품3">
+                        <div class="product-label">AirTAC</div>
+                    </div>
+                    <div class="product-slide"><img src="img/main/product4.jpg" alt="제품4">
+                        <div class="product-label">Rexnord</div>
+                    </div>
+                    <div class="product-slide"><img src="img/main/product5.jpg" alt="제품5">
+                        <div class="product-label">Hanel</div>
+                    </div>
+                    <div class="product-slide"><img src="img/main/product6.jpg" alt="제품6">
+                        <div class="product-label">Raedel-Vogel</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="partner">
+        <div class="sec-inner" data-aos="fade-up">
+            <div class="sub">Partner</div>
+            <h2>(주)제이씨시스템스는 <br class="mo">다양한 파트너사와 함께<br>더 나은 미래를 <br class="mo">만들어가고 있습니다.</h2>
+            <ul class="partner-wrap">
+                <li><img src="img/main/partner1.svg" alt="파트너사"></li>
+                <li><img src="img/main/partner2.svg" alt="파트너사"></li>
+                <li><img src="img/main/partner3.svg" alt="파트너사"></li>
+                <li><img src="img/main/partner4.svg" alt="파트너사"></li>
+                <li><img src="img/main/partner5.svg" alt="파트너사"></li>
+                <li><img src="img/main/partner6.svg" alt="파트너사"></li>
+            </ul>
+        </div>
+        <div class="partner-marquee" data-aos="fade-up">
+            <div class="partner-marquee-text">JC SYSTEMS GLOBAL LEADER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JC SYSTEMS GLOBAL LEADER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JC SYSTEMS GLOBAL LEADER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JC SYSTEMS GLOBAL LEADER</div>
+        </div>
+    </section>
+    <section class="client">
+        <div class="sec-inner" data-aos="fade-up">
+            <div class="sub">Client</div>
+            <h2>(주)제이씨시스템스는 <br class="mo">여러 클라이언트들과 <br class="mo">함께합니다.</h2>
+            <ul class="client-wrap">
+                <li><img src="img/main/client1.svg" alt="클라이언트"></li>
+                <li><img src="img/main/client2.svg" alt="클라이언트"></li>
+                <li><img src="img/main/client3.svg" alt="클라이언트"></li>
+                <li><img src="img/main/client4.svg" alt="클라이언트"></li>
+                <li><img src="img/main/client5.svg" alt="클라이언트"></li>
+                <li><img src="img/main/client6.svg" alt="클라이언트"></li>
+                <li><img src="img/main/client7.svg" alt="클라이언트"></li>
+                <li><img src="img/main/client8.svg" alt="클라이언트"></li>
+                <li><img src="img/main/client9.svg" alt="클라이언트"></li>
+                <li><img src="img/main/client10.svg" alt="클라이언트"></li>
+                <li><img src="img/main/client11.svg" alt="클라이언트"></li>
+                <li><img src="img/main/client12.svg" alt="클라이언트"></li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-inner">
+            <div class="logo">(주)제이씨시스템스</div>
+            <div class="footer-agreement">
+                <div><a href="privacy.html" target="_blank">개인정보처리방침</a></div>
+                <div><a href="email.html" target="_blank">이메일무단수집거부</a></div>
+                <div><a href="contact.html">문의하기</a></div>
+            </div>
+            <div class="footer-info">
+                <ul>
+                    <li>(주)제이씨시스템스</li>
+                    <li class="bar">|</li>
+                    <li>대표이사: 조종후</li>
+                    <li class="bar">|</li>
+                    <li>사업자등록번호: 119-86-66085</li>
+                    <li class="bar">|</li>
+                    <li>서울 금천구 가산디지털1로 233, 405호 (가산동,에이스하이엔드타워9차)</li>
                 </ul>
             </div>
-            <div class="gnb-footer">
-                <a href="contact.html" class="inquiry-btn">문의 신청하기</a>
-            </div>
-          </div>
-
+            <div class="rights">© 2025 JC Systems Corporation All rights reserved.</div>
+            <div class="scroll-top" onclick="scrollToTop()"></div>
         </div>
-    </nav>
-  </header>
-
-  <main class="main-slider" id="mainSlider">
-    <div class="main-inner">
-        <div class="main-slide active">
-            <img src="img/main/main1.jpg" alt="슬라이드1">
-            <div class="main-text">
-                Precise,<br class="mo">Flexible<br>Transport
-                <div class="main-subtext">(주)제이씨시스템스는 자동차 생산라인 <br class="mo">및 일반 물류센터에 최적화되고 <br class="mo">완벽한 솔루션을 제공합니다.</div>
-            </div>
-        </div>
-        <div class="main-slide">
-            <img src="img/main/main2.jpg" alt="슬라이드2">
-            <div class="main-text">Trusted by<br>Industry <br class="mo">Partners
-                <div class="main-subtext">국내외 다양한 기업과 함께한 <br class="mo">경험을 통해 쌓아온 신뢰와 노하우로,<br>고객의 비즈니스 성장을 함께합니다.</div>
-            </div>
-        </div>
-        <div class="main-slide">
-            <img src="img/main/main3.jpg" alt="슬라이드3">
-            <div class="main-text">Flexible Solutions <br class="mo">for Manufacturing <br class="mo">& Material Handling
-                <div class="main-subtext">제조 현장에서 요구되는 정확도, 내구성, 확장성을 <br class="mo">갖춘 시스템으로 스마트 팩토리 환경에 최적화된 <br class="mo">솔루션을 제공합니다.</div>
-            </div>
-        </div>
-    </div>
-    <div class="main-slide-function">
-        <div class="progress-bar">
-            <div class="progress"></div>
-        </div>
-        <div class="page-view">
-            <button class="nav-btn prev"><img src="img/main/ico-prev.svg" alt="메인슬라이더1"></button>
-            <button class="pause-resume"><img src="img/main/ico-pause.svg" alt="메인슬라이더3"></button>
-            <button class="nav-btn next"><img src="img/main/ico-next.svg" alt="메인슬라이더2"></button>
-        </div>
-    </div>
-  </main>
-
-  <section class="solution">
-    <div class="sec-inner">
-      <div class="sec-txt">
-        <div class="sub">Solution</div>
-        <h2>고객 맞춤 솔루션과 <br>기술 제안,<br>(주)제이씨시스템스에서 <br>시작하세요.</h2>
-        <p class="sub-txt">축적된 경험과 전문성으로 고객님의 비즈니스에<br>최적화된 솔루션을 제공합니다.</p>
-        <div class="contact-btn"><a href="contact.html">상담 신청하기</a></div>
-      </div>
-    </div>
-    <div class="solution-img"></div>
-  </section>
-
-  <section class="products">
-    <div class="sec-inner">
-      <div class="sub">Product</div>
-      <h2>(주)제이씨시스템스의 기술로<br>증명하는 대표 솔루션</h2>
-      <p class="sub-txt">정확성, 복잡성, 효율성을 갖춘<br>(주)제이씨시스템스의 핵심 기술을 지금 만나보세요.</p>
-      <div class="product-btn-wrap">
-        <button class="product-btn"><img src="img/main/ico-arrow-left.svg" alt="좌"></button>
-        <div class="num"><span class="now-num">1</span> / 06</div>
-        <button class="product-btn"><img src="img/main/ico-arrow-right.svg" alt="우"></button>
-      </div>
-      <div class="product-slider" id="productSlider">
-        <div class="product-slide"><img src="img/main/product1.jpg" alt="제품1"><div class="product-label">Effecto</div></div>
-        <div class="product-slide"><img src="img/main/product2.jpg" alt="제품2"><div class="product-label">Winkel</div></div>
-        <div class="product-slide"><img src="img/main/product3.jpg" alt="제품3"><div class="product-label">AirTAC</div></div>
-        <div class="product-slide"><img src="img/main/product4.jpg" alt="제품4"><div class="product-label">Rexnord</div></div>
-        <div class="product-slide"><img src="img/main/product5.jpg" alt="제품5"><div class="product-label">Hanel</div></div>
-        <div class="product-slide"><img src="img/main/product6.jpg" alt="제품6"><div class="product-label">Raedel-Vogel</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="partner">
-    <div class="sec-inner">
-      <div class="sub">Partner</div>
-      <h2>(주)제이씨시스템스는 <br class="mo">다양한 파트너사와 함께<br>더 나은 미래를 <br class="mo">만들어가고 있습니다.</h2>
-      <ul class="partner-wrap">
-        <li><img src="img/main/partner1.svg" alt="파트너사"></li>
-        <li><img src="img/main/partner2.svg" alt="파트너사"></li>
-        <li><img src="img/main/partner3.svg" alt="파트너사"></li>
-        <li><img src="img/main/partner4.svg" alt="파트너사"></li>
-        <li><img src="img/main/partner5.svg" alt="파트너사"></li>
-        <li><img src="img/main/partner6.svg" alt="파트너사"></li>
-      </ul>
-    </div>
-    <div class="partner-marquee">
-      <div class="partner-marquee-text">JC SYSTEMS GLOBAL LEADER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JC SYSTEMS GLOBAL LEADER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JC SYSTEMS GLOBAL LEADER</div>
-    </div>
-  </section>
-
-  <section class="client">
-    <div class="sec-inner">
-      <div class="sub">Client</div>
-      <h2>(주)제이씨시스템스는 <br class="mo">여러 클라이언트들과 <br class="mo">함께합니다.</h2>
-      <ul class="client-wrap">
-        <li><img src="img/main/client1.svg" alt="클라이언트"></li>
-        <li><img src="img/main/client2.svg" alt="클라이언트"></li>
-        <li><img src="img/main/client3.svg" alt="클라이언트"></li>
-        <li><img src="img/main/client4.svg" alt="클라이언트"></li>
-        <li><img src="img/main/client5.svg" alt="클라이언트"></li>
-        <li><img src="img/main/client6.svg" alt="클라이언트"></li>
-        <li><img src="img/main/client7.svg" alt="클라이언트"></li>
-        <li><img src="img/main/client8.svg" alt="클라이언트"></li>
-        <li><img src="img/main/client9.svg" alt="클라이언트"></li>
-        <li><img src="img/main/client10.svg" alt="클라이언트"></li>
-        <li><img src="img/main/client11.svg" alt="클라이언트"></li>
-        <li><img src="img/main/client12.svg" alt="클라이언트"></li>
-      </ul>  
-    </div>   
-  </section>
-
-  <footer>
-    <div class="footer-inner">
-      <div class="logo">(주)제이씨시스템스</div>
-      <div class="footer-agreement">
-        <div><a href="#">사업자정보확인</a></div>
-        <div><a href="#">개인정보처리방침</a></div>
-        <div><a href="#">이메일무단수집거부</a></div>
-        <div><a href="contact.html">문의하기</a></div>
-      </div>
-      <div class="footer-info">
-        <ul>
-          <li>(주)제이씨시스템스</li>
-          <li class="bar">|</li>
-          <li>대표이사: 조종후</li>
-          <li class="bar">|</li>
-          <li>사업자등록번호: 119-86-66085</li>
-          <li class="bar">|</li>
-          <li>서울 금천구 가산디지털1로 233, 405호 (가산동,에이스하이엔드타워9차)</li>
-        </ul>
-      </div>
-      <div class="rights">© 2025 JC Systems Corporation All rights reserved.</div>
-      <div class="scroll-top" onclick="scrollToTop()"></div>
-    </div>
-  </footer>
-
-
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/common.js"></script>
-  <script src="js/main.js"></script>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
