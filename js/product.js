@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // 네비게이션 아이템 클릭 시
+// 네비게이션 아이템 클릭 시
     $(".nav-item").on('click', function(e) {
         e.stopPropagation(); // 이벤트 버블링 중단
 
@@ -22,7 +22,8 @@ $(document).ready(function() {
         $otherItems.removeClass('active');
     });
 
-    // 문서(페이지 전체)의 다른 곳을 클릭했을 때
+
+// 문서(페이지 전체)의 다른 곳을 클릭했을 때
     $(document).on('click', function() {
         // 모든 드롭다운을 닫고,
         $(".dropdown").slideUp(200);
@@ -30,8 +31,9 @@ $(document).ready(function() {
         $(".nav-item").removeClass('active');
     });
 
-    //rexnord 제품 공정 과정
-    $('.rexnord-progress .progress-tab ul li').click(function(){
+
+//rexnord 제품 공정 과정
+    $('.rexnord-progress .progress-tab ul li').click(function() {
         var index = $(this).index();
 
         // li active 클래스 처리
@@ -42,4 +44,52 @@ $(document).ready(function() {
         $(".progress-wrap .card-img").removeClass("active");
         $(".progress-wrap .card-img").eq(index).addClass("active");
     });
+
+//raedel TAB
+    $('.raedel-tab ul li').click(function() {
+        var index = $(this).index();
+
+        // li active 클래스 처리
+        $(".raedel-tab li").removeClass("active");
+        $(this).addClass("active");
+
+        // 이미지 active 처리
+        $(".raedel-info").removeClass("active");
+        $(".raedel-info").eq(index).addClass("active");
+    });
+
+// raedel 하위 테이블 탭 클릭 이벤트
+    $(".sub-tab button").on("click", function() {
+        var parentTab = $(this).attr("onclick").match(/'(.*?)'/g)[1].replace(/'/g, ""); // Rexnord or Raeder
+        var subTab = $(this).attr("onclick").match(/'(.*?)'/g)[0].replace(/'/g, ""); // Hyundai or Kia
+
+        // 하위 탭 active 처리
+        $("#" + parentTab)
+            .find(".sub-tab button")
+            .removeClass("active");
+        $(this).addClass("active");
+
+        // 하위 콘텐츠 보이기
+        $("#" + parentTab)
+            .find(".sub-tabcontent")
+            .hide();
+        $("#" + subTab + "-" + parentTab).show();
+    });
+
+// raedel 탭 스크롤 시, 상단고정
+    $(function() {
+        var $tabMenu = $(".raedel-tab");
+        var tabOffset = $tabMenu.offset().top; // 원래 탭 위치 기억
+
+        $(window).on("scroll", function() {
+            var scrollTop = $(window).scrollTop();
+
+            if (scrollTop >= tabOffset) {
+                $tabMenu.addClass("fixed");
+            } else {
+                $tabMenu.removeClass("fixed");
+            }
+        });
+    });
+
 });

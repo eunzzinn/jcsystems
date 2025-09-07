@@ -1,219 +1,256 @@
 $(document).ready(function() {
 
-// *****MAIN*****
 
-    const slides = document.querySelectorAll('.main-slide');
-    const prevBtn = document.querySelector('.main-slider .prev');
-    const nextBtn = document.querySelector('.main-slider .next');
-    const pauseBtn = document.querySelector('.pause-resume');
-    const progress = document.querySelector('.progress');
+// ***** MAIN SLIDER (3장, 진행바 이어서 재생, 좌/우/일시정지) *****
 
-    let current = 0;
-    let playing = true;
-    let timeout; // setInterval 대신 setTimeout 사용
-    let startTime; // 타이머 시작 시간
-    const slideDuration = 5000; // 슬라이드 전환 시간 (5초)
+$(function () {
+  const slides = [...document.querySelectorAll(".main-slide")];
+  const prevBtns = document.querySelectorAll(".nav-btn.prev");
+  const nextBtns = document.querySelectorAll(".nav-btn.next");
+  const pauseBtns = document.querySelectorAll(".pause-resume");
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-        current = index;
+  const DURATION = 5000; // 5s
+  let idx = 0;
+  let timer = null;
+  let isPaused = false;
+  let startTime = 0;
+  let elapsed = 0; // ms (현재 슬라이드에서 경과한 시간)
 
-        // 프로그레스 바를 처음부터 다시 시작
-    progress.style.transition = 'none'; // 애니메이션 중지
-    progress.style.width = '0%'; // 너비 0%로 리셋
+  const barOf = (i) => slides[i].querySelector(".progress");
 
-    // 강제로 리플로우(reflow)를 발생시켜 브라우저가 변경 사항을 즉시 렌더링하도록 함
-    progress.offsetWidth; // 이 줄을 추가
+  const updatePauseIcons = () => {
+    pauseBtns.forEach((btn) => {
+      const img = btn.querySelector("img");
+      if (isPaused) {
+        img.src = "img/main/ico-play.svg";
+        img.alt = "재생";
+      } else {
+        img.src = "img/main/ico-pause.svg";
+        img.alt = "일시정지";
+      }
+    });
+  };
 
-    // 다음 프레임에서 애니메이션 다시 시작
-    setTimeout(() => {
-        if (playing) {
-            progress.style.transition = `width 5s linear`; // 슬라이드 시간에 맞춰 transition 설정
-            progress.style.width = '100%';
-            startAutoSlide(); // 다음 슬라이드 타이머 재설정
-        }
-    }, 10);
+  const stopTimer = () => {
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
     }
+  };
 
-    function nextSlide() {
-        clearTimeout(timeout); // 기존 타이머 중지
-        showSlide((current + 1) % slides.length);
-    }
+  const go = (to, { keepElapsed = false } = {}) => {
+    // 활성 슬라이드 전환
+    slides.forEach((s, i) => s.classList.toggle("active", i === to));
+    stopTimer();
+    if (!keepElapsed) elapsed = 0;
 
-    function prevSlide() {
-        clearTimeout(timeout); // 기존 타이머 중지
-        showSlide((current - 1 + slides.length) % slides.length);
-    }
-
-    function startAutoSlide() {
-        clearTimeout(timeout);
-        startTime = Date.now();
-        timeout = setTimeout(nextSlide, slideDuration);
-    }
-
-    function stopAutoSlide() {
-        clearTimeout(timeout);
-        const elapsedTime = Date.now() - startTime;
-        const remainingTime = slideDuration - elapsedTime;
-
-        // 프로그레스 바의 너비를 현재 진행 상태로 유지
-        const currentWidth = (elapsedTime / slideDuration) * 100;
-        progress.style.transition = 'none';
-        progress.style.width = `${currentWidth}%`;
-
-        // 일시정지 상태를 유지하기 위해 remainingTime 저장
-        return remainingTime > 0 ? remainingTime : 0;
-    }
-
-    pauseBtn.addEventListener('click', () => {
-        playing = !playing;
-        const pauseBtnImg = pauseBtn.querySelector('img');
-
-        if (playing) {
-            // 재생 상태일 때
-            pauseBtnImg.src = 'img/main/ico-pause.svg';
-            // 프로그레스 바 애니메이션 재개
-            const remainingTime = parseFloat(progress.style.width) > 0 ?
-                slideDuration * (1 - parseFloat(progress.style.width) / 100) : slideDuration;
-
-            timeout = setTimeout(nextSlide, remainingTime);
-
-            progress.style.transition = `width ${remainingTime / 1000}s linear`;
-            progress.style.width = '100%';
-
-        } else {
-            // 일시정지 상태일 때
-            pauseBtnImg.src = 'img/main/ico-play.svg';
-            clearTimeout(timeout);
-            // 프로그레스 바의 현재 상태를 유지하고 애니메이션 중지
-            const elapsedTime = Date.now() - startTime;
-            const currentWidth = (elapsedTime / slideDuration) * 100;
-            progress.style.transition = 'none';
-            progress.style.width = `${currentWidth}%`;
-        }
+    // 모든 바 리셋, 활성 슬라이드만 현재 상태로 세팅
+    slides.forEach((s, i) => {
+      const b = s.querySelector(".progress");
+      b.style.transition = "none";
+      b.style.width = i === to
+        ? (isPaused ? `${(elapsed / DURATION) * 100}%` : "0%")
+        : "0%";
     });
 
-    nextBtn.addEventListener('click', () => {
-        // 수동으로 슬라이드 넘길 때도 타이머 리셋
-        clearTimeout(timeout);
-        nextSlide();
-        if(playing) {
-            startAutoSlide();
-        }
-    });
+    // 재생 중이면 남은 시간만큼 진행바 + 자동 넘김
+    if (!isPaused) {
+      const remaining = Math.max(0, DURATION - elapsed);
+      const b = barOf(to);
+      // 다음 프레임에 transition 적용
+      requestAnimationFrame(() => {
+        b.style.transition = `width ${remaining}ms linear`;
+        // 강제 리플로우로 transition 재적용 보장
+        void b.offsetWidth;
+        b.style.width = "100%";
+      });
+      startTime = Date.now();
+      timer = setTimeout(() => {
+        elapsed = 0;
+        next();
+      }, remaining);
+    }
 
-    prevBtn.addEventListener('click', () => {
-        // 수동으로 슬라이드 넘길 때도 타이머 리셋
-        clearTimeout(timeout);
-        prevSlide();
-        if(playing) {
-            startAutoSlide();
-        }
-    });
+    idx = to;
+  };
 
-    showSlide(0);
-    startAutoSlide();
+  const next = () => go((idx + 1) % slides.length);
+  const prev = () => go((idx - 1 + slides.length) % slides.length);
+
+  const pause = () => {
+    if (isPaused) return;
+    isPaused = true;
+    elapsed += Date.now() - startTime;
+    const b = barOf(idx);
+    b.style.transition = "none";
+    b.style.width = `${Math.min(100, (elapsed / DURATION) * 100)}%`;
+    stopTimer();
+    updatePauseIcons();
+  };
+
+  const resume = () => {
+    if (!isPaused) return;
+    isPaused = false;
+    const remaining = Math.max(0, DURATION - elapsed);
+    const b = barOf(idx);
+    b.style.transition = `width ${remaining}ms linear`;
+    void b.offsetWidth;
+    b.style.width = "100%";
+    startTime = Date.now();
+    timer = setTimeout(() => {
+      elapsed = 0;
+      next();
+    }, remaining);
+    updatePauseIcons();
+  };
+
+  // 버튼 이벤트
+  nextBtns.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const wasPaused = isPaused;
+      go((idx + 1) % slides.length);
+      if (wasPaused) updatePauseIcons(); // 일시정지 상태 유지(진행바는 0%에서 멈춘 채)
+    })
+  );
+
+  prevBtns.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const wasPaused = isPaused;
+      go((idx - 1 + slides.length) % slides.length);
+      if (wasPaused) updatePauseIcons();
+    })
+  );
+
+  pauseBtns.forEach((btn) =>
+    btn.addEventListener("click", () => (isPaused ? resume() : pause()))
+  );
+
+  // 초기화
+  go(0);
+  updatePauseIcons();
+});
+
+
+
 
 
 // ***** PRODUCT SLIDER *****
 
-    const productSlider = document.getElementById("productSlider");
-    const productSlides = document.querySelectorAll(".product-slide");
-    const productBtns = document.querySelectorAll(".product-btn");
-    const numNow = document.querySelector(".now-num");
+const productSlider = document.getElementById("productSlider");
+    if (productSlider) {
+        const sliderContainer = productSlider.parentElement;
+        const originalSlides = Array.from(productSlider.querySelectorAll(".product-slide"));
+        const productBtns = document.querySelectorAll(".product-btn");
+        const numNow = document.querySelector(".now-num");
 
-    const slideWidth = productSlides[0].offsetWidth;
-    const slideGap = 20;
-    const slidesPerView = 1;   //한 번에 1장씩 이동
-    const autoDelay = 3000;
-    const totalOriginal = productSlides.length;
+        const totalOriginal = originalSlides.length;
+        const autoDelay = 3000;
+        let productIndex = totalOriginal; // 시작 인덱스 (원본 슬라이드의 첫 번째)
+        let productInterval;
 
-    let productIndex = slidesPerView; // 복제 때문에 1부터 시작
-    let productInterval;
+        // 모든 슬라이드를 앞뒤로 복제하여 완벽한 무한 루프 구현
+        originalSlides.forEach(slide => {
+            const clone = slide.cloneNode(true);
+            productSlider.appendChild(clone);
+        });
+        originalSlides.slice().reverse().forEach(slide => {
+            const clone = slide.cloneNode(true);
+            productSlider.prepend(clone);
+        });
 
-    // 슬라이드 복제 (앞뒤에 더미 추가)
-    const firstClones = [];
-    const lastClones = [];
+        const allSlides = document.querySelectorAll(".product-slide");
 
-    for (let i = 0; i < slidesPerView; i++) {
-      const firstClone = productSlides[i].cloneNode(true);
-      const lastClone = productSlides[productSlides.length - 1 - i].cloneNode(true);
-      firstClone.classList.add("clone");
-      lastClone.classList.add("clone");
-      firstClones.push(firstClone);
-      lastClones.unshift(lastClone);
+        // 슬라이더 위치를 설정하는 핵심 함수 (로직 전면 수정)
+        function setProductSliderPosition(animate = true) {
+            // 데스크톱 (1025px+) 에서만 새 로직 적용
+            if (window.innerWidth >= 1025) {
+                const transitionStyle = animate ? "transform 0.6s ease-in-out" : "none";
+                productSlider.style.transition = transitionStyle;
+
+                // 모든 슬라이드에서 'active-product' 클래스 제거 후 현재 슬라이드에만 추가
+                allSlides.forEach(s => s.classList.remove("active-product"));
+                const activeSlide = allSlides[productIndex];
+                if (activeSlide) {
+                    activeSlide.classList.add("active-product");
+                }
+
+                // --- 위치 계산 로직 수정 ---
+                const slideWidthDefault = 340;
+                const slideWidthActive = 620;
+                const slideGap = 20;
+                const rightOffset = 60;
+
+                // 1. 활성 슬라이드 이전 슬라이드들의 전체 너비를 계산
+                let offsetToActiveSlide = 0;
+                for (let i = 0; i < productIndex; i++) {
+                    offsetToActiveSlide += slideWidthDefault + slideGap;
+                }
+
+                // 2. 활성 슬라이드의 오른쪽 끝이 컨테이너 오른쪽에서 60px 떨어진 곳에 위치하기 위한 translateX 값을 계산
+                const containerWidth = sliderContainer.offsetWidth;
+                // 활성 슬라이드의 왼쪽이 컨테이너 왼쪽에 대해 위치해야 할 지점
+                const targetActiveLeft = containerWidth - slideWidthActive - rightOffset;
+                // 이동해야 할 총 거리
+                const translateXValue = offsetToActiveSlide - targetActiveLeft;
+
+                productSlider.style.transform = `translateX(-${translateXValue}px)`;
+
+            } else { // 모바일/태블릿 (1025px 미만) - 기존 로직 유지
+                const slideWidth = document.querySelector('.product-slide').offsetWidth;
+                const offset = -((productIndex - totalOriginal) * (slideWidth + 20));
+                productSlider.style.transform = `translateX(${offset}px)`;
+                allSlides.forEach(s => s.classList.remove("active-product"));
+            }
+
+            // 페이지 번호 업데이트
+            let realIndex = (productIndex % totalOriginal);
+            if (realIndex === 0) realIndex = totalOriginal;
+            numNow.textContent = (realIndex === totalOriginal ? 1 : realIndex + 1).toString().padStart(2, "0");
+        }
+
+        // 슬라이드 이동 및 무한 루프 처리 함수
+        function moveSlide(direction) {
+            productIndex += direction;
+            setProductSliderPosition();
+
+            if (productIndex >= totalOriginal * 2) {
+                setTimeout(() => {
+                    productIndex = totalOriginal;
+                    setProductSliderPosition(false);
+                }, 600);
+            } else if (productIndex < totalOriginal) {
+                setTimeout(() => {
+                    productIndex = totalOriginal * 2 - 1;
+                    setProductSliderPosition(false);
+                }, 600);
+            }
+        }
+
+        function nextProductSlide() { moveSlide(1); }
+        function prevProductSlide() { moveSlide(-1); }
+
+        productBtns[0].addEventListener("click", () => {
+            prevProductSlide();
+            resetProductAutoSlide();
+        });
+        productBtns[1].addEventListener("click", () => {
+            nextProductSlide();
+            resetProductAutoSlide();
+        });
+
+        function startProductAutoSlide() {
+            clearInterval(productInterval);
+            productInterval = setInterval(nextProductSlide, autoDelay);
+        }
+
+        function resetProductAutoSlide() {
+            startProductAutoSlide();
+        }
+
+        // 초기 설정
+        setProductSliderPosition(false);
+        startProductAutoSlide();
+
+        window.addEventListener('resize', () => setProductSliderPosition(false));
     }
-
-    productSlider.append(...firstClones);
-    productSlider.prepend(...lastClones);
-
-    const allSlides = document.querySelectorAll(".product-slide"); // 복제 포함
-    const totalSlides = allSlides.length;
-
-    // 위치 세팅 + 숫자 업데이트
-    function setProductSliderPosition(animate = true) {
-      if (!animate) productSlider.style.transition = "none";
-      else productSlider.style.transition = "transform 0.6s ease-in-out";
-
-      const offset = -(productIndex * (slideWidth + slideGap));
-      productSlider.style.transform = `translateX(${offset}px)`;
-
-      // 원본 기준 인덱스로 숫자 업데이트
-      let realIndex = productIndex - slidesPerView;
-      if (realIndex < 0) realIndex = totalOriginal + realIndex;
-      realIndex = realIndex % totalOriginal;
-      numNow.textContent = (realIndex + 1).toString().padStart(2, "0"); // 01 ~ 06
-    }
-
-    // 다음 슬라이드
-    function nextProductSlide() {
-      productIndex++;
-      setProductSliderPosition();
-
-      if (productIndex === totalSlides - slidesPerView) {
-        setTimeout(() => {
-          productIndex = slidesPerView;
-          setProductSliderPosition(false);
-        }, 600);
-      }
-    }
-
-    // 이전 슬라이드
-    function prevProductSlide() {
-      productIndex--;
-      setProductSliderPosition();
-
-      if (productIndex < slidesPerView) {
-        setTimeout(() => {
-          productIndex = totalSlides - slidesPerView * 2;
-          setProductSliderPosition(false);
-        }, 600);
-      }
-    }
-
-    // 버튼 이벤트
-    productBtns[0].addEventListener("click", () => {
-      prevProductSlide();
-      resetProductAutoSlide();
-    });
-    productBtns[1].addEventListener("click", () => {
-      nextProductSlide();
-      resetProductAutoSlide();
-    });
-
-    // 자동 슬라이드
-    function startProductAutoSlide() {
-      clearInterval(productInterval);
-      productInterval = setInterval(nextProductSlide, autoDelay);
-    }
-    function resetProductAutoSlide() {
-      clearInterval(productInterval);
-      startProductAutoSlide();
-    }
-
-    // 초기 실행
-    productIndex = slidesPerView;
-    setProductSliderPosition(false);
-    startProductAutoSlide();
-
 });
