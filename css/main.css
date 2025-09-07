@@ -180,10 +180,13 @@ section.products {
 
 .product-slider .product-slide {
     flex: 0 0 280px;
-    width: 280px; height: 280px;
+    width: 280px; height: 340px;
     transition: width 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease;
     position: relative;
     z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .product-slider .product-slide.active-product {
   z-index: 2; /* 커지는 카드가 위로 올라오게 */
@@ -191,12 +194,12 @@ section.products {
 .product-slider .product-slide img {
     width: 100%;
     height: auto;
+    display: block;
 }
 .product-slider .product-label {
-    margin-top: 20px;
+    margin-top: 12px;
     font-size: 1.8rem;
     font-weight: 500;
-    text-align: left;
 }
 
 /* partner */
@@ -293,7 +296,7 @@ section.products {
     }
     .product-slider .product-slide {
         flex: 0 0 340px;
-        width: 340px; height: 340px;
+        width: 340px; height: 380px;
     }
     .client .client-wrap {
         margin: 100px auto 80px;
@@ -370,6 +373,8 @@ section.products {
       position: relative;
       min-height: 620px;
       margin: -200px auto 0;
+      display: flex;
+      align-items: flex-end;
     }
     .products .product-slider-container::before {
         content: "";
@@ -394,6 +399,9 @@ section.products {
         width: 340px;
         height: auto;
         transition: width 0.6s ease-in-out, opacity 0.6s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .product-slider .product-slide.active-product {
         flex: 0 0 620px;
