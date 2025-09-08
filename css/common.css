@@ -391,7 +391,8 @@ footer .footer-info {
 footer .footer-info ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 6px;
+  max-width: 500px;
 }
 footer .footer-info .bar {
   opacity: 0.4;
