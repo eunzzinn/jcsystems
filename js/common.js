@@ -76,22 +76,47 @@ $(document).ready(function() {
 
     //PC GNB-Product 메뉴 오픈
 
+    let navProductTimeout = null;
+
     function navHoverEvent() {
+        $("nav").off("mouseenter mouseleave");
+        $(".product-nav, .nav-pc-product").off(".nav");
+
         if ($(window).width() >= 1025) {
-            $("nav").off("mouseenter mouseleave").hover(
-                function() {
-                    $(".nav-pc-product").stop(true, true).slideDown(200);
-                    $(this).parent().addClass("visible");
-                },
-                function() {
-                    $(".nav-pc-product").stop(true, true).slideUp(200);
-                    $(this).parent().removeClass("visible");
+            $(".product-nav, .nav-pc-product").on("mouseenter.nav", function(e) {
+                clearTimeout(navProductTimeout);
+                $(".nav-pc-product").stop(true, true).slideDown(200);
+                $("#header").addClass("visible");
+            });
+
+            $(".product-nav, .nav-pc-product").on("mouseleave.nav", function(e) {
+                const to = e.relatedTarget || e.toElement;
+                if (to && ($(to).closest('.product-nav').length || $(to).closest('.nav-pc-product').length)) {
+                    return;
                 }
-            );
+
+                navProductTimeout = setTimeout(function() {
+                    // 안전하게 한 번 더 hover 상태 확인
+                    if (!$('.product-nav:hover').length && !$('.nav-pc-product:hover').length) {
+                        $(".nav-pc-product").stop(true, true).slideUp(200);
+                        $("#header").removeClass("visible");
+                    }
+                }, 180); // 120~220ms 범위에서 조절 가능 (지금은 180ms)
+            });
         } else {
-            $("nav").off("mouseenter mouseleave"); // 모바일 등 작은 화면일 때 이벤트 제거
+            $(".product-nav, .nav-pc-product").off(".nav");
+            clearTimeout(navProductTimeout);
+            $(".nav-pc-product").hide();
+            $("#header").removeClass("visible");
         }
     }
+
+    // 초기 실행 및 리사이즈 핸들러 유지
+    navHoverEvent();
+    $(window).resize(function() {
+        navHoverEvent();
+    });
+
 
     // 처음 로드할 때 실행
     navHoverEvent();
