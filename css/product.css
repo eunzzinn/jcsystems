@@ -350,6 +350,9 @@ main .product-main-img {
   margin-left: 8px;
   vertical-align: sub;
 }
+.hanel-customer .sub-tabcontent {
+  overflow: auto;
+}
 
 /* raedel */
 

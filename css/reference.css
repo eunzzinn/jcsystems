@@ -5,36 +5,55 @@ main .sub {
     background-size: cover;
 }
 .tab {
-  padding: 8px;
-  background: var(--gray-100);
+  background: #F2F4F8;
+  height: 76px;
+  position: relative;
+  z-index: 99;
 }
 .top-tab {
   display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 12px;
 }
 .tab button {
-  font-size: 1.6rem;
-  font-weight: 600;
-  height: 50px;
-  width: calc(100% - 16px);
+  font-size: 1.4rem;
+  font-weight: 500;
+  height: 76px;
+  border-radius: 8px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  display: flex;
+  padding: 0 20px;
   color: var(--gray-500);
-  border-radius: 50px;
+  line-height: 1.4;
+  align-items: center;
 }
 .tab button:hover {
-  color: var(--gray-900);
+  color: var(--gray-700);
 }
 .tab button.active {
-  background: var(--gray-900);
   color: var(--white-0);
+  background: var(--gray-900);
+  font-weight: 600;
+  height: 60px;
   box-shadow: 4px 4px 20px rgba(0,0,0,0.24);
+}
+.tabcontent .product-reference p {
+  font-size: 1.4rem;
+  color: var(--gray-700);
+  line-height: 1.8;
+  border-top: 2px solid var(--gray-900);
+  padding-top: 24px;
 }
 
 /* Rexnord */
 
 .table {
   margin-bottom: 60px;
-}
-.table .tabcontent {
-  margin-top: 20px;
 }
 .table .tabcontent .sub-tab {
   height: 50px;
@@ -61,11 +80,46 @@ main .sub {
   border-style: solid;
   color: var(--gray-900);
 }
-
+.table .tabcontent .sec-txt {
+  margin-bottom: 24px;
+}
 .table .sub-tabcontent {
   width: 100%;
 }
 
+/* Hanel */
+.hanel .sub-tabcontent {
+  overflow: auto;
+}
+.hanel table {
+  margin-top: 0px;
+}
+.hanel .sec-txt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hanel .sec-txt .reference-view {
+  width: 140px; height: 40px;
+  border: 1px solid var(--gray-300);
+  color: var(--gray-600);
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 40px;
+}
+.hanel .sec-txt .reference-view a {
+  position: relative;
+}
+.hanel .sec-txt .reference-view a::after {
+  content: " ";
+  display: inline-block;
+  width: 18px; height: 18px;
+  background: url('../img/product/ico-arrow-right-gr.svg') no-repeat 50%;
+  background-size: cover;
+  margin-left: 8px;
+  vertical-align: sub;
+}
 
 /* Raeder Vogel */
 .table .raeder .sub-tabcontent .img-content img {
@@ -129,13 +183,26 @@ main .sub {
   .table .raeder .sub-tabcontent table td.gr {
     background-color: var(--gray-100) !important;
   }
+  .top-tab {
+    gap: 20px;
+  }
+  .tabcontent .product-reference p {
+    font-size: 1.5rem;
+  }
+  .hanel .sec-txt .reference-view {
+    width: 170px; height: 52px;
+    font-size: 1.6rem;
+    line-height: 52px;
+  }
 } /*821*/
 
 /********** MO(1025 - 1440) **********/
 @media screen and (min-width: 1025px) {
   .tab button {
-    height: 60px;
-    font-size: 1.8rem;
+    height: 80px;
+    font-size: 1.6rem;
+    width: calc(100% / 6 - 20px);
+    justify-content: center;
   }
   .table .tabcontent .sub-tab {
     height: 60px;
@@ -145,6 +212,18 @@ main .sub {
   }
   .table .tabcontent .sub-tab button {
     font-size: 1.8rem;
+  }
+  .tab {
+    height: 80px;
+  }
+  .tabcontent .product-reference p {
+    font-size: 1.6rem;
+  }
+  .top-tab {
+    padding: 0 60px;
+    justify-content: space-between;
+    margin: 0;
+    gap: 20px;
   }
 }
 
@@ -157,5 +236,6 @@ main .sub {
     width: 72.708vw;
     min-width: 1396px;
     margin: 0 auto;
+    padding: 0;
   }
 }
